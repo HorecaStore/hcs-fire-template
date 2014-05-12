@@ -5,6 +5,6 @@ img/
 .htaccess
 fire_app_log.txt
 config.rb
-dendor-com.sublime-project
-dendor-com.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 ~*
