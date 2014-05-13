@@ -3,12 +3,11 @@
   %head
     = render :partial => "/layouts/head"
   %body
-    .container
-      .layout
-        .header{:role=>"banner"}
-        .main{:role=>"main"}
-          = yield
-        .layout-footer
+    .layout
+      .header{:role=>"banner"}
+      .main{:role=>"main"}
+        = yield
+      .layout-footer
       .footer{:role=>"contentinfo"}
     = javascript_include_tag "/ext/headjs/head.min"
     = render :partial => "/layouts/headjs"
