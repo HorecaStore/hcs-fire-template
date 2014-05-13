@@ -1,0 +1,10 @@
+.line { height: 1px; margin: 25px auto; overflow: hidden; }
+
+.line-dotted { border-bottom: 1px dotted #524E4E; border-top: 0; }
+
+html, body { height: 100%; }
+
+.layout { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -70px; }
+.layout .layout-footer { height: 70px; }
+
+.footer { clear: both; position: relative; height: 70px; }
