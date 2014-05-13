@@ -4,10 +4,39 @@
     = render :partial => "/layouts/head"
   %body
     .layout
-      .header{:role=>"banner"}
-      .main{:role=>"main"}
-        = yield
+      .container
+        .header{:role=>"banner"}
+          .row-fluid
+            .span3
+              .logo=link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store"), "/")
+            .span9
+              .row-fluid
+                .span6
+                .span6
+                  .navbar
+                    %ul.nav.pull-right
+                      %li=link_to("О компании","#")
+                      %li=link_to("Контакты","#")
+                      %li=link_to("Личный кабинет","#")
+              .row-fluid
+                .span12
+                  .navbar.navbar-inverse
+                    .navbar-inner
+                      %ul.nav
+                        %li=link_to("Для отелей","#")
+                        %li=link_to("Для ресторанов","#")
+                        %li=link_to("Товары на складе","#")
+                      %ul.nav.pull-right
+                        %li.divider-vertical
+                        %li=link_to("Заказ товара","#")
+
+
+        .main{:role=>"main"}
+          = yield
       .layout-footer
-      .footer{:role=>"contentinfo"}
+    .footer{:role=>"contentinfo"}
+      .container
+        .row
+          = render :partial => "/layouts/footer"
     = javascript_include_tag "/ext/headjs/head.min"
     = render :partial => "/layouts/headjs"

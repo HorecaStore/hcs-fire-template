@@ -1,2 +1,19 @@
 @import "base";
 @include sticky-footer(70px, ".layout", ".layout-footer", ".footer");
+
+body{
+  @include red-box(true);
+}
+
+.header{
+  margin-top: 20px;
+  .navbar{
+    margin: {
+      top: 24px;
+      bottom: 0;
+    }
+    &.navbar-inverse{
+      margin-top: 0;
+    }
+  }
+}

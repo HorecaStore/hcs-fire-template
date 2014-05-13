@@ -8,3 +8,9 @@ html, body { height: 100%; }
 .layout .layout-footer { height: 70px; }
 
 .footer { clear: both; position: relative; height: 70px; }
+
+body, body div { -webkit-box-shadow: red 0 0 1px inset; -moz-box-shadow: red 0 0 1px inset; box-shadow: red 0 0 1px inset; }
+
+.header { margin-top: 20px; }
+.header .navbar { margin-top: 24px; margin-bottom: 0; }
+.header .navbar.navbar-inverse { margin-top: 0; }
