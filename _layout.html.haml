@@ -4,3 +4,5 @@
     = render :partial => "/layouts/head"
   %body
     = yield
+    = javascript_include_tag "/ext/headjs/head.min"
+    = render :partial => "/layouts/headjs"
