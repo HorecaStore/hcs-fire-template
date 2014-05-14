@@ -2,18 +2,77 @@
 @include sticky-footer(70px, ".layout", ".layout-footer", ".footer");
 
 body{
-  @include red-box(true);
+  //@include red-box(true);
+  background:{
+    image: image-url("bg-body.png");
+    position: top top;
+    repeat: repeat;
+  }
 }
 
 .header{
-  margin-top: 20px;
+  margin-bottom: 10px;
+  .logo{
+    >span{
+      width: 149px;
+      font:{
+        family: "PFDinDisplayProLight";
+        size: 11px;
+      }
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+  .phone{
+    font:{
+      family: "PFDinDisplayProLight";
+      size: 27px;
+    }
+    line-height: 58px;
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+  }
   .navbar{
     margin: {
-      top: 24px;
       bottom: 0;
     }
-    &.navbar-inverse{
-      margin-top: 0;
+  }
+  .form-search{
+    margin:{
+      //bottom: 0;
+      top: 12px;
+    }
+  }
+}
+.middle{
+  .catalog-menu{
+    padding:{
+      top: 18px;
+      bottom: 10px;
+      left: 72px;
+      right: 72px;
+    }
+    //background-color: transparent;
+    @include box-shadow(rgba(0,0,0,.1) -1px 3px 6px);
+  }
+  .head-contact{
+    padding-top: 20px;
+    color: #777;
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+    >span{
+      font:{
+        size: 11px;
+      }
+    }
+    .phone{
+      margin-bottom: 10px;
+      font:{
+        family: "PFDinDisplayProLight";
+        size: 28px;
+      }
+      line-height: normal;
+      >i{
+        font-size: 80%;
+      }
     }
   }
 }

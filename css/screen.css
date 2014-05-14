@@ -1,3 +1,13 @@
+@font-face { font-family: "pf_agora_sans_proregular"; src: url(/fonts/pfagorasanspro-reg-webfont.eot) format('embedded-opentype'), url(/fonts/pfagorasanspro-reg-webfont.woff) format('woff'), url(/fonts/pfagorasanspro-reg-webfont.ttf) format('truetype'), url(/fonts/pfagorasanspro-reg-webfont.svg) format('svg'); }
+
+@font-face { font-family: "pf_agora_sans_proMdIt"; src: url(/fonts/pfagorasanspro-mediumital-webfont.eot) format('embedded-opentype'), url(/fonts/pfagorasanspro-mediumital-webfont.woff) format('woff'), url(/fonts/pfagorasanspro-mediumital-webfont.ttf) format('truetype'), url(/fonts/pfagorasanspro-mediumital-webfont.svg) format('svg'); }
+
+@font-face { font-family: "PFDinDisplayProLight"; src: url(/fonts/pfdindisplaypro-light-webfont.eot) format('embedded-opentype'), url(/fonts/pfdindisplaypro-light-webfont.woff) format('woff'), url(/fonts/pfdindisplaypro-light-webfont.ttf) format('truetype'), url(/fonts/pfdindisplaypro-light-webfont.svg) format('svg'); }
+
+@font-face { font-family: "PFDinDisplayProRegular"; src: url(/fonts/pfdindisplaypro-reg-webfont.eot) format('embedded-opentype'), url(/fonts/pfdindisplaypro-reg-webfont.woff) format('woff'), url(/fonts/pfdindisplaypro-reg-webfont.ttf) format('truetype'), url(/fonts/pfdindisplaypro-reg-webfont.svg) format('svg'); }
+
+@font-face { font-family: "PFDinDisplayProExtraThin"; src: url(/fonts/pfdindisplaypro-xthin-webfont.eot) format('embedded-opentype'), url(/fonts/pfdindisplaypro-xthin-webfont.woff) format('woff'), url(/fonts/pfdindisplaypro-xthin-webfont.ttf) format('truetype'), url(/fonts/pfdindisplaypro-xthin-webfont.svg) format('svg'); }
+
 .line { height: 1px; margin: 25px auto; overflow: hidden; }
 
 .line-dotted { border-bottom: 1px dotted #524E4E; border-top: 0; }
@@ -9,8 +19,16 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 70px; }
 
-body, body div { -webkit-box-shadow: red 0 0 1px inset; -moz-box-shadow: red 0 0 1px inset; box-shadow: red 0 0 1px inset; }
+body { background-image: url('/img/bg-body.png?1400067393'); background-position: top top; background-repeat: repeat; }
 
-.header { margin-top: 20px; }
-.header .navbar { margin-top: 24px; margin-bottom: 0; }
-.header .navbar.navbar-inverse { margin-top: 0; }
+.header { margin-bottom: 10px; }
+.header .logo > span { width: 149px; font-family: "PFDinDisplayProLight"; font-size: 11px; text-transform: uppercase; display: block; }
+.header .phone { font-family: "PFDinDisplayProLight"; font-size: 27px; line-height: 58px; text-shadow: white 0px 1px 0px; }
+.header .navbar { margin-bottom: 0; }
+.header .form-search { margin-top: 12px; }
+
+.middle .catalog-menu { padding-top: 18px; padding-bottom: 10px; padding-left: 72px; padding-right: 72px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; }
+.middle .head-contact { padding-top: 20px; color: #777; text-shadow: white 0px 1px 0px; }
+.middle .head-contact > span { font-size: 11px; }
+.middle .head-contact .phone { margin-bottom: 10px; font-family: "PFDinDisplayProLight"; font-size: 28px; line-height: normal; }
+.middle .head-contact .phone > i { font-size: 80%; }

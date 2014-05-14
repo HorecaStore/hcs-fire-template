@@ -71,6 +71,13 @@
   }
 }
 
+@include font-face("pf_agora_sans_proregular", font-files("/fonts/pfagorasanspro-reg-webfont.eot", "/fonts/pfagorasanspro-reg-webfont.woff", "/fonts/pfagorasanspro-reg-webfont.ttf", "/fonts/pfagorasanspro-reg-webfont.svg"));
+@include font-face("pf_agora_sans_proMdIt", font-files("/fonts/pfagorasanspro-mediumital-webfont.eot", "/fonts/pfagorasanspro-mediumital-webfont.woff", "/fonts/pfagorasanspro-mediumital-webfont.ttf", "/fonts/pfagorasanspro-mediumital-webfont.svg"));
+
+@include font-face("PFDinDisplayProLight", font-files("/fonts/pfdindisplaypro-light-webfont.eot", "/fonts/pfdindisplaypro-light-webfont.woff", "/fonts/pfdindisplaypro-light-webfont.ttf", "/fonts/pfdindisplaypro-light-webfont.svg"));
+@include font-face("PFDinDisplayProRegular", font-files("/fonts/pfdindisplaypro-reg-webfont.eot", "/fonts/pfdindisplaypro-reg-webfont.woff", "/fonts/pfdindisplaypro-reg-webfont.ttf", "/fonts/pfdindisplaypro-reg-webfont.svg"));
+@include font-face("PFDinDisplayProExtraThin", font-files("/fonts/pfdindisplaypro-xthin-webfont.eot", "/fonts/pfdindisplaypro-xthin-webfont.woff", "/fonts/pfdindisplaypro-xthin-webfont.ttf", "/fonts/pfdindisplaypro-xthin-webfont.svg"));
+
 .line{
   height: 1px;
   margin: 25px auto;
