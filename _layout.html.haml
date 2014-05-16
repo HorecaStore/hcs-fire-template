@@ -7,43 +7,33 @@
       .container
         .header{:role=>"banner"}
           .row
-            .navbar.top-menu
-              %ul.nav.pull-right
-                %li=link_to("О компании","#")
-                %li=link_to("Контакты","#")
-                %li=link_to("Личный кабинет","#")
-          .row
             .span3
               .logo
                 =link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store"), "/")
                 %span.text-center Для отелей и ресторанов
             .span9
-              .row-fluid
-                .span6
-                /
-                  .text-center.phone
-                    %i.fa.fa-phone-square
-                    8(812) 305-6020
-                .span6
-                  %form.form-search.pull-right
-                    .input-append
-                      %input.input-xlarge.serch-query{:type=>'text', :placeholder=>"Поиск по каталогу"}
-                      %button.btn{:type=>'submit'}
-                        %i.fa.fa-search.fa-fw
-              .row-fluid
+              .row-fluid.top-menu
                 .span12
-                  .navbar.navbar-inverse.main-menu
+                  .navbar
+                    %ul.nav.pull-right
+                      %li=link_to("О компании","#")
+                      %li=link_to("Контакты","#")
+                      %li=link_to("Личный кабинет","#")
+                      %li.divider-vertical
+                      %li
+                        %a{:href=>'#'}
+                          %i.fa.fa-shopping-cart.fa-fw
+                          Заказ товара
+              .row-fluid.main-menu
+                .span12
+                  .navbar.navbar-inverse
                     .navbar-inner
                       %ul.nav
                         %li=link_to("Для отелей","#")
                         %li=link_to("Для ресторанов","#")
                         %li=link_to("Товары на складе","#")
-                      %ul.nav.pull-right
-                        %li.divider-vertical
-                        %li
-                          %a{:href=>'#'}
-                            %i.fa.fa-shopping-cart.fa-fw
-                            Заказ товара
+                      %form.navbar-search.pull-right
+                        %input.search-query.input-medium{:type=>'text', :placeholder=>"Поиск по сайту"}
         .middle
           .row
             .span3
@@ -59,23 +49,23 @@
               .well.well-large.catalog-menu
                 .row-fluid
                   .span4
-                    %ul.unstyled
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Халаты","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Полотенца","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Постель","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Тапочки","#")
+                    %ul.fa-ul
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Халаты","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Полотенца","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Постель","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Тапочки","#")
                   .span4
-                    %ul.unstyled
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Покрывала","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Наматрасники","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Подушки","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Матрасы","#")
+                    %ul.fa-ul
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Покрывала","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Наматрасники","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Подушки","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Матрасы","#")
                   .span4
-                    %ul.unstyled
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Косметика для номеров","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Скатерти","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Салфетки","#")
-                      %li=link_to("#{'<i class="fa fa-check fa-fw"></i>'}Посуда","#")
+                    %ul.fa-ul
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Косметика для номеров","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Скатерти","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Салфетки","#")
+                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Посуда","#")
         .main{:role=>"main"}
           = yield
       .layout-footer

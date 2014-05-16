@@ -12,6 +12,8 @@
 
 .line-dotted { border-bottom: 1px dotted #524E4E; border-top: 0; }
 
+h1, h2, h3, h4, h5, h6 { color: #777; font-family: 'Arial','Tahoma',sans-serif; font-size: 18px; font-weight: 400; letter-spacing: normal; line-height: 1em; margin-top: 0; text-transform: uppercase; }
+
 html, body { height: 100%; }
 
 .layout { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -70px; }
@@ -21,14 +23,15 @@ html, body { height: 100%; }
 
 body { background-image: url('/img/bg-body.png?1400067393'); background-position: top top; background-repeat: repeat; }
 
-.header { margin-bottom: 10px; }
+.header { margin-bottom: 10px; margin-top: 25px; }
 .header .logo > span { width: 149px; font-family: "PFDinDisplayProLight"; font-size: 11px; text-transform: uppercase; display: block; }
+.header .top-menu { margin-bottom: 15px; margin-top: 5px; }
+.header .top-menu .navbar .divider-vertical { border-right-color: #909090; }
+.header .main-menu .navbar-inverse .navbar-search .search-query { font-size: 11px; line-height: 20px; margin-top: 2px; padding-top: 2px; padding-bottom: 2px; }
 .header .phone { font-family: "PFDinDisplayProLight"; font-size: 27px; line-height: 58px; text-shadow: white 0px 1px 0px; }
-.header .navbar { margin-bottom: 0; }
-.header .form-search { margin-top: 12px; }
 
-.middle .catalog-menu { padding-top: 18px; padding-bottom: 10px; padding-left: 72px; padding-right: 72px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; }
-.middle .head-contact { padding-top: 20px; color: #777; text-shadow: white 0px 1px 0px; }
+.middle .catalog-menu { font-style: italic; padding-top: 18px; padding-bottom: 10px; padding-left: 65px; padding-right: 70px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; box-shadow: rgba(0, 0, 0, 0.1) -1px 3px 6px; }
+.middle .head-contact { padding-top: 15px; color: #777; text-shadow: white 0px 1px 0px; }
 .middle .head-contact > span { font-size: 11px; }
 .middle .head-contact .phone { margin-bottom: 10px; font-family: "PFDinDisplayProLight"; font-size: 28px; line-height: normal; }
 .middle .head-contact .phone > i { font-size: 80%; }

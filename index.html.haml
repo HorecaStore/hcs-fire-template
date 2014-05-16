@@ -1,4 +1,15 @@
 -@view = {:title=>"Главная", :description=>"Главная", :keywords=>"Главная"}
 -@activeAbout = "active"
 
-%h1.hide-text= @view[:title]
+.row-fluid
+  .span3
+  .span9
+    %section.about.clearfix
+      %h2 О нас
+      -2.times do
+        %p= lorem_paragraph
+      =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
+    .line.line-dotted
+    %section.products-carousel
+      .title-divider
+        %h3 Рекомендованные товары
