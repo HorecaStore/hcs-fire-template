@@ -89,12 +89,22 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #777;
-  font-family: 'Arial','Tahoma',sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: normal;
-  line-height: 1em;
-  margin-top: 0;
-  text-transform: uppercase;
+  &.unified {
+    color: #777;
+    font-family: 'Arial','Tahoma',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1em;
+    margin:{
+      top: 0;
+      bottom: 20px;
+    }
+    text-transform: uppercase;
+  }
+  @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+}
+
+.h4 {
+  font-size: 13px;
 }

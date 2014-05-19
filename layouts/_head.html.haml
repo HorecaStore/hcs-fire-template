@@ -6,7 +6,9 @@
 /%link{:href => "/favicon.ico", :rel => "shortcut icon"}/
 = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
 = stylesheet_link_tag "font-awesome/font-awesome", :media=>"screen, projection"
+= stylesheet_link_tag "/ext/slick/slick", :media=>"screen, projection"
 = stylesheet_link_tag "screen", :media=>"screen, projection"
+= stylesheet_link_tag @css, :media=>"screen, projection"
 /[if IE]
   %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
   = stylesheet_link_tag "ie", :media=>"all"

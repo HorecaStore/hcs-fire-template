@@ -1,15 +1,56 @@
 -@view = {:title=>"Главная", :description=>"Главная", :keywords=>"Главная"}
 -@activeAbout = "active"
+-@css = "home"
+-@script = "home"
 
+.line.line-dotted
 .row-fluid
   .span3
+    %section.news.clearfix
+      %h2.unified Новости
+      -2.times do
+        .media
+          = link_to(image_tag(lorem_image("64x64"),:class=>'media-object'),'#', :class=>'pull-left')
+          .media-body
+            %h4.h4.media-heading Заголовок новости
+            .media= lorem_words(6)
+          =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
+    %section.news.clearfix
+      %h2.unified Внимание акция!!!
+      .media
+        = link_to(image_tag(lorem_image("64x64"),:class=>'media-object'),'#', :class=>'pull-left')
+        .media-body
+          %h4.h4.media-heading Наименование акции
+          .media= lorem_words(6)
+        =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
   .span9
     %section.about.clearfix
-      %h2 О нас
+      %h2.unified О нас
       -2.times do
         %p= lorem_paragraph
       =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
     .line.line-dotted
-    %section.products-carousel
-      .title-divider
-        %h3 Рекомендованные товары
+    %section.products-recom
+      %h2.unified Рекомендованные товары
+      .row-fluid
+        %ul.thumbnails.recom-items
+          -4.times do
+            %li.span3
+              .thumbnail.item.text-center
+                %h3.unified Название товара
+                = link_to(image_tag(lorem_image("140x120")),'#')
+                .captions.clearfix
+                  %span.price.pull-left<
+                    1500
+                    %i.fa.fa-rub.fa-fw
+                  %a.btn.pull-right
+                    %i.fa.fa-shopping-cart.fa-fw
+.line.line-dotted
+.row-fluid
+  .span12
+    %section.clients
+      %h2.unified Наши клиенты
+      .carousel_clients
+        -12.times do
+          .text-center= image_tag(lorem_image("140x100"))
+

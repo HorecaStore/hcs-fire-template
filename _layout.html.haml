@@ -49,23 +49,23 @@
               .well.well-large.catalog-menu
                 .row-fluid
                   .span4
-                    %ul.fa-ul
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Халаты","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Полотенца","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Постель","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Тапочки","#")
+                    %ul.nav.nav-pills.nav-stacked
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Халаты","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Полотенца","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Постель","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Тапочки","#")
                   .span4
-                    %ul.fa-ul
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Покрывала","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Наматрасники","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Подушки","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Матрасы","#")
+                    %ul.nav.nav-pills.nav-stacked
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Покрывала","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Наматрасники","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Подушки","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Матрасы","#")
                   .span4
-                    %ul.fa-ul
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Косметика для номеров","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Скатерти","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Салфетки","#")
-                      %li=link_to("#{'<i class="fa-li fa fa-caret-right fa-fw"></i>'}Посуда","#")
+                    %ul.nav.nav-pills.nav-stacked
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Косметика для номеров","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Скатерти","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Салфетки","#")
+                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Посуда","#")
         .main{:role=>"main"}
           = yield
       .layout-footer
@@ -75,3 +75,4 @@
           = render :partial => "/layouts/footer"
     = javascript_include_tag "/ext/headjs/head.min"
     = render :partial => "/layouts/headjs"
+    = javascript_include_tag @script

@@ -1,0 +1,42 @@
+@import "compass/css3";
+
+.main{
+  .news{
+    margin-bottom: 50px;
+  }
+  .products-recom{
+    .recom-items{
+      .item{
+        h3{
+          background-color: #e4e4e4;
+          color: #6e6e6e;
+          font:{
+            family: arial,tahoma,sans-serif;
+            size: 14px;
+          }
+          margin-bottom: 40px;
+          padding: 10px 0;
+        }
+        .captions{
+          margin:{
+            top: 20px;
+            bottom: 20px;
+          }
+          padding: 0 15px;
+          .price{
+            font: {
+              size: 22px;
+              weight: bold;
+            }
+            line-height: 38px;
+            color: #7e9a47;
+          }
+        }
+        &.thumbnail {
+          padding: 0;
+          background-color: whitesmoke;
+        }
+      }
+    }
+  }
+}
