@@ -1,7 +1,8 @@
 -@view = {:title=>"Главная", :description=>"Главная", :keywords=>"Главная"}
--@activeAbout = "active"
 -@css = "home"
 -@script = "home"
+
+-@middle = true
 
 .line.line-dotted
 .row-fluid
@@ -26,8 +27,8 @@
   .span9
     %section.about.clearfix
       %h2.unified О нас
-      -2.times do
-        %p= lorem_paragraph
+      %p Компания HoReCa Store начала свою деятельность в 2011 году с организации розничных продаж домашнего текстиля. За несколько лет накоплен большой опыт, критическая масса поставщиков более чем из десяти стран мира.
+      %p В данный момент HoReCa Store - профессиональный поставщик широкого перечня товаров используемых в работе гостиничных и ресторанных сетей, для которых дизайн и качество продукции является ключом к успеху...
       =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
     .line.line-dotted
     %section.products-recom

@@ -12,8 +12,14 @@
                 =link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store"), "/")
                 %span.text-center Для отелей и ресторанов
             .span9
-              .row-fluid.top-menu
-                .span12
+              .row-fluid
+                .span4.head-contact
+                  -if !@middle
+                    %span телефон в Санкт-Петербурге:
+                    .phone
+                      %i.fa.fa-phone
+                      8(812)305-6020
+                .span8.top-menu
                   .navbar
                     %ul.nav.pull-right
                       %li=link_to("О компании","#")
@@ -34,38 +40,8 @@
                         %li=link_to("Товары на складе","#")
                       %form.navbar-search.pull-right
                         %input.search-query.input-medium{:type=>'text', :placeholder=>"Поиск по сайту"}
-        .middle
-          .row
-            .span3
-              .head-contact
-                %span телефон в Санкт-Петербурге:
-                .phone
-                  %i.fa.fa-phone
-                  8(812)305-6020
-                .email
-                  %i.fa.fa-envelope-o
-                  = mail_to "alex@horecastore.ru"
-            .span9
-              .well.well-large.catalog-menu
-                .row-fluid
-                  .span4
-                    %ul.nav.nav-pills.nav-stacked
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Халаты","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Полотенца","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Постель","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Тапочки","#")
-                  .span4
-                    %ul.nav.nav-pills.nav-stacked
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Покрывала","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Наматрасники","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Подушки","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Матрасы","#")
-                  .span4
-                    %ul.nav.nav-pills.nav-stacked
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Косметика для номеров","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Скатерти","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Салфетки","#")
-                      %li=link_to("#{'<i class="fa fa-caret-right fa-fw"></i>'}Посуда","#")
+        -if @middle
+          = render :partial => "/layouts/middle"
         .main{:role=>"main"}
           = yield
       .layout-footer

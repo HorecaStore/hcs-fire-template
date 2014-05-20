@@ -8,6 +8,7 @@ body{
     position: top top;
     repeat: repeat;
   }
+  overflow: hidden;
 }
 
 .header{
@@ -28,9 +29,10 @@ body{
   }
   .top-menu{
     margin:{
-      bottom: 15px;
+      bottom: 22px;
       top: 5px;
     }
+    font-size: 13px;
     .navbar{
       .divider-vertical{
         border-right-color: rgb(144, 144, 144);
@@ -38,6 +40,7 @@ body{
     }
   }
   .main-menu{
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
     .navbar-inverse{
       .navbar-search{
         .search-query{
@@ -52,28 +55,28 @@ body{
       }
     }
   }
-  .phone{
-    font:{
-      family: "PFDinDisplayProLight";
-      size: 27px;
-    }
-    line-height: 58px;
+  .head-contact{
+    color: #777;
     @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+    >span{
+      font:{
+        size: 11px;
+      }
+    }
+    .phone{
+      margin-bottom: 10px;
+      font:{
+        family: "PFDinDisplayProLight";
+        size: 28px;
+      }
+      line-height: normal;
+      >i{
+        font-size: 80%;
+      }
+    }
   }
 }
 .middle{
-  .catalog-menu{
-    //font-style: italic;
-    padding:{
-      top: 18px;
-      bottom: 0px;
-      left: 50px;
-      right: 55px;
-    }
-    margin-bottom: 10px;
-    //background-color: transparent;
-    @include box-shadow(rgba(0,0,0,.2) -1px 3px 6px);
-  }
   .head-contact{
     margin-top: 35px;
     color: #777;
@@ -95,7 +98,41 @@ body{
       }
     }
   }
+  .catalog-menu{
+    font:{
+      size: 12px;
+      weight: 700;
+    }
+    text-transform: uppercase;
+    padding:{
+      top: 18px;
+      bottom: 0px;
+      left: 50px;
+      right: 50px;
+    }
+    margin-bottom: 10px;
+    @include box-shadow(rgba(0,0,0,.2) -1px 3px 6px);
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+    a {
+      color: #777;//#9D9D00;
+    }
+    background:{
+      image: image-url("bg_middle.png");
+      position: center center;
+      repeat: no-repeat;
+      color: #fff;
+    }
+  }
 }
 .main{
-  //@include red-box(true);
+}
+.footer{
+  position: relative;
+  background-color: #727272;
+  color: #f5f5f5;
+  font-size: 12px;
+  @include box-shadow (rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset);
+  .container{
+    padding-top: 30px;
+  }
 }
