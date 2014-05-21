@@ -5,7 +5,7 @@ body{
   //@include red-box(true);
   background:{
     image: image-url("bg-body.png");
-    position: top top;
+    position: 0 0;
     repeat: repeat;
   }
   overflow: hidden;
@@ -125,6 +125,7 @@ body{
   }
 }
 .main{
+  margin-bottom: 40px;
 }
 .footer{
   position: relative;
@@ -135,4 +136,18 @@ body{
   .container{
     padding-top: 30px;
   }
+}
+.left-menu{
+  .nav-header{
+    background-color: #e4e4e4;
+    color: #6e6e6e;
+    font:{
+      family: arial,tahoma,sans-serif;
+      size: 14px;
+      weight: 500;
+    }
+    text-transform: uppercase;
+    line-height: 28px;
+  }
+  i {line-height: inherit}
 }

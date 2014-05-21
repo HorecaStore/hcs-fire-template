@@ -35,9 +35,9 @@
                   .navbar.navbar-inverse
                     .navbar-inner
                       %ul.nav
-                        %li=link_to("Для отелей","#")
-                        %li=link_to("Для ресторанов","#")
-                        %li=link_to("Товары на складе","#")
+                        %li=link_to("Для отелей","/catalog/hotel.html")
+                        %li=link_to("Для ресторанов","/catalog/restaurant.html")
+                        %li=link_to("Товары на складе","/catalog/warehouse.html")
                       %form.navbar-search.pull-right
                         %input.search-query.input-medium{:type=>'text', :placeholder=>"Поиск по сайту"}
         -if @middle

@@ -103,6 +103,9 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
   }
   @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+  > a{
+    @include link-colors(#2f2f2f, darken(#2f2f2f, 10%), #2f2f2f, #2f2f2f, #2f2f2f);
+  }
 }
 
 .h1 {

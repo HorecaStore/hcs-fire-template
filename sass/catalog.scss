@@ -1,5 +1,31 @@
-.middle{
-  .head-contact{
-    margin-top: 20px;
+@import "compass/utilities";
+@import "compass/layout";
+@import "compass/css3";
+
+.img-hover{
+  margin:{
+    bottom: 10px;
+    right: 10px;
+  }
+  @include single-transition(all, 0.2s, ease-in-out, false);
+  &:hover{
+    @include box-shadow(rgba(0,0,0,0.1) 6px 6px 6px);
+  }
+}
+.catalog-groups{
+  .catalog-group-items{
+    margin-bottom: 20px;
+    .media-heading{
+      > a{
+        @include link-colors(#777, darken(#777, 10%), #777, #777, #777);
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+    .media-body{
+      li{
+        margin-bottom: 5px;
+      }
+    }
   }
 }

@@ -1,8 +1,8 @@
--@view = {:title=>"Каталог товаров", :description=>"Каталог продукции HoReCa Store", :keywords=>"Каталог"}
+-@view = {:title=>"Для ресторанов", :description=>"HoReCa Store для ресторанов", :keywords=>"Каталог"}
 -@css = "catalog"
 -@script = "catalog"
--@activeCatalog = "active"
--@breadcrumbs = "catalog"
+-@activeCatalog = "restaurant"
+-@breadcrumbs = "catalog/restaurant"
 
 .row-fluid
   .span9.offset3
@@ -11,11 +11,11 @@
 .row-fluid
   .span3
     %ul.nav.nav-tabs.nav-stacked.left-menu
-      %li.nav-header Каталог
-      -12.times do
+      %li.nav-header= @view[:title]
+      -4.times do
         %li= link_to("Раздел товара #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '#')
   .span9.catalog-groups
-    -6.times do
+    -2.times do
       .row-fluid.catalog-group-items
         -2.times do
           .span6
