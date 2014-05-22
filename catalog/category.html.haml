@@ -1,8 +1,8 @@
--@view = {:title=>"Для отелей", :description=>"HoReCa Store для отелей", :keywords=>"Каталог"}
+-@view = {:title=>"Категория товаров", :description=>"Категория товаров", :keywords=>"Каталог"}
 -@css = "catalog"
 -@script = "catalog"
--@activeCatalog = "hotel"
--@breadcrumbs = "catalog/hotel"
+-@activeCatalog = "category"
+-@breadcrumbs = {:path => ['catalog','category']}
 
 .row-fluid
   .span9.offset3
@@ -13,16 +13,16 @@
     %ul.nav.nav-tabs.nav-stacked.left-menu
       %li.nav-header= @view[:title]
       -9.times do
-        %li= link_to("Раздел товаров #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group.html')
+        %li= link_to("Группа товаров в категории #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group.html')
   .span9.catalog-groups
     -4.times do
       .row-fluid.catalog-group-items
         -2.times do
           .span6
-            .media-heading.line-dotted= link_to('Раздел товара', '#')
+            .media-heading.line-dotted= link_to('Группа товаров в категории', '#')
             .media
               = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'#', :class=>'pull-left img-hover')
-              .media-body
+              .media-body.list-items
                 %ul
                   -6.times do
                     %li=link_to("Наименование товара","#")

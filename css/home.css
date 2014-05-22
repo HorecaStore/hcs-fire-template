@@ -2,4 +2,4 @@
 .main .products-recom .recom-items .item h3 { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; margin-bottom: 40px; padding: 10px 0; }
 .main .products-recom .recom-items .item .captions { margin-top: 20px; margin-bottom: 20px; padding: 0 15px; }
 .main .products-recom .recom-items .item .captions .price { font-size: 22px; font-weight: bold; line-height: 38px; color: #9D9D00; }
-.main .products-recom .recom-items .item.thumbnail { padding: 0; background-color: whitesmoke; }
+.main .products-recom .recom-items .item.thumbnail { padding: 0; background-color: #f5f5f5; }

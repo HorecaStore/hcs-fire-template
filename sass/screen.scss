@@ -4,11 +4,16 @@
 body{
   //@include red-box(true);
   background:{
-    image: image-url("bg-body.png");
+    image: image-url("body.jpg");
     position: 0 0;
     repeat: repeat;
   }
   overflow: hidden;
+  .wrapper{
+    padding: 0 50px;
+    background-color: #fff;
+    @include box-shadow(rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px);
+  }
 }
 
 .header{
@@ -41,7 +46,8 @@ body{
   }
   .main-menu{
     @include text-shadow(rgb(255,255,255) 0px 1px 0px);
-    .navbar-inverse{
+    .navbar{
+      margin-bottom: 0;
       .navbar-search{
         .search-query{
           font-size: 11px;
@@ -74,6 +80,9 @@ body{
         font-size: 80%;
       }
     }
+  }
+  .breadcrumb{
+    background-color: transparent;
   }
 }
 .middle{
@@ -138,6 +147,10 @@ body{
   }
 }
 .left-menu{
+  border-color: #ddd;
+  @include border-radius(4px, 4px);
+  @include box-shadow (rgba(0, 0, 0, .0555) 0 1px 3px);
+  background-color: #f9f9f9;
   .nav-header{
     background-color: #e4e4e4;
     color: #6e6e6e;
@@ -149,5 +162,8 @@ body{
     text-transform: uppercase;
     line-height: 28px;
   }
-  i {line-height: inherit}
+  i {
+    line-height: inherit;
+    position: absolute;
+  }
 }

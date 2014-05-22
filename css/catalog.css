@@ -1,10 +1,10 @@
-.img-hover { margin-bottom: 10px; margin-right: 10px; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.img-hover { margin-bottom: 10px; margin-right: 20px; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .img-hover:hover { -webkit-box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 6px; box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 6px; }
 
-.catalog-groups .catalog-group-items { margin-bottom: 20px; }
+.catalog-groups .catalog-group-items { margin-bottom: 30px; }
 .catalog-groups .catalog-group-items .media-heading > a { color: #777777; font-weight: 500; font-size: 16px; }
 .catalog-groups .catalog-group-items .media-heading > a:visited { color: #777777; }
 .catalog-groups .catalog-group-items .media-heading > a:focus { color: #777777; }
 .catalog-groups .catalog-group-items .media-heading > a:hover { color: #5e5e5e; }
 .catalog-groups .catalog-group-items .media-heading > a:active { color: #777777; }
-.catalog-groups .catalog-group-items .media-body li { margin-bottom: 5px; }
+.catalog-groups .catalog-group-items .list-items li { margin-bottom: 5px; }

@@ -5,7 +5,7 @@
 .img-hover{
   margin:{
     bottom: 10px;
-    right: 10px;
+    right: 20px;
   }
   @include single-transition(all, 0.2s, ease-in-out, false);
   &:hover{
@@ -14,7 +14,7 @@
 }
 .catalog-groups{
   .catalog-group-items{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     .media-heading{
       > a{
         @include link-colors(#777, darken(#777, 10%), #777, #777, #777);
@@ -22,7 +22,7 @@
         font-size: 16px;
       }
     }
-    .media-body{
+    .list-items{
       li{
         margin-bottom: 5px;
       }
