@@ -48,7 +48,8 @@
                       %span.divider='/'
                     -@breadcrumbs[:path].each do |path|
                       %li
-                        %a(href="\##{path}")#{path}
+                        %a(href="\/#{path}\.html")#{path}
+                        %span.divider='/'
         -if @middle
           = render :partial => "/layouts/middle"
         .main{:role=>"main"}
