@@ -41,15 +41,7 @@
                       %form.navbar-search.pull-right
                         %input.search-query.input-medium{:type=>'text', :placeholder=>"Поиск по сайту"}
               -if @breadcrumbs
-                .row-fluid
-                  %ul.breadcrumb
-                    %li
-                      =link_to('Home', '/')
-                      %span.divider='/'
-                    -@breadcrumbs[:path].each do |path|
-                      %li
-                        %a(href="\/#{path}\.html")#{path}
-                        %span.divider='/'
+                = render :partial => "/layouts/breadcrumbs"
         -if @middle
           = render :partial => "/layouts/middle"
         .main{:role=>"main"}

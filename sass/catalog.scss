@@ -27,5 +27,16 @@
         margin-bottom: 5px;
       }
     }
+    .item{
+      .dl-horizontal{
+        margin: auto;
+        dt{width: auto;}
+        dd{margin-left: 80px;}
+      }
+      .form-horizontal{
+        .control-label{width: auto;}
+        .controls{margin-left: 80px;}
+      }
+    }
   }
 }

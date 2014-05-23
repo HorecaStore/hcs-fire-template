@@ -7,6 +7,8 @@
 = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
 = stylesheet_link_tag "font-awesome/font-awesome", :media=>"screen, projection"
 = stylesheet_link_tag "/ext/slick/slick", :media=>"screen, projection"
+-if @bootstrap_select
+  = stylesheet_link_tag '/ext/bootstrap/select/bootstrap-select.min', :media=>"screen, projection"
 = stylesheet_link_tag "screen", :media=>"screen, projection"
 = stylesheet_link_tag @css, :media=>"screen, projection"
 /[if IE]

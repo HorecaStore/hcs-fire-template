@@ -1,0 +1,9 @@
+.row-fluid
+  %ul.breadcrumb
+    %li
+      =link_to('Home', '/')
+      %span.divider='/'
+    -@breadcrumbs.each do |breadcrumb|
+      %li
+        %a(href="\/#{breadcrumb[:path]}\.html")#{breadcrumb[:name]}
+        %span.divider='/'

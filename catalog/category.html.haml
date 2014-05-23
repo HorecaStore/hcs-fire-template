@@ -2,7 +2,7 @@
 -@css = "catalog"
 -@script = "catalog"
 -@activeCatalog = "category"
--@breadcrumbs = {:path => ['catalog','category']}
+-@breadcrumbs = [{:path=>'catalog',:name=>'Каталог'},{:path=>'catalog/category',:name=>'Категория товаров'}]
 
 .row-fluid
   .span9.offset3
@@ -19,10 +19,10 @@
       .row-fluid.catalog-group-items
         -2.times do
           .span6
-            .media-heading.line-dotted= link_to('Группа товаров в категории', '#')
+            .media-heading.line-dotted= link_to('Группа товаров в категории', '/catalog/category/group.html')
             .media
-              = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'#', :class=>'pull-left img-hover')
+              = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'/catalog/category/group.html', :class=>'pull-left img-hover')
               .media-body.list-items
                 %ul
                   -6.times do
-                    %li=link_to("Наименование товара","#")
+                    %li=link_to("Наименование товара","/catalog/category/group/item.html")

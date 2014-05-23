@@ -8,3 +8,8 @@
 .catalog-groups .catalog-group-items .media-heading > a:hover { color: #5e5e5e; }
 .catalog-groups .catalog-group-items .media-heading > a:active { color: #777777; }
 .catalog-groups .catalog-group-items .list-items li { margin-bottom: 5px; }
+.catalog-groups .catalog-group-items .item .dl-horizontal { margin: auto; }
+.catalog-groups .catalog-group-items .item .dl-horizontal dt { width: auto; }
+.catalog-groups .catalog-group-items .item .dl-horizontal dd { margin-left: 80px; }
+.catalog-groups .catalog-group-items .item .form-horizontal .control-label { width: auto; }
+.catalog-groups .catalog-group-items .item .form-horizontal .controls { margin-left: 80px; }
