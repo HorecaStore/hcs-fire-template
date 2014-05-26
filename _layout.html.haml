@@ -6,42 +6,7 @@
     .layout
       .container.wrapper
         .header{:role=>"banner"}
-          .row
-            .span3
-              .logo
-                =link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store"), "/")
-                %span.text-center Для отелей и ресторанов
-            .span9
-              .row-fluid
-                .span4.head-contact
-                  -if !@middle
-                    %span телефон в Санкт-Петербурге:
-                    .phone
-                      %i.fa.fa-phone
-                      8(812)305-6020
-                .span8.top-menu
-                  .navbar
-                    %ul.nav.pull-right
-                      %li=link_to("О компании","#")
-                      %li=link_to("Контакты","#")
-                      %li=link_to("Личный кабинет","#")
-                      %li.divider-vertical
-                      %li
-                        %a{:href=>'#'}
-                          %i.fa.fa-shopping-cart.fa-fw
-                          Заказ товара
-              .row-fluid.main-menu
-                .span12
-                  .navbar.navbar-inverse
-                    .navbar-inner
-                      %ul.nav
-                        %li=link_to("Для отелей","/catalog/category.html")
-                        %li=link_to("Для ресторанов","/catalog/category.html")
-                        %li=link_to("Товары на складе","/catalog/category.html")
-                      %form.navbar-search.pull-right
-                        %input.search-query.input-medium{:type=>'text', :placeholder=>"Поиск по сайту"}
-              -if @breadcrumbs
-                = render :partial => "/layouts/breadcrumbs"
+          = render :partial => "/layouts/header"
         -if @middle
           = render :partial => "/layouts/middle"
         .main{:role=>"main"}
@@ -53,4 +18,6 @@
           = render :partial => "/layouts/footer"
     = javascript_include_tag "/ext/headjs/head.min"
     = render :partial => "/layouts/headjs"
+    -if @script == "contact"
+      = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'
     = javascript_include_tag @script

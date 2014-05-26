@@ -1,0 +1,13 @@
+-@view = {:title=>"Контакты", :description=>"Контакты", :keywords=>"Контаткты"}
+-@css = "contact"
+-@script = "contact"
+-@activeContact = "active"
+-@breadcrumbs = [{:path=>'contact',:name=>'Контакты'}]
+
+.row-fluid
+  .span12
+    %h1.unified.page-title= @view[:title]
+
+.row-fluid
+  .span12
+    .gmap#map

@@ -135,6 +135,14 @@ body{
 }
 .main{
   margin-bottom: 40px;
+  .price{
+    font: {
+      size: 22px;
+      weight: bold;
+    }
+    line-height: 30px;
+    color: #EA2125;//#9D9D00;
+  }
 }
 .footer{
   position: relative;
