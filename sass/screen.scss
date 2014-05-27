@@ -13,13 +13,15 @@ body{
     padding: 0 50px;
     background-color: #fff;
     @include box-shadow(rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px);
+    border:{
+      top: 15px solid #231f20;
+    }
   }
 }
-
 .header{
   margin:{
     bottom: 10px;
-    top: 25px;
+    top: 15px;
   }
   .logo{
     >span{

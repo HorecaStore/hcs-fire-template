@@ -1,4 +1,28 @@
+body{
+  overflow: auto;
+}
 #map{
   width: 1000px;
-  height: 350px;
+  height: 300px;
+  img {
+    max-width: none !important;
+  }
+}
+.address{
+  margin-bottom: 30px;
+  li {
+    margin-bottom: 5px;
+  }
+}
+.contact-form{
+  .text-input{
+    line-height: 30px;
+    padding:{
+      top: 18px;
+      bottom: 18px;
+    }
+  }
+  .text-area{
+    resize: vertical;
+  }
 }

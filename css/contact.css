@@ -1,1 +1,10 @@
-#map { width: 1000px; height: 350px; }
+body { overflow: auto; }
+
+#map { width: 1000px; height: 300px; }
+#map img { max-width: none !important; }
+
+.address { margin-bottom: 30px; }
+.address li { margin-bottom: 5px; }
+
+.contact-form .text-input { line-height: 30px; padding-top: 18px; padding-bottom: 18px; }
+.contact-form .text-area { resize: vertical; }
