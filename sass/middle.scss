@@ -1,0 +1,49 @@
+@import "compass/css3";
+.middle{
+  .head-contact{
+    margin-top: 35px;
+    color: #777;
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+    >span{
+      font:{
+        size: 11px;
+      }
+    }
+    .phone{
+      margin-bottom: 10px;
+      font:{
+        family: "PFDinDisplayProLight";
+        size: 28px;
+      }
+      line-height: normal;
+      >i{
+        font-size: 80%;
+      }
+    }
+  }
+  .catalog-menu{
+    font:{
+      size: 12px;
+      weight: 700;
+    }
+    text-transform: uppercase;
+    padding:{
+      top: 18px;
+      bottom: 0px;
+      left: 50px;
+      right: 50px;
+    }
+    margin-bottom: 10px;
+    @include box-shadow(rgba(0,0,0,.2) -1px 3px 6px);
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+    a {
+      color: #777;//#9D9D00;
+    }
+    background:{
+      image: image-url("bg_middle.png");
+      position: center center;
+      repeat: no-repeat;
+      color: #fff;
+    }
+  }
+}

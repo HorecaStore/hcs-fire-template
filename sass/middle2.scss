@@ -1,0 +1,89 @@
+@import "compass/css3";
+@import "variables";
+
+.middle{
+  .head-contact{
+    margin-top: 25px;
+    color: #777;
+    @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+    >span{
+      font:{
+        size: 11px;
+      }
+    }
+    .phone{
+      margin-bottom: 10px;
+      font:{
+        family: "PFDinDisplayProLight";
+        size: 28px;
+      }
+      line-height: normal;
+      >i{
+        font-size: 80%;
+      }
+    }
+  }
+  .catalog-menu{
+    font:{
+      //family: "PFDinDisplayProLight";
+      size: 13px;
+      weight: bold;
+    }
+    text-transform: uppercase;
+    color: rgb(2, 46, 101);
+    //padding: 10px;
+    //@include box-shadow(rgba(0,0,0,.2) -1px 2px 8px);
+    //@include text-shadow(rgba(255,255,255, 0.75) 0px 1px 1px);
+    .nav{
+      margin:{
+        top: 5px;
+        bottom: 0;
+      }
+      >li {
+        >a {
+          color: inherit;//#9D9D00;
+          line-height: normal;
+          margin-bottom: 8px;
+          &.pink{
+            &:before{
+              border-color: lighten($pink,45%);
+            }
+            &:hover{
+              background-color: lighten($pink,45%);
+            }
+          }
+          &.blue{
+            &:before{
+              border-color: lighten($blue,45%);
+            }
+            &:hover{
+              background-color: lighten($blue,45%);
+            }
+          }
+          &.yellow{
+            &:before{
+              border-color: lighten($yellow,25%);
+            }
+            &:hover{
+              background-color: lighten($yellow,35%);
+            }
+          }
+          &.green{
+            &:before{
+              border-color: lighten($green,45%);
+            }
+            &:hover{
+              background-color: lighten($green,45%);
+            }
+          }
+        }
+      }
+    }
+    background:{
+      //image: image-url("bg_middle.png");
+      position: center center;
+      repeat: no-repeat;
+      color: #fff;
+    }
+  }
+}

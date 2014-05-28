@@ -1,0 +1,15 @@
+.middle .head-contact { margin-top: 25px; color: #777; text-shadow: white 0px 1px 0px; }
+.middle .head-contact > span { font-size: 11px; }
+.middle .head-contact .phone { margin-bottom: 10px; font-family: "PFDinDisplayProLight"; font-size: 28px; line-height: normal; }
+.middle .head-contact .phone > i { font-size: 80%; }
+.middle .catalog-menu { font-size: 13px; font-weight: bold; text-transform: uppercase; color: #022e65; background-position: center center; background-repeat: no-repeat; background-color: #fff; }
+.middle .catalog-menu .nav { margin-top: 5px; margin-bottom: 0; }
+.middle .catalog-menu .nav > li > a { color: inherit; line-height: normal; margin-bottom: 8px; }
+.middle .catalog-menu .nav > li > a.pink:before { border-color: #f8e3e9; }
+.middle .catalog-menu .nav > li > a.pink:hover { background-color: #f8e3e9; }
+.middle .catalog-menu .nav > li > a.blue:before { border-color: #c7eefe; }
+.middle .catalog-menu .nav > li > a.blue:hover { background-color: #c7eefe; }
+.middle .catalog-menu .nav > li > a.yellow:before { border-color: #ffe38d; }
+.middle .catalog-menu .nav > li > a.yellow:hover { background-color: #fff0c0; }
+.middle .catalog-menu .nav > li > a.green:before { border-color: #dff1df; }
+.middle .catalog-menu .nav > li > a.green:hover { background-color: #dff1df; }

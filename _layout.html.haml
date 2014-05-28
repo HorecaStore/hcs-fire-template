@@ -8,7 +8,7 @@
         .header{:role=>"banner"}
           = render :partial => "/layouts/header"
         -if @middle
-          = render :partial => "/layouts/middle"
+          = render :partial => "/layouts/"+@middle
         .main{:role=>"main"}
           = yield
       .layout-footer
