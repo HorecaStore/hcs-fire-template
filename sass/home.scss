@@ -1,8 +1,20 @@
 @import "compass/css3";
 
 .main{
-  .news{
-    margin-bottom: 50px;
+  .price-list{
+    width: 90%;
+    .nav-header{
+      background-color: #e4e4e4;
+      @include border-radius(4px 4px 0px 0px);
+      >span{
+        padding:{
+          top: 4px;
+          bottom: 4px;
+        }
+        line-height: 20px;
+        display: block;
+      }
+    }
   }
   .products-recom{
     .recom-items{

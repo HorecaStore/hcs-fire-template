@@ -7,23 +7,12 @@
 .line.line-dotted
 .row-fluid
   .span3
-    %section.news.clearfix
-      %h2.unified Новости
-      -2.times do
-        .media
-          = link_to(image_tag(lorem_image("64x64"),:class=>'media-object'),'#', :class=>'pull-left')
-          .media-body
-            %h4.h4.media-heading Заголовок новости
-            .media= lorem_words(6)
-          =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
-    %section.action.clearfix
-      %h2.unified Внимание акция!!!
-      .media
-        = link_to(image_tag(lorem_image("64x64"),:class=>'media-object'),'#', :class=>'pull-left')
-        .media-body
-          %h4.h4.media-heading Наименование акции
-          .media= lorem_words(6)
-        =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
+    .price-list
+      %ul.nav.nav-tabs.nav-stacked
+        %li.nav-header
+          %span Скачать прайс листы
+        -12.times do
+          %li=link_to('<i class="fa fa-download fa-fw"></i>&nbsp; Раздел товара', '#', :title=>'Скачать прайс лист')
   .span9
     %section.about.clearfix
       %h2.unified О нас
@@ -39,7 +28,7 @@
             %li.span3
               .thumbnail.item.text-center
                 %h3.unified Название товара
-                = link_to(image_tag(lorem_image("140x120")),'/catalog/category/group/item.html')
+                = link_to(image_tag(lorem_image("140x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
                 .captions.clearfix
                   %span.price.pull-left<
                     1500

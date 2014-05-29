@@ -2,16 +2,6 @@
 @import "compass/layout";
 @import "compass/css3";
 
-.img-hover{
-  margin:{
-    bottom: 10px;
-    right: 20px;
-  }
-  @include single-transition(all, 0.2s, ease-in-out, false);
-  &:hover{
-    @include box-shadow(rgba(0,0,0,0.1) 6px 6px 6px);
-  }
-}
 .thumbnails{
   .img-hover{
     margin: inherit;
