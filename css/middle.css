@@ -2,5 +2,5 @@
 .middle .head-contact > span { font-size: 11px; }
 .middle .head-contact .phone { margin-bottom: 10px; font-family: "PFDinDisplayProLight"; font-size: 28px; line-height: normal; }
 .middle .head-contact .phone > i { font-size: 80%; }
-.middle .catalog-menu { font-size: 12px; font-weight: 700; text-transform: uppercase; padding-top: 18px; padding-bottom: 0px; padding-left: 50px; padding-right: 50px; margin-bottom: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) -1px 3px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.2) -1px 3px 6px; box-shadow: rgba(0, 0, 0, 0.2) -1px 3px 6px; text-shadow: white 0px 1px 0px; background-image: url('/img/bg_middle.png?1400571669'); background-position: center center; background-repeat: no-repeat; background-color: #fff; }
+.middle .catalog-menu { font-size: 12px; font-weight: 700; text-transform: uppercase; padding-top: 18px; padding-bottom: 0px; padding-left: 50px; padding-right: 50px; margin-bottom: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) -1px 3px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.2) -1px 3px 6px; box-shadow: rgba(0, 0, 0, 0.2) -1px 3px 6px; text-shadow: white 0px 1px 0px; background-image: url('/img/bg_middle.png'); background-position: center center; background-repeat: no-repeat; background-color: #fff; }
 .middle .catalog-menu a { color: #777; }

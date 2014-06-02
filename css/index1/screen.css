@@ -53,7 +53,7 @@ h1.page-title, h2.page-title, h3.page-title, h4.page-title, h5.page-title, h6.pa
 .header .main-menu { text-shadow: white 0px 1px 0px; }
 .header .main-menu .navbar { margin-bottom: 0; }
 .header .main-menu .navbar .navbar-search .search-query { font-size: 11px; line-height: 20px; margin-top: 2px; padding-top: 2px; padding-bottom: 2px; }
-.header .head-contact { color: #777; text-shadow: white 0px 1px 0px; }
+.header .head-contact { text-shadow: white 0px 1px 0px; }
 .header .head-contact > span { font-size: 11px; }
 .header .head-contact .phone { margin-bottom: 10px; font-family: "PFDinDisplayProLight"; font-size: 32px; line-height: normal; }
 .header .head-contact .phone > i { font-size: 80%; }
@@ -73,5 +73,5 @@ h1.page-title, h2.page-title, h3.page-title, h4.page-title, h5.page-title, h6.pa
 .main { margin-bottom: 40px; }
 .main .price { font-size: 22px; font-weight: bold; line-height: 30px; color: #EA2125; }
 
-.footer { position: relative; background-color: #727272; color: #f5f5f5; font-size: 12px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; }
+.footer { position: relative; background-color: rgba(0, 0, 0, 0.05); color: #f5f5f5; font-size: 12px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; }
 .footer .container { padding-top: 20px; }
