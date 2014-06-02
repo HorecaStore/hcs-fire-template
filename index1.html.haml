@@ -1,0 +1,30 @@
+-@view = {:title=>"HoReCa store для отелей и ресторанов", :description=>"HoReCa store для отелей и ресторанов", :keywords=>"Horeca store, для отелей, для ресторанов"}
+-#@css = "home"
+-@script = "home"
+
+/
+  .line.line-dotted
+  %section.products-recom
+    %h2.unified Рекомендованные товары
+    .row-fluid
+      %ul.thumbnails.recom-items
+        -4.times do
+          %li.span3
+            .thumbnail.item.text-center
+              %h3.unified Название товара
+              = link_to(image_tag(lorem_image("140x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
+              .captions.clearfix
+                %span.price.pull-left<
+                  1500
+                  %i.fa.fa-rub.fa-fw
+                %a.btn.pull-right
+                  %i.fa.fa-shopping-cart.fa-fw
+  .line.line-dotted
+  .row-fluid
+    .span12
+      %section.clients
+        %h2.unified Наши клиенты
+        .carousel_clients
+          -12.times do
+            .text-center= image_tag(lorem_image("140x100"))
+
