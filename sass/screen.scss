@@ -1,6 +1,6 @@
 @import "base";
 @import "fonts";
-@include sticky-footer(250px, ".layout", ".layout-footer", ".footer");
+@include sticky-footer(270px, ".layout", ".layout-footer", ".footer");
 
 body{
   //@include red-box(true);
@@ -10,13 +10,18 @@ body{
     repeat: repeat;
   }
   overflow: hidden;
-  .wrapper{
-    padding: 0 50px;
+}
+.wrapper{
+  padding: 0 50px;
+  @include box-shadow(rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px);
+  &.layout{
     background-color: #fff;
-    @include box-shadow(rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px);
     border:{
       top: 15px solid #231f20;
     }
+  }
+  .footer &{
+    background-color: #231f20;
   }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -81,6 +86,10 @@ h1, h2, h3, h4, h5, h6 {
 .line-dotted{
   border-bottom: 1px dotted #524E4E;
   border-top: 0;
+}
+.line-solid{
+  background-color: #ccc;
+  border-bottom: 1px solid #F9F9F9;
 }
 .header{
   margin:{
@@ -194,10 +203,53 @@ h1, h2, h3, h4, h5, h6 {
 .footer{
   position: relative;
   background-color: #727272;
-  color: #f5f5f5;
+  color: #999;//#f5f5f5;
   font-size: 12px;
-  @include box-shadow (rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset);
+  //@include box-shadow (rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset);
   .container{
     padding-top: 20px;
   }
+  .copyright{
+    margin:{
+      bottom: 20px;
+    }
+  }
+  .nav{
+    .nav-header{
+      border:{
+        bottom: 1px dotted #524E4E;
+      }
+      margin:{
+        bottom: 10px;
+        right: 25px;
+      }
+      padding:{
+        top: 0;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+      }
+      text-shadow: none;
+      font:{
+        size: 13px;
+      }
+    }
+    >li{
+      >a{
+        display: inline-block;
+        color: inherit;
+        border-bottom: 1px dashed #999;
+        &:hover{
+          color: darken(#fff, 15%);
+          border-bottom-style: solid;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .line-solid{
+    background-color: darken(#231f20, 15%);
+    border-bottom: 1px solid lighten(#231f20, 15%);
+  }
+
 }

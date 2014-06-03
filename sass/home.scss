@@ -1,44 +1,77 @@
-@import "compass/css3";
+@import "base";
+//$group: sprite-map("group/*.png", $position: 100%, $spacing: 5px, $repeat: no-repeat);
 
 .main{
-  .price-list{
-    width: 90%;
-    .nav-header{
-      background-color: #e4e4e4;
-      @include border-radius(4px 4px 0px 0px);
-      >span{
-        padding:{
-          top: 4px;
-          bottom: 4px;
-        }
-        line-height: 20px;
-        display: block;
+  h1{
+    >small{
+      display: block;
+      font:{
+        weight: normal;
+        size: initial;
       }
     }
   }
-  .products-recom{
-    .recom-items{
-      .item{
-        h3{
-          background-color: #e4e4e4;
-          color: #6e6e6e;
-          font:{
-            family: arial,tahoma,sans-serif;
-            size: 14px;
-          }
-          margin-bottom: 40px;
-          padding: 10px 0;
+  blockquote{
+    margin-top: 5px;
+  }
+  .action-price{
+    .thumbnail {
+      h3{
+        background-color: #e4e4e4;
+        color: #6e6e6e;
+        font:{
+          family: arial,tahoma,sans-serif;
+          size: 14px;
         }
-        .captions{
-          margin:{
-            top: 20px;
-            bottom: 20px;
-          }
-          padding: 0 15px;
+        margin-bottom: 8px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .captions{
+      text-align: left;
+      margin:{
+        top: 10px;
+        bottom: 10px;
+      }
+      padding: 0 15px;
+    }
+  }
+  .groups-list{
+    @include justified-grid(100%, 4);
+    .group-list-item{
+      >a{
+        display: block;
+        position: relative;
+        width: 201px;
+        height: 150px;
+        background:{
+          color: #EBECEC;
+          //image: sprite($group, 1);
         }
-        &.thumbnail {
-          padding: 0;
-          background-color: #f5f5f5;
+        border:{
+          top: 5px solid white;
+          left: 5px solid white;
+          right: 5px solid white;
+          bottom: 40px solid white;
+        };
+        margin:{
+          bottom: 10px;
+        }
+        @include box-shadow(rgba(0, 0, 0, 0.3) 1px 1px 3px);
+        @include single-transition(all, 0.1s, ease-in-out, false);
+        &:hover{
+          cursor: pointer;
+          @include box-shadow(rgba(0,0,0,0.3) 6px 6px 6px);
+        }
+        >span{
+          content:"Группа товара";
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          width: 100%;
         }
       }
     }

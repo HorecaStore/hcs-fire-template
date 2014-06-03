@@ -3,17 +3,16 @@
   %head
     = render :partial => "/layouts/head"
   %body
-    .layout
-      .container.wrapper
-        .header{:role=>"banner"}
-          = render :partial => "/layouts/header"
-        -if @middle
-          = render :partial => "/layouts/"+@middle
-        .main{:role=>"main"}
-          = yield
+    .container.layout.wrapper
+      .header{:role=>"banner"}
+        = render :partial => "/layouts/header"
+      -if @middle
+        = render :partial => "/layouts/"+@middle
+      .main{:role=>"main"}
+        = yield
       .layout-footer
     .footer{:role=>"contentinfo"}
-      .container
+      .container.wrapper
         .row
           = render :partial => "/layouts/footer"
     = javascript_include_tag "/ext/headjs/head.min"

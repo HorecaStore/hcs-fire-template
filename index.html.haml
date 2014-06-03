@@ -1,40 +1,47 @@
--@view = {:title=>"Главная", :description=>"Главная", :keywords=>"Главная"}
+-@view = {:title=>"HoReCa Store - для отелей и ресторанов", :description=>"HoReCa Store. Поставки полного спектра текстильных изделий высокого качества, используемых в отельном и ресторанном бизнесе. Номерная косметика и средства личной гигиены.", :keywords=>"Главная"}
 -@css = "home"
 -@script = "home"
 
--@middle = "middle2"
+-#@middle = "middle2"
 
+.row
+  .span5.offset1
+    %h1
+      HoReCa Store
+      %small - для отелей и ресторанов
+  .span6
+    %blockquote
+      %span Поставки полного спектра текстильных изделий высокого качества, используемых в отельном и ресторанном бизнесе. Номерная косметика и средства личной гигиены.
+.groups-list
+  -12.times do
+    .group-list-item
+      = link_to('<span>Название группы</span>', '/catalog/category/group/item.html')
 .line.line-dotted
 .row-fluid
-  .span3
-    .price-list
-      %ul.nav.nav-tabs.nav-stacked
-        %li.nav-header
-          %span Скачать прайс листы
-        -12.times do
-          %li=link_to('<i class="fa fa-download fa-fw"></i>&nbsp; Раздел товара', '#', :title=>'Скачать прайс лист')
-  .span9
+  .span6
     %section.about.clearfix
       %h2.unified О нас
       %p Компания HoReCa Store начала свою деятельность в 2011 году с организации розничных продаж домашнего текстиля. За несколько лет накоплен большой опыт, критическая масса поставщиков более чем из десяти стран мира.
       %p В данный момент HoReCa Store - профессиональный поставщик широкого перечня товаров используемых в работе гостиничных и ресторанных сетей, для которых дизайн и качество продукции является ключом к успеху...
       =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
-    .line.line-dotted
-    %section.products-recom
-      %h2.unified Рекомендованные товары
+  .span6
+    %section.action-price
       .row-fluid
-        %ul.thumbnails.recom-items
-          -4.times do
-            %li.span3
-              .thumbnail.item.text-center
-                %h3.unified Название товара
-                = link_to(image_tag(lorem_image("140x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
-                .captions.clearfix
-                  %span.price.pull-left<
-                    1500
-                    %i.fa.fa-rub.fa-fw
-                  %a.btn.pull-right
-                    %i.fa.fa-shopping-cart.fa-fw
+        %ul.thumbnails
+          %li.span5.offset1
+            .thumbnail.text-center
+              %h3.unified Акция
+              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
+              .captions
+                %div=lorem_words(8)
+                %p.text-right= link_to('Подробнее...', '#', :class=>'btn btn-link')
+          %li.span5.offset1
+            .thumbnail.text-center
+              %h3.unified Наши прайс листы
+              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
+              .captions
+                %div=lorem_words(8)
+                %p.text-right= link_to('Скачать...', '#', :class=>'btn btn-link')
 .line.line-dotted
 .row-fluid
   .span12

@@ -21,7 +21,8 @@
   @include box-shadow(rgba(0,0,0, 0.2) 5px 5px 5px, rgba(0, 0, 0, 0.3) 0px 0px 2px);
 }
 
-@mixin justified-grid($wrap-width: 100%, $item-width: 32%){
+@mixin justified-grid($wrap-width: 100%, $item-line-count: 3){
+  $item-width: $wrap-width/$item-line-count;
   width: $wrap-width;
   text-align: justify;
   font-size: 0;
@@ -34,7 +35,7 @@
     zoom: 1;
     *display: inline; /* IE stuff again */
   }
-  &:after{
+  &:after, &:before{
     content: "";
     width: 100%;
     display: inline-block;
@@ -68,5 +69,13 @@
     -ms-flex: 1;
     flex: 1;
     -ms-flex-preferred-size: auto;
+  }
+}
+
+@mixin box-hover-shadow(){
+  @include single-transition(all, 0.2s, ease-in-out, false);
+  &:hover{
+    cursor: pointer;
+    @include box-shadow(rgba(0,0,0,0.1) 6px 6px 6px);
   }
 }

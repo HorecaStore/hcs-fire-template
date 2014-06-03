@@ -1,6 +1,11 @@
-.main .price-list { width: 90%; }
-.main .price-list .nav-header { background-color: #e4e4e4; -webkit-border-radius: 4px 4px 0px 0px; -moz-border-radius: 4px 4px 0px 0px; -ms-border-radius: 4px 4px 0px 0px; -o-border-radius: 4px 4px 0px 0px; border-radius: 4px 4px 0px 0px; }
-.main .price-list .nav-header > span { padding-top: 4px; padding-bottom: 4px; line-height: 20px; display: block; }
-.main .products-recom .recom-items .item h3 { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; margin-bottom: 40px; padding: 10px 0; }
-.main .products-recom .recom-items .item .captions { margin-top: 20px; margin-bottom: 20px; padding: 0 15px; }
-.main .products-recom .recom-items .item.thumbnail { padding: 0; background-color: #f5f5f5; }
+.main h1 > small { display: block; font-weight: normal; font-size: initial; }
+.main blockquote { margin-top: 5px; }
+.main .action-price .thumbnail { padding: 0; background-color: #f5f5f5; }
+.main .action-price .thumbnail h3 { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; margin-bottom: 8px; padding: 10px 0; border-bottom: 1px solid #ddd; }
+.main .action-price .captions { text-align: left; margin-top: 10px; margin-bottom: 10px; padding: 0 15px; }
+.main .groups-list { width: 100%; text-align: justify; font-size: 0; font-size: 12px\9; /* IE6-9 only fix */ }
+.main .groups-list > div { width: 25%; display: inline-block; font-size: initial; text-align: center; zoom: 1; *display: inline; /* IE stuff again */ }
+.main .groups-list:after, .main .groups-list:before { content: ""; width: 100%; display: inline-block; zoom: 1; *display: inline; }
+.main .groups-list .group-list-item > a { display: block; position: relative; width: 201px; height: 150px; background-color: #EBECEC; border-top: 5px solid white; border-left: 5px solid white; border-right: 5px solid white; border-bottom: 40px solid white; margin-bottom: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+.main .groups-list .group-list-item > a:hover { cursor: pointer; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; }
+.main .groups-list .group-list-item > a > span { content: "Группа товара"; position: absolute; bottom: -30px; left: 0; width: 100%; }
