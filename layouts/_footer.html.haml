@@ -1,12 +1,22 @@
 .row-fluid
   .span4
-    %ul.nav.fa-ul
+    %ul.nav.contact
       %li.nav-header Контакты
       %li 199397, Россия, г. Санкт-Петербург, ул. Кораблестроителей, дом 30, к.3, пом. 70н
       %li Телефон: 8(812)305-60-20
       %li Мобильный телефон: +7(921)420-77-20
+      %li Мы работаем ежедневно с 9:00 до 18:00
       %li= "Электронная почта:&nbsp;#{mail_to 'alex@horecastore.ru'}"
-  .span4
-  .span4
+  .span3.offset1
+    %ul.nav
+      %li.nav-header Быстрые ссылки
+      %li= link_to('О компании', '#')
+      %li= link_to('Каталог', '#')
+      %li= link_to('Акции', '#')
+      %li= link_to('Прайс листы', '#')
+      %li= link_to('Личный кабинет', '#')
+      %li= link_to('Заказ товара', '#')
+  .span3.offset1
+    .social
 .line.line-solid
 .copyright.text-center © HoReCa Store 2014

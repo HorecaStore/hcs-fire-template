@@ -6,16 +6,37 @@
 
 .row
   .span5.offset1
-    %h1
+    %h1.text-info
       HoReCa Store
       %small - для отелей и ресторанов
   .span6
     %blockquote
       %span Поставки полного спектра текстильных изделий высокого качества, используемых в отельном и ресторанном бизнесе. Номерная косметика и средства личной гигиены.
 .groups-list
-  -12.times do
-    .group-list-item
-      = link_to('<span>Название группы</span>', '/catalog/category/group/item.html')
+  .group-list-item.bathrobe
+    = link_to('<span>Халаты</span>', '/catalog/category/group.html')
+  .group-list-item.towel
+    = link_to('<span>Полотенца</span>', '/catalog/category/group.html')
+  .group-list-item.bed
+    = link_to('<span>Постель</span>', '/catalog/category/group.html')
+  .group-list-item.sneakers
+    = link_to('<span>Тапочки</span>', '/catalog/category/group.html')
+  .group-list-item.bedspreads
+    = link_to('<span>Покрывала</span>', '/catalog/category/group.html')
+  .group-list-item.toppers
+    = link_to('<span>Наматрасники</span>', '/catalog/category/group.html')
+  .group-list-item.pillows
+    = link_to('<span>Подушки</span>', '/catalog/category/group.html')
+  .group-list-item.mattress
+    = link_to('<span>Матрасы</span>', '/catalog/category/group.html')
+  .group-list-item.cosmetics
+    = link_to('<span>Косметика для номеров</span>', '/catalog/category/group.html')
+  .group-list-item.tablecloth
+    = link_to('<span>Скатерти</span>', '/catalog/category/group.html')
+  .group-list-item.napkin
+    = link_to('<span>Салфетки</span>', '/catalog/category/group.html')
+  .group-list-item.tableware
+    = link_to('<span>Посуда</span>', '/catalog/category/group.html')
 .line.line-dotted
 .row-fluid
   .span6
@@ -31,14 +52,14 @@
           %li.span5.offset1
             .thumbnail.text-center
               %h3.unified Акция
-              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
+              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group.html')
               .captions
                 %div=lorem_words(8)
                 %p.text-right= link_to('Подробнее...', '#', :class=>'btn btn-link')
           %li.span5.offset1
             .thumbnail.text-center
               %h3.unified Наши прайс листы
-              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group/item.html')
+              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group.html')
               .captions
                 %div=lorem_words(8)
                 %p.text-right= link_to('Скачать...', '#', :class=>'btn btn-link')

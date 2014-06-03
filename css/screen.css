@@ -15,7 +15,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 270px; }
 
-body { background-image: url('/img/body.jpg?1400756304'); background-position: 0 0; background-repeat: repeat; overflow: hidden; }
+body { background-image: url('/img/body.jpg?1401740234'); background-position: 0 0; background-repeat: repeat; overflow: hidden; }
 
 .wrapper { padding: 0 50px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; }
 .wrapper.layout { background-color: #fff; border-top: 15px solid #231f20; }
@@ -49,6 +49,7 @@ h1.page-title, h2.page-title, h3.page-title, h4.page-title, h5.page-title, h6.pa
 .line-solid { background-color: #ccc; border-bottom: 1px solid #F9F9F9; }
 
 .header { margin-bottom: 10px; margin-top: 15px; }
+.header .logo { margin-top: 4px; }
 .header .logo > span { width: 149px; font-family: "PFDinDisplayProLight"; font-size: 11px; text-transform: uppercase; display: block; }
 .header .top-menu { margin-bottom: 22px; margin-top: 5px; font-size: 13px; }
 .header .top-menu .navbar .divider-vertical { border-right-color: #909090; }
@@ -73,6 +74,8 @@ h1.page-title, h2.page-title, h3.page-title, h4.page-title, h5.page-title, h6.pa
 .footer .container { padding-top: 20px; }
 .footer .copyright { margin-bottom: 20px; }
 .footer .nav .nav-header { border-bottom: 1px dotted #524E4E; margin-bottom: 10px; margin-right: 25px; padding-top: 0; padding-bottom: 3px; padding-left: 0; padding-right: 0; text-shadow: none; font-size: 13px; }
-.footer .nav > li > a { display: inline-block; color: inherit; border-bottom: 1px dashed #999; }
-.footer .nav > li > a:hover { color: #d9d9d9; border-bottom-style: solid; background-color: transparent; }
+.footer .nav > li > a { display: inline-block; color: inherit; }
+.footer .nav > li > a:hover { color: #d9d9d9; background-color: transparent; }
+.footer .nav.contact > li > a { border-bottom: 1px dashed #999; }
+.footer .nav.contact > li > a:hover { border-bottom-style: solid; }
 .footer .line-solid { background-color: black; border-bottom: 1px solid #4c4345; }

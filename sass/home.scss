@@ -1,9 +1,10 @@
 @import "base";
-//$group: sprite-map("group/*.png", $position: 100%, $spacing: 5px, $repeat: no-repeat);
 
 .main{
   h1{
+    @include text-shadow(5px 3px 8px rgba(0,0,0,0.3));
     >small{
+      color: #777;
       display: block;
       font:{
         weight: normal;
@@ -49,7 +50,6 @@
         height: 150px;
         background:{
           color: #EBECEC;
-          //image: sprite($group, 1);
         }
         border:{
           top: 5px solid white;
@@ -73,6 +73,42 @@
           left: 0;
           width: 100%;
         }
+      }
+      &.bathrobe>a{
+        background: sprite($group-sprite, bathrobe);
+      }
+      &.towel>a{
+        background: sprite($group-sprite, towel);
+      }
+      &.bed>a{
+        background: sprite($group-sprite, bed);
+      }
+      &.sneakers>a{
+        background: sprite($group-sprite, sneakers);
+      }
+      &.bedspreads>a{
+        background: sprite($group-sprite, bedspreads);
+      }
+      &.toppers>a{
+        background: sprite($group-sprite, toppers);
+      }
+      &.pillows>a{
+        background: sprite($group-sprite, pillows);
+      }
+      &.mattress>a{
+        background: sprite($group-sprite, mattress);
+      }
+      &.cosmetics>a{
+        background: sprite($group-sprite, cosmetics);
+      }
+      &.tablecloth>a{
+        background: sprite($group-sprite, tablecloth);
+      }
+      &.napkin>a{
+        background: sprite($group-sprite, napkin);
+      }
+      &.tableware>a{
+        background: sprite($group-sprite, tableware);
       }
     }
   }

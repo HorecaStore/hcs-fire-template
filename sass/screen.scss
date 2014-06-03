@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 15px;
   }
   .logo{
+    margin-top: 4px;
     >span{
       width: 149px;
       font:{
@@ -238,11 +239,19 @@ h1, h2, h3, h4, h5, h6 {
       >a{
         display: inline-block;
         color: inherit;
-        border-bottom: 1px dashed #999;
         &:hover{
           color: darken(#fff, 15%);
-          border-bottom-style: solid;
           background-color: transparent;
+        }
+      }
+    }
+    &.contact{
+      >li{
+        >a{
+          border-bottom: 1px dashed #999;
+          &:hover{
+            border-bottom-style: solid;
+          }
         }
       }
     }
