@@ -1,8 +1,12 @@
 .row
   .span3
-    .logo
-      =link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store"), "/")
-      -#%span.text-center Для отелей и ресторанов
+    .logo{:itemscope=>"itemscope", :itemtype=>"http://schema.org/Organization"}
+      %meta{:itemprop=>"name", :content=>"HoReCa Store"}/
+      %meta{:itemprop=>"telephone", :content=>"8(812) 305 6020"}/
+      %span{:itemprop=>"address", :itemscope=>"itemscope", :itemtype=>"http://schema.org/PostalAddress"}
+        %meta{:itemprop=>"addressCountry", :content=>"Россия"}/
+        %meta{:itemprop=>"addressLocality", :content=>"Санкт-Петербург"}/
+      =link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store", :itemprop=>"logo"), "/", :itemprop=>"url")
   .span9
     .row-fluid
       .span4.head-contact

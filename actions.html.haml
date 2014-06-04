@@ -1,0 +1,21 @@
+-@view = {:title=>"Акции", :description=>"Акции", :keywords=>"Акции"}
+-@css = "action"
+-@script = "script"
+-@breadcrumbs = [{:path=>'actions',:name=>'Акции'}]
+
+.row-fluid
+  .span9.offset3
+    %h1.unified.page-title= @view[:title]
+
+.row-fluid
+  .span3
+    %ul.media-menu
+      %li.nav-header Последние акции
+      -3.times do
+        %li
+          .media
+            = link_to(image_tag(lorem_image("64x64"), :class=>"media-object img-hover"), '/text.html',:class=>"pull-left")
+            .media-body
+              .media-head Заголовок акции
+              %p= lorem_words(8)
+  .span9

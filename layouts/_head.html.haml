@@ -3,7 +3,29 @@
 %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
 %meta{:name=>'description', :content=>@view[:description] || "Horeca store - Для отелей и ресторанов" }/
 %meta{:name=>'keywords', :content=>@view[:description] || "Horeca store - Для отелей и ресторанов" }/
-/%link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+%link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+/Apple iOS
+%link{:rel=>"apple-touch-icon", :href=>"/img/favicons/touch-icon-iphone.png"}/
+%link{:rel=>"apple-touch-icon", :sizes=>"76x76", :href=>"/img/favicons/touch-icon-ipad.png"}/
+%link{:rel=>"apple-touch-icon", :sizes=>"120x120", :href=>"/img/favicons/touch-icon-iphone-retina.png"}/
+%link{:rel=>"apple-touch-icon", :sizes=>"156x156", :href=>"/img/favicons/touch-icon-ipad-retina.png"}/
+/facebook meta
+%meta{:property=>"og:url", :content=>"http://horecastore.ru"}
+%meta{:property=>"og:title", :content=>@view[:title] || "Horeca store - Для отелей и ресторанов"}
+%meta{:property=>"og:type", :content=>"website"}
+%meta{:property=>"og:site_name", :content=>"HoReCa Store"}
+%meta{:property=>"og:image", :content=>"/img/logo/logo-top.png"}
+%meta{:property=>"og:description", :content=>@view[:description]}
+/win meta
+%meta{:name=>"application-name", :content=>"HoReCa Store"}
+%meta{:name=>"msapplication-TileImage", :content=>"/img/logo/logo-top.png"}
+%meta{:name=>"msapplication-TileColor", :content=>"#ffffff"}
+/twitter meta
+%meta{:name=>"twitter:card", :content=>"summary"}
+%meta{:name=>"twitter:description", :content=>@view[:description]}
+%meta{:name=>"twitter:site", :content=>"@HoReCa_Store"}
+%meta{:name=>"twitter:title", :content=>@view[:title] || "Horeca store - Для отелей и ресторанов"}
+%meta{:name=>"twitter:url", :content=>"http://horecastore.ru"}
 = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
 = stylesheet_link_tag "font-awesome/font-awesome", :media=>"screen, projection"
 = stylesheet_link_tag "/ext/slick/slick", :media=>"screen, projection"

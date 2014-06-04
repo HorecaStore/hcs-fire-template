@@ -1,0 +1,19 @@
+-@view = {:title=>"Текстовая страница", :description=>"Текстовая страница", :keywords=>"Текстовая страница"}
+-@css = "text"
+-@script = "text"
+-@breadcrumbs = [{:path=>'text',:name=>'Текстовая страница'}]
+
+.row-fluid
+  .span9.offset3
+    %h1.unified.page-title= @view[:title]
+
+.row-fluid
+  .span3
+    %ul.nav.nav-tabs.nav-stacked.left-menu
+      %li.nav-header Каталог
+      -12.times do
+        %li= link_to("Группа товаров #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group.html')
+  .span9
+    .img-content.pull-left= image_tag(lorem_image("300x200"), :class=>"img-polaroid")
+    -6.times do
+      %p=lorem_paragraph

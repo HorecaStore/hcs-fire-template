@@ -1,5 +1,7 @@
 @import "base";
-
+.header{
+  margin-bottom: 25px;
+}
 .main{
   h1{
     @include text-shadow(5px 3px 8px rgba(0,0,0,0.3));
@@ -48,6 +50,7 @@
         position: relative;
         width: 201px;
         height: 150px;
+        margin: 0 auto;
         background:{
           color: #EBECEC;
         }

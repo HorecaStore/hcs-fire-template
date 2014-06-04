@@ -1,8 +1,7 @@
 -@view = {:title=>"О компании", :description=>"О компании", :keywords=>"О компании"}
--@css = "contact"
--@script = "contact"
--@activeContact = "active"
--@breadcrumbs = [{:path=>'contact',:name=>'О компании'}]
+-@css = "about"
+-@script = "home"
+-@breadcrumbs = [{:path=>'about',:name=>'О компании'}]
 
 .row-fluid
   .span9.offset3
@@ -10,4 +9,30 @@
 
 .row-fluid
   .span3
+    %ul.nav.nav-tabs.nav-stacked.left-menu
+      %li.nav-header Каталог
+      -12.times do
+        %li= link_to("Группа товаров #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group.html')
   .span9
+    .img-content.pull-left= image_tag(lorem_image("300x200"), :class=>"img-polaroid", :alt=>"HoReCa Store")
+    -5.times do
+      %p=lorem_paragraph
+    .line.line-dotted
+    .row-fluid
+      .span6
+        %h2.unified Наш ассортимент
+        .img-content.pull-left= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
+        -2.times do
+          %p=lorem_paragraph
+      .span6
+        %h2.unified Наши услуги
+        .img-content.pull-left= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
+        -2.times do
+          %p=lorem_paragraph
+    .line.line-dotted
+    .row-fluid
+      .span12.clients
+        %h2.unified Наши клиенты
+        .carousel_clients
+          -12.times do
+            .text-center= image_tag(lorem_image("100x80"), :alt=>"HoReCa Store")

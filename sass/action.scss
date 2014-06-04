@@ -1,0 +1,40 @@
+@import "base";
+.media-menu{
+  font:{
+    size: 13px;
+  }
+  .nav-header{
+    color:#777;
+    border-bottom: 1px dotted #524E4E;
+    margin:{
+      bottom: 10px;
+    }
+    padding:{
+      top: 0;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+    }
+    font:{
+      size: 13px;
+    }
+  }
+  .media{
+    margin:{
+      bottom: 10px;
+    }
+    .media-object{
+      margin-right: 8px;
+    }
+    .media-body{
+      .media-head{
+        font:{
+          weight: bold;
+        }
+        margin:{
+          bottom: 5px;
+        }
+      }
+    }
+  }
+}

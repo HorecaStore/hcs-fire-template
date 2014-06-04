@@ -1,0 +1,5 @@
+.media-menu { font-size: 13px; }
+.media-menu .nav-header { color: #777; border-bottom: 1px dotted #524E4E; margin-bottom: 10px; padding-top: 0; padding-bottom: 3px; padding-left: 0; padding-right: 0; font-size: 13px; }
+.media-menu .media { margin-bottom: 10px; }
+.media-menu .media .media-object { margin-right: 8px; }
+.media-menu .media .media-body .media-head { font-weight: bold; margin-bottom: 5px; }

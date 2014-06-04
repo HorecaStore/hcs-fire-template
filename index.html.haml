@@ -44,7 +44,7 @@
       %h2.unified О нас
       %p Компания HoReCa Store начала свою деятельность в 2011 году с организации розничных продаж домашнего текстиля. За несколько лет накоплен большой опыт, критическая масса поставщиков более чем из десяти стран мира.
       %p В данный момент HoReCa Store - профессиональный поставщик широкого перечня товаров используемых в работе гостиничных и ресторанных сетей, для которых дизайн и качество продукции является ключом к успеху...
-      =link_to("Подробнее...","#", :class=>"btn btn-link pull-right")
+      =link_to("Подробнее...","/about.html", :class=>"btn btn-link pull-right")
   .span6
     %section.action-price
       .row-fluid
@@ -52,17 +52,17 @@
           %li.span5.offset1
             .thumbnail.text-center
               %h3.unified Акция
-              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group.html')
+              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover", :alt=>"HoReCa Store"),'/text.html')
               .captions
                 %div=lorem_words(8)
-                %p.text-right= link_to('Подробнее...', '#', :class=>'btn btn-link')
+                %p.text-right= link_to('Подробнее...', '/text.html', :class=>'btn btn-link')
           %li.span5.offset1
             .thumbnail.text-center
               %h3.unified Наши прайс листы
-              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover"),'/catalog/category/group.html')
+              = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover", :alt=>"HoReCa Store"),'/text.html')
               .captions
                 %div=lorem_words(8)
-                %p.text-right= link_to('Скачать...', '#', :class=>'btn btn-link')
+                %p.text-right= link_to('Скачать...', '/text.html', :class=>'btn btn-link')
 .line.line-dotted
 .row-fluid
   .span12
@@ -70,5 +70,5 @@
       %h2.unified Наши клиенты
       .carousel_clients
         -12.times do
-          .text-center= image_tag(lorem_image("140x100"))
+          .text-center= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
 

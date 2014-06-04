@@ -1,3 +1,5 @@
+.header { margin-bottom: 25px; }
+
 .main h1 { text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.3); }
 .main h1 > small { color: #777; display: block; font-weight: normal; font-size: initial; }
 .main blockquote { margin-top: 5px; }
@@ -7,7 +9,7 @@
 .main .groups-list { width: 100%; text-align: justify; font-size: 0; font-size: 12px\9; /* IE6-9 only fix */ }
 .main .groups-list > div { width: 25%; display: inline-block; font-size: initial; text-align: center; zoom: 1; *display: inline; /* IE stuff again */ }
 .main .groups-list:after, .main .groups-list:before { content: ""; width: 100%; display: inline-block; zoom: 1; *display: inline; }
-.main .groups-list .group-list-item > a { display: block; position: relative; width: 201px; height: 150px; background-color: #EBECEC; border-top: 5px solid white; border-left: 5px solid white; border-right: 5px solid white; border-bottom: 40px solid white; margin-bottom: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+.main .groups-list .group-list-item > a { display: block; position: relative; width: 201px; height: 150px; margin: 0 auto; background-color: #EBECEC; border-top: 5px solid white; border-left: 5px solid white; border-right: 5px solid white; border-bottom: 40px solid white; margin-bottom: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .main .groups-list .group-list-item > a:hover { cursor: pointer; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; }
 .main .groups-list .group-list-item > a > span { content: "Группа товара"; position: absolute; bottom: -30px; left: 0; width: 100%; }
 .main .groups-list .group-list-item.bathrobe > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -1248px; }

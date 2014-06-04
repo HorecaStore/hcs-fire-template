@@ -5,18 +5,30 @@
       %li 199397, Россия, г. Санкт-Петербург, ул. Кораблестроителей, дом 30, к.3, пом. 70н
       %li Телефон: 8(812)305-60-20
       %li Мобильный телефон: +7(921)420-77-20
-      %li Мы работаем ежедневно с 9:00 до 18:00
       %li= "Электронная почта:&nbsp;#{mail_to 'alex@horecastore.ru'}"
+      %li Мы работаем ежедневно с 9:00 до 18:00
+    %ul.nav.fa-ul
+      %li= link_to('<i class="fa fa-li fa-list-alt fa-fw"></i>&nbsp;Форма обратной связи', "/contact.html")
   .span3.offset1
-    %ul.nav
+    %ul.nav.fa-ul
       %li.nav-header Быстрые ссылки
-      %li= link_to('О компании', '#')
-      %li= link_to('Каталог', '#')
-      %li= link_to('Акции', '#')
-      %li= link_to('Прайс листы', '#')
-      %li= link_to('Личный кабинет', '#')
-      %li= link_to('Заказ товара', '#')
-  .span3.offset1
-    .social
+      %li= link_to('<i class="fa fa-li fa-desktop fa-fw"></i>&nbsp;О компании', '/about.html')
+      %li= link_to('<i class="fa fa-li fa-book fa-fw"></i>&nbsp;Каталог товаров', '/catalog.html')
+      %li= link_to('<i class="fa fa-li fa-gift fa-fw"></i>&nbsp;Акции', '/actions.html')
+      %li= link_to('<i class="fa fa-li fa-download fa-fw"></i>&nbsp;Прайс листы', '#')
+      %li= link_to('<i class="fa fa-li fa-user fa-fw"></i>&nbsp;Личный кабинет', '#')
+      %li= link_to('<i class="fa fa-li fa-shopping-cart fa-fw"></i>&nbsp;Заказ товара', '#')
+      %li= link_to('<i class="fa fa-li fa-sitemap fa-fw"></i>&nbsp;Карта сайта', '#')
+  .span4
+    .social.clearfix
+      %ul.inline.pull-right
+        %li= link_to('','http://vk.com/public64557659',:class=>"soc-ico vk", :target=>"_blank", :alt=>"В контакте")
+        %li= link_to('','http://facebook.com/horecastore',:class=>"soc-ico facebook", :target=>"_blank", :alt=>"Facebook")
+        %li= link_to('','http://odnoklassniki.ru',:class=>"soc-ico odnoklassniki", :target=>"_blank", :alt=>"Одноклассники")
+        %li= link_to('','http://twitter.com',:class=>"soc-ico twitter", :target=>"_blank", :alt=>"Twitter")
+    .text-right
+      %span Вы можете связаться с нами по телефону:
+      %p.h1= "8(812)305-60-20"
+
 .line.line-solid
 .copyright.text-center © HoReCa Store 2014

@@ -1,6 +1,6 @@
 @import "base";
 @import "fonts";
-@include sticky-footer(270px, ".layout", ".layout-footer", ".footer");
+@include sticky-footer(310px, ".layout", ".layout-footer", ".footer");
 
 body{
   //@include red-box(true);
@@ -200,6 +200,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 30px;
     color: #EA2125;//#9D9D00;
   }
+  .img-content{
+    &.pull-left{
+      margin:{
+        right: 30px;
+        bottom: 20px;
+      }
+    }
+  }
 }
 .footer{
   position: relative;
@@ -216,6 +224,9 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .nav{
+    &:last-child{
+      margin-bottom: 0;
+    }
     .nav-header{
       border:{
         bottom: 1px dotted #524E4E;
@@ -233,6 +244,16 @@ h1, h2, h3, h4, h5, h6 {
       text-shadow: none;
       font:{
         size: 13px;
+      }
+    }
+    &.fa-ul{
+      .nav-header{
+        margin-left: -25px;
+      }
+      .fa-li{
+        margin:{
+          top: 2px;
+        }
       }
     }
     >li{
@@ -253,6 +274,26 @@ h1, h2, h3, h4, h5, h6 {
             border-bottom-style: solid;
           }
         }
+      }
+    }
+  }
+  .social{
+    margin-top: 40px;
+    .soc-ico{
+      display: block;
+      height: 24px;
+      width: 25px;
+      &.vk{
+        background: sprite($social-sprite, vk);
+      }
+      &.facebook{
+        background: sprite($social-sprite, facebook);
+      }
+      &.odnoklassniki{
+        background: sprite($social-sprite, odnoklassniki);
+      }
+      &.twitter{
+        background: sprite($social-sprite, twitter);
       }
     }
   }
