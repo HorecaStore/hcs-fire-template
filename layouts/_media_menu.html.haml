@@ -1,0 +1,16 @@
+-#@nav_header = "Заголовок меню"
+-#@media_head = "Заголовок"
+-#@link_path = "/actions/action.html"
+-#@all_path = "/actions.html"
+
+%ul.unstyled.media-menu
+  %li.nav-header= nav_header
+  -3.times do
+    %li
+      .media
+        = link_to(image_tag(lorem_image("64x64"), :class=>"media-object img-hover"), link_path,:class=>"pull-left")
+        .media-body
+          .media-head=link_to(media_head, link_path)
+          %p= lorem_words(8)
+  -if locals[:all_path]
+    %li= link_to('Посмотреть все...', all_path, :class=>"btn btn-link")

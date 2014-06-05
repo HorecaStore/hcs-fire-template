@@ -9,13 +9,17 @@
 
 .row-fluid
   .span3
-    %ul.media-menu
-      %li.nav-header Последние акции
-      -3.times do
-        %li
-          .media
-            = link_to(image_tag(lorem_image("64x64"), :class=>"media-object img-hover"), '/text.html',:class=>"pull-left")
-            .media-body
-              .media-head Заголовок акции
-              %p= lorem_words(8)
+    = render :partial => "/layouts/media_menu", :locals=>{:nav_header => "Последние акции", :media_head => "Заголовок акции", :link_path => "/actions/action.html"}
   .span9
+    -3.times do
+      .row-fluid
+        -2.times do
+          .span6
+            .media
+              = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'/actions/action.html', :class=>'pull-left img-hover')
+              .media-body
+                %h2.h4.media-head.unified Заголовок акции
+                %p= lorem_words(20)+'...'
+                %p=link_to('Подробнее...', '/actions/action.html', :class=>'btn btn-link')
+      .line.line-dotted
+    = render :partial => "/layouts/pagination"

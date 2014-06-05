@@ -1,0 +1,16 @@
+-@view = {:title=>"Заголовок акции", :description=>"Заголовок акции", :keywords=>"Заголовок акции"}
+-@css = "action"
+-@script = "script"
+-@breadcrumbs = [{:path=>'actions',:name=>'Акции'},{:path=>'actions/action',:name=>@view[:title]}]
+
+.row-fluid
+  .span9.offset3
+    %h1.unified.page-title= @view[:title]
+
+.row-fluid
+  .span3
+    = render :partial => "/layouts/media_menu", :locals=>{:nav_header => "Последние акции", :media_head => "Заголовок акции", :link_path => "/actions/action.html", :all_path=>"/actions.html"}
+  .span9
+    .img-content.pull-left= image_tag(lorem_image("300x200"), :class=>"img-polaroid")
+    -6.times do
+      %p=lorem_paragraph

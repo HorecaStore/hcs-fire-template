@@ -1,0 +1,24 @@
+-@view = {:title=>"Прайс-листы", :description=>"Прайс-листы", :keywords=>"Прайс-листы"}
+-@css = "catalog"
+-@script = "catalog"
+-@breadcrumbs = [{:path=>'catalog',:name=>'Каталог'},{:path=>'catalog/prices',:name=>'Прайс-листы'}]
+
+.row-fluid
+  .span9.offset3
+    %h1.unified.page-title= @view[:title]
+
+.row-fluid
+  .span3
+    = render :partial => "/layouts/catalog_menu", :locals=>{:nav_header => "Каталог", :count_item => 12, :link_path => "/catalog/category/group.html", :item_name=>"Группа товаров в категории"}
+  .span9
+    -4.times do
+      .row-fluid
+        -2.times do
+          .span6
+            .media
+              = link_to(image_tag(lorem_image("120x120"),:class=>'media-object img-polaroid', :alt=>"прайс"),'#', :class=>'pull-left img-hover', :title=>"Скачать прайс лист")
+              .media-body.list-items
+                %h2.h4.media-head.unified Группа товаров
+                %p= lorem_words(8)+"..."
+                %p=link_to('<i class="fa fa-download fa-fw"></i>&nbsp;Скачать прайс лист',"#", :class=>"btn")
+      .line.line-dotted

@@ -20,12 +20,9 @@
           %ul.nav.pull-right
             %li=link_to("О компании","/about.html")
             %li=link_to("Контакты","/contact.html")
-            %li=link_to("Личный кабинет","#")
+            %li=link_to('Заказ товара', '/catalog/order.html')
             %li.divider-vertical
-            %li
-              %a{:href=>'#'}
-                %i.fa.fa-shopping-cart.fa-fw
-                Заказ товара
+            %li=link_to('<i class="fa fa-user fa-fw"></i>&nbsp;Личный кабинет', '/users.html')
     .row-fluid.main-menu
       .span12
         .navbar.navbar-inverse

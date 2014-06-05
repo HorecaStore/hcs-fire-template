@@ -10,10 +10,7 @@
 
 .row-fluid
   .span3
-    %ul.nav.nav-tabs.nav-stacked.left-menu
-      %li.nav-header= @view[:title]
-      -9.times do
-        %li= link_to("Группа товаров в категории #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group.html')
+    = render :partial => "/layouts/catalog_menu", :locals=>{:nav_header => @view[:title], :count_item => 9, :link_path => "/catalog/category/group.html", :item_name=>"Группа товаров в категории"}
   .span9.catalog-groups
     -4.times do
       .row-fluid.catalog-group-items

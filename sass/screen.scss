@@ -9,7 +9,14 @@ body{
     position: 0 0;
     repeat: repeat;
   }
-  overflow: hidden;
+  overflow-x: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #777;
+  @include text-shadow(rgb(255,255,255) 0px 1px 0px);
+  > a{
+    @include link-colors(#2f2f2f, darken(#2f2f2f, 10%), #2f2f2f, #2f2f2f, #2f2f2f);
+  }
 }
 .wrapper{
   padding: 0 50px;
@@ -24,31 +31,23 @@ body{
     background-color: #231f20;
   }
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #777;
-  &.unified {
-    font-family: 'Arial','Tahoma',sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 1em;
-    margin:{
-      top: 0;
-      bottom: 20px;
-    }
-    text-transform: uppercase;
+.unified {
+  font-family: 'Arial','Tahoma',sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1em;
+  margin:{
+    top: 0;
+    bottom: 20px;
   }
-  @include text-shadow(rgb(255,255,255) 0px 1px 0px);
-  > a{
-    @include link-colors(#2f2f2f, darken(#2f2f2f, 10%), #2f2f2f, #2f2f2f, #2f2f2f);
-  }
+  text-transform: uppercase;
   &.page-title{
     color: #9D9D00;
     font-size: 24px;
     text-transform: none;
   }
 }
-
 .h1 {
   font:{
     size: 32px;
@@ -63,7 +62,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 .h4 {
-  font-size: 13px;
+  font:{
+    size: 13px;
+    weight: 700;
+  }
 }
 .img-hover{
   margin:{
@@ -161,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
   }
 }
-.left-menu{
+.catalog-menu{
   border-color: #ddd;
   @include border-radius(4px, 4px);
   @include box-shadow (rgba(0, 0, 0, .0555) 0 1px 3px);

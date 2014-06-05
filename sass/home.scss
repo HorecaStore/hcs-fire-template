@@ -4,6 +4,7 @@
 }
 .main{
   h1{
+    color: initial;
     @include text-shadow(5px 3px 8px rgba(0,0,0,0.3));
     >small{
       color: #777;
@@ -60,6 +61,7 @@
           right: 5px solid white;
           bottom: 40px solid white;
         };
+        @include border-radius(4px);
         margin:{
           bottom: 10px;
         }

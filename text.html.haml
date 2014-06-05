@@ -1,5 +1,4 @@
 -@view = {:title=>"Текстовая страница", :description=>"Текстовая страница", :keywords=>"Текстовая страница"}
--@css = "text"
 -@script = "text"
 -@breadcrumbs = [{:path=>'text',:name=>'Текстовая страница'}]
 
@@ -9,10 +8,7 @@
 
 .row-fluid
   .span3
-    %ul.nav.nav-tabs.nav-stacked.left-menu
-      %li.nav-header Каталог
-      -12.times do
-        %li= link_to("Группа товаров #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group.html')
+    = render :partial => "/layouts/catalog_menu", :locals=>{:nav_header => "Каталог", :count_item => 12, :link_path => "/catalog/category/group.html", :item_name=>"Группа товаров в категории"}
   .span9
     .img-content.pull-left= image_tag(lorem_image("300x200"), :class=>"img-polaroid")
     -6.times do
