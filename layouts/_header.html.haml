@@ -22,7 +22,9 @@
             %li=link_to("Контакты","/contact.html")
             %li=link_to('Заказ товара', '/catalog/order.html')
             %li.divider-vertical
-            %li=link_to('<i class="fa fa-user fa-fw"></i>&nbsp;Личный кабинет', '/users.html')
+            %li=link_to('<i class="fa fa-user fa-fw"></i>&nbsp;Личный кабинет', '#mfp-user', :class=>"mfp-user")
+        %form.mfp-hide.white-popup-block#mfp-user
+          %h1 Form
     .row-fluid.main-menu
       .span12
         .navbar.navbar-inverse

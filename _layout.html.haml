@@ -17,6 +17,7 @@
           = render :partial => "/layouts/footer"
     = javascript_include_tag "/ext/headjs/head.min"
     = render :partial => "/layouts/headjs"
+    -if @script
+      = javascript_include_tag @script
     -if @script == "contact"
       = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'
-    = javascript_include_tag @script

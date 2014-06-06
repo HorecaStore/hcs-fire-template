@@ -1,5 +1,12 @@
 %script{:type=>"text/javascript"}
   head.js(
   {jquery: "/ext/jquery/jquery-1.10.2.js"},
+  {mfp: "/ext/mfp/jquery.magnific-popup.min.js"},
   {siteJs: "/js/script.js"}
   );
+  head.ready('mfp', function(){
+  $('.mfp-user').magnificPopup({
+  type: 'inline',
+  preloader: false
+  })
+  });
