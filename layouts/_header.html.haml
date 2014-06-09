@@ -7,6 +7,8 @@
         %meta{:itemprop=>"addressCountry", :content=>"Россия"}/
         %meta{:itemprop=>"addressLocality", :content=>"Санкт-Петербург"}/
       =link_to(image_tag('logo/logo-top.png', :width=>"149", :height=>"96", :alt=>"HoReCa Store", :itemprop=>"logo"), "/", :itemprop=>"url")
+      -if !@logo_span
+        %span.text-center Для отелей и ресторанов
   .span9
     .row-fluid
       .span4.head-contact
@@ -23,8 +25,6 @@
             %li=link_to('Заказ товара', '/catalog/order.html')
             %li.divider-vertical
             %li=link_to('<i class="fa fa-user fa-fw"></i>&nbsp;Личный кабинет', '#mfp-user', :class=>"mfp-user")
-        %form.mfp-hide.white-popup-block#mfp-user
-          %h1 Form
     .row-fluid.main-menu
       .span12
         .navbar.navbar-inverse

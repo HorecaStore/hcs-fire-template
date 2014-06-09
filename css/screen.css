@@ -90,3 +90,7 @@ h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > 
 .footer .social .soc-ico.odnoklassniki { background: url('/img/social-s45d308d236.png') 0 0; }
 .footer .social .soc-ico.twitter { background: url('/img/social-s45d308d236.png') -2px -58px; }
 .footer .line-solid { background-color: black; border-bottom: 1px solid #4c4345; }
+
+.form-user { margin: 0; border: 1px solid #eee; }
+.form-user .modal-label { font-size: 13px; font-weight: bold; color: #999; line-height: 20px; margin: 10px 0; text-transform: uppercase; }
+.form-user .modal-body { max-height: 100%; margin-top: 20px; }

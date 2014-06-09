@@ -1,8 +1,11 @@
 -@view = {:title=>"Личный кабинет", :description=>"Личный кабинет", :keywords=>"Личный кабинет"}
--#@css = "users"
--@script = "script"
+-@css = "user"
 -@breadcrumbs = [{:path=>'users',:name=>@view[:title]}]
 
 .row-fluid
   .span9.offset3
     %h1.unified.page-title= @view[:title]
+.row-fluid
+  .span3
+    = render :partial=>"/layouts/user_menu"
+  .span9

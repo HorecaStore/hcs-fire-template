@@ -105,3 +105,6 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .mfp-ie7 .mfp-container { padding: 0; }
 .mfp-ie7 .mfp-content { padding-top: 44px; }
 .mfp-ie7 .mfp-close { top: 0; right: 0; padding-top: 0; }
+
+.white-popup-block { background: #FFF; padding: 5px; text-align: left; max-width: 550px; margin: 10px auto; position: relative; }
+.white-popup-block .mfp-close { right: 5px; top: 10px; }

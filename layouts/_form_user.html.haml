@@ -1,0 +1,18 @@
+.mfp-hide.white-popup-block#mfp-user
+  %form.form-horizontal.form-user{:action=>"/users.html"}
+    .modal-header
+      .modal-label Вход в личный кабинет
+    .modal-body
+      .control-group
+        .control-label Ваш e-mail:
+        .controls
+          %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail"}
+      .control-group
+        .control-label Ваш пароль:
+        .controls
+          %input{:name=>"email", :type=>"password", :required=>"required", :placeholder=>"Ваш пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+    .modal-footer
+      .pull-left
+        =link_to("Регистрация...", "#", :class=>"btn btn-link")
+      .pull-right
+        %input.btn.btn-primary{:type=>"submit", :name=>"apply", :value=>"Войти"}

@@ -1,0 +1,10 @@
+.user-menu{
+  .fa{
+    margin-right: 10px;
+  }
+  >li{
+    &:last-child{
+      background-color: #f9f9f9;
+    }
+  }
+}
