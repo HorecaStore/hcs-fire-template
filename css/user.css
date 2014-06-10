@@ -1,2 +1,10 @@
 .user-menu .fa { margin-right: 10px; }
 .user-menu > li:last-child { background-color: #f9f9f9; }
+
+.left-user-profile .line-dotted { border-bottom-color: #ccc; }
+.left-user-profile .profile-header { margin-top: 10px; margin-bottom: 15px; }
+.left-user-profile .fa-ul li .fa { color: #ccc; }
+.left-user-profile .stat-count > a { display: block; font-size: 28px; font-weight: bold; line-height: 1; color: inherit; }
+.left-user-profile .stat-count > a:hover { color: #4183c4; }
+.left-user-profile .stat-count > a:hover { text-decoration: none; }
+.left-user-profile .stat-count > span { display: block; font-size: 11px; color: #999; text-transform: capitalize; }

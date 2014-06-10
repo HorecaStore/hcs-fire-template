@@ -1,3 +1,5 @@
+@import "base";
+
 .user-menu{
   .fa{
     margin-right: 10px;
@@ -5,6 +7,44 @@
   >li{
     &:last-child{
       background-color: #f9f9f9;
+    }
+  }
+}
+.left-user-profile{
+  .line-dotted{
+    border-bottom-color: #ccc;
+  }
+  .profile-header{
+    margin:{
+      top: 10px;
+      bottom: 15px;
+    }
+  }
+  .fa-ul{
+    li{
+      .fa{
+        color: #ccc;
+      }
+    }
+  }
+  .stat-count{
+    >a{
+      display: block;
+      font:{
+        size: 28px;
+        weight: bold;
+      }
+      line-height: 1;
+      @include link-colors(inherit, #4183c4);
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    >span{
+      display: block;
+      font-size: 11px;
+      color: #999;
+      text-transform: capitalize;
     }
   }
 }
