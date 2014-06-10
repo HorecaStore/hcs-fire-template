@@ -1,5 +1,6 @@
 head.js(
   {bootstrap_tab: "/ext/bootstrap/bootstrap-tab.js"},
+  {bootstrap_transition: "/ext/bootstrap/bootstrap-transition.js"},
   {bootstrap_collapse: "/ext/bootstrap/bootstrap-collapse.js"}
 );
 head.ready("bootstrap_tab", function() {
