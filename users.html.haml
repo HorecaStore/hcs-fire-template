@@ -32,22 +32,35 @@
 
   .span9
     %ul.nav.nav-tabs#profile-user
-      %li.active= link_to('Мои заказы', '#orders', 'data-toogle'=>'tab')
+      %li.active= link_to('История заказов', '#orders', 'data-toogle'=>'tab')
       %li= link_to('Мои отзывы о товаре', '#messages', 'data-toogle'=>'tab')
       %li= link_to('Мой профиль', '#profile', 'data-toogle'=>'tab')
     .tab-content
       .tab-pane.active#orders
         .accordion#ordersCollapse
-          .accordion-group
-            .accordion-heading
-              = link_to('Collapsible Group Item #1', '#orderOne', :class=>"accordion-toggle", "data-toggle"=>"collapse", "data-parent"=>"#ordersCollapse")
-            .accordion-body.collapse#orderOne
-              .accordion-inner= lorem_paragraph
-          .accordion-group
-            .accordion-heading
-              = link_to('Collapsible Group Item #2', '#orderTwo', :class=>"accordion-toggle", "data-toggle"=>"collapse", "data-parent"=>"#ordersCollapse")
-            .accordion-body.collapse#orderTwo
-              .accordion-inner= lorem_paragraph
+          -1.upto(10) do |i|
+            .accordion-group
+              .accordion-heading
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#ordersCollapse", "data-target"=>"#order_#{i}"}
+                  .row-fluid
+                    .span3.order-head
+                      %i.fa.fa-book.fa-lg
+                      %strong="Заказ № "+"#{i}"
+                    .span6.order-structure
+                      %span= content_tag(:i, "", :class => "fa fa-clock-o")+" "+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                      %span= content_tag(:i, "", :class => "fa fa-check-square-o")+" "+"5 наименований, "
+                      %span= content_tag(:i, "", :class => "fa fa-rub")+" "+"2500 руб."
+                    .span3.order-actions
+                      Actions
+              .accordion-body.collapse{:id => "order_#{i}"}
+                .accordion-inner
+                  %table.table.table-hover
+                    -5.times do
+                      %tr
+                        %td=content_tag(:i, "", :class => "fa fa-tag")
+                        %td=link_to("Наименование товара", "/catalog/category/group/item.html")
+                        %td 5 шт.
+                        %td 500 руб.
       .tab-pane#messages
       .tab-pane#profile
 

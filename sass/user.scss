@@ -48,3 +48,26 @@
     }
   }
 }
+.accordion-group{
+  .row-fluid [class*="span"]{
+    min-height: 20px;
+  }
+  .order-head{
+    .fa{
+      color: #999;
+      &:before{
+        line-height: 1;
+        margin-right: 20px;
+      }
+    }
+  }
+  .order-structure{
+    >span{
+      color: #999;
+      display: inline-block;
+      font-size: 11px;
+      margin-right: 10px;
+    }
+  }
+  .order-actions{}
+}

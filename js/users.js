@@ -9,7 +9,9 @@ head.ready("bootstrap_tab", function() {
     $(this).tab('show');
   });
 });
-/*head.ready("bootstrap_collapse", function() {
-  $(".collapse").collapse();
+head.ready("bootstrap_collapse", function() {
+  $("#ordersCollapse").on("show", function(){
+    console.info("ok");
+  });
 });
-*/
+
