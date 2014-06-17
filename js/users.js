@@ -10,8 +10,10 @@ head.ready("bootstrap_tab", function() {
   });
 });
 head.ready("bootstrap_collapse", function() {
-  $("#ordersCollapse").on("show", function(){
-    console.info("ok");
+  $("#ordersCollapse").on('click.collapse.data-api', '[data-toggle=collapse]', function(e){
+    var $this = $(this),
+        target = $this.attr('data-target');
+    $this[$(target).hasClass('in') ? 'removeClass' : 'addClass']('active');
   });
 });
 
