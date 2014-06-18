@@ -1,0 +1,9 @@
+.mfp-hide.white-popup-block#mfp-message
+  %form.form-horizontal
+    .modal-header
+      .modal-label Всплывающее сообщение
+    .modal-body
+      .message.text-center=lorem_words(5)
+    .modal-footer
+      .pull-right
+        %button.btn.btn-primary{:type=>"button", :name=>"apply", "onClick"=>"$.magnificPopup.close();"} OK

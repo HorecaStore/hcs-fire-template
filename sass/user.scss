@@ -62,7 +62,9 @@
   .row-fluid [class*="span"]{
     min-height: 20px;
   }
-  .order-head{
+  .order-head,
+  .message-head{
+    font-size: 13px;
     .fa{
       color: #999;
       &:before{
@@ -71,13 +73,75 @@
       }
     }
   }
-  .order-structure{
+  .order-structure,
+  .message-info{
     >span{
       color: #999;
       display: inline-block;
       font-size: 11px;
       margin-right: 10px;
     }
+    .rating{
+      color: #EA2125;
+    }
   }
-  .order-actions{}
+  .order-actions,
+  .message-actions{
+    > ul{
+      margin-bottom: 0;
+    }
+  }
+  .accordion-inner{
+    .message{
+      margin:{
+        top: 10px;
+        left: 20px;
+      }
+      >p{
+        font-size: inherit;
+      }
+    }
+  }
+}
+.boxed-group{
+  border-radius: 4px;
+  margin-bottom:15px;
+  .boxed-group-head{
+    background-color: #f5f5f5;
+    margin: 0;
+    border: 1px solid #d8d8d8;
+    border-bottom: 0;
+    padding:{
+      top: 10px;
+      bottom: 11px;
+      left: 10px;
+      right: 10px;
+    }
+    font:{
+      size: 13px;
+      weight: bold;
+    }
+    @include border-radius(4px 4px 0px 0px);
+    @include text-shadow(#fff 0 1px 0);
+  }
+  .boxed-group-inner{
+    padding:{
+      top: 20px;
+      right: 10px;
+      bottom: 1px;
+      left: 10px;
+    }
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+  }
+}
+.profile-avatar{
+  .controls{
+    >label{
+      line-height: 30px;
+      margin-top: 5px;
+    }
+  }
 }

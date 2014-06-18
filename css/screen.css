@@ -15,7 +15,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 310px; }
 
-body { background-image: url('/img/body.jpg?1401740234'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
+body { background-image: url('/img/body.jpg?1400756304'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
 
 h1, h2, h3, h4, h5, h6 { color: #777; text-shadow: white 0px 1px 0px; }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a { color: #2f2f2f; }
@@ -91,6 +91,7 @@ h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > 
 .footer .social .soc-ico.twitter { background: url('/img/social-s45d308d236.png') -2px -58px; }
 .footer .line-solid { background-color: black; border-bottom: 1px solid #4c4345; }
 
-.form-user { margin: 0; border: 1px solid #eee; }
-.form-user .modal-label { font-size: 13px; font-weight: bold; color: #999; line-height: 20px; margin: 10px 0; text-transform: uppercase; }
-.form-user .modal-body { max-height: 100%; margin-top: 20px; }
+.white-popup-block .modal-label { font-size: 13px; font-weight: bold; color: #999; line-height: 20px; margin: 10px 0; text-transform: uppercase; }
+.white-popup-block .modal-body { max-height: 100%; margin-top: 20px; }
+.white-popup-block .modal-body .message { min-height: 20px; margin-bottom: 20px; padding: 24px; }
+.white-popup-block > form { margin: 0; border: 1px solid #eee; }
