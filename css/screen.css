@@ -24,6 +24,9 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
 h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover { color: #161616; }
 h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > a:active { color: #2f2f2f; }
 
+.required { position: relative; }
+.required:after { content: "*"; color: red; position: absolute; display: block; right: -10px; top: 0; }
+
 .wrapper { padding: 0 50px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; }
 .wrapper.layout { background-color: #fff; border-top: 15px solid #231f20; }
 .footer .wrapper { background-color: #231f20; }
@@ -63,11 +66,6 @@ h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > 
 .header .head-contact .phone > i { font-size: 80%; }
 .header .breadcrumb { background-color: transparent; }
 
-.catalog-menu { border-color: #ddd; -webkit-border-radius: 4px 4px; -moz-border-radius: 4px / 4px; border-radius: 4px / 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; background-color: #f9f9f9; }
-.catalog-menu .nav-header { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; font-weight: 500; text-transform: uppercase; line-height: 28px; }
-.catalog-menu > li > a { position: relative; }
-.catalog-menu > li > a > i.pull-right { line-height: inherit; position: absolute; right: 8px; }
-
 .main { margin-bottom: 40px; }
 .main .price { font-size: 22px; font-weight: bold; line-height: 30px; color: #EA2125; }
 .main .img-content.pull-left { margin-right: 30px; margin-bottom: 20px; }
@@ -90,6 +88,11 @@ h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > 
 .footer .social .soc-ico.odnoklassniki { background: url('/img/social-s45d308d236.png') 0 0; }
 .footer .social .soc-ico.twitter { background: url('/img/social-s45d308d236.png') -2px -58px; }
 .footer .line-solid { background-color: black; border-bottom: 1px solid #4c4345; }
+
+.catalog-menu { border-color: #ddd; -webkit-border-radius: 4px 4px; -moz-border-radius: 4px / 4px; border-radius: 4px / 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; background-color: #f9f9f9; }
+.catalog-menu .nav-header { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; font-weight: 500; text-transform: uppercase; line-height: 28px; }
+.catalog-menu > li > a { position: relative; }
+.catalog-menu > li > a > i.pull-right { line-height: inherit; position: absolute; right: 8px; }
 
 .white-popup-block .modal-label { font-size: 13px; font-weight: bold; color: #999; line-height: 20px; margin: 10px 0; text-transform: uppercase; }
 .white-popup-block .modal-body { max-height: 100%; margin-top: 20px; }

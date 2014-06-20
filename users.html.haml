@@ -91,88 +91,106 @@
                     %p= lorem_paragraph
       .tab-pane#profile
         .boxed-group
-          .boxed-group-head Личные данные
-          .boxed-group-inner.clearfix
-            %form.form-horizontal.form-registration{:action=>"/users.html"}
-              .control-group.profile-avatar
-                .control-label=image_tag(lorem_image("85x59"), :alt=>"Аватар", :class=>"img-polaroid")
-                .controls
-                  %label Фото (аватар)
-                  %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}
-              .control-group
-                .control-label E-mail:
-                .controls
-                  %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}
-              .control-group
-                .control-label Имя:
-                .controls
-                  %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
-              .control-group
-                .control-label Фамилия:
-                .controls
-                  %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
-              .control-group
-                .control-label Отчетство:
-                .controls
-                  %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
-              .control-group
-                .control-label Телефон для связи:
-                .controls
-                  %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
-              .control-group
-                .control-label Страна:
-                .controls
-                  %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
-              .control-group
-                .control-label Город:
-                .controls
-                  %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
+          .boxed-group-head
+            Личные данные
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#user_profile"}
+              %i.fa.fa-eye-slash
+          .collapse.in#user_profile
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
+                .control-group.profile-avatar
+                  .control-label=image_tag(lorem_image("85x59"), :alt=>"Аватар", :class=>"img-polaroid")
+                  .controls
+                    %label Фото (аватар)
+                    %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}
+                .control-group
+                  .control-label Имя:
+                  .controls
+                    %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
+                .control-group
+                  .control-label Фамилия:
+                  .controls
+                    %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
+                .control-group
+                  .control-label Отчетство:
+                  .controls
+                    %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
+                .control-group
+                  .control-label Компания:
+                  .controls
+                    %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
+                .control-group
+                  .control-label Город:
+                  .controls
+                    %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
+                .text-right
+                  %input.btn.btn-success{:type=>"submit", :value=>"Обновить личные данные"}
         .boxed-group
-          .boxed-group-head Компания
-          .boxed-group-inner.clearfix
-            %form.form-horizontal.form-registration{:action=>"/users.html"}
-              .control-group
-                .control-label Название компании:
-                .controls
-                  %input{:name=>"name_company", :type=>"text", :placeholder=>"OOO 'Компания'"}
-              .control-group
-                .control-label Сайт:
-                .controls
-                  %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
-              .control-group
-                .control-label Телефон:
-                .controls
-                  %input{:name=>"phone_comhany", :type=>"text", :placeholder=>"Телефон"}
-              .control-group
-                .control-label Факс:
-                .controls
-                  %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
-              .control-group
-                .control-label Почтовый индекс:
-                .controls
-                  %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
-              .control-group
-                .control-label Юридический адрес:
-                .controls
-                  %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
+          .boxed-group-head
+            Контактные данные
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#contact_data"}
+              %i.fa.fa-eye
+          .collapse#contact_data
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
+                .control-group
+                  .control-label.required E-mail:
+                  .controls
+                    %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
+                .control-group
+                  .control-label Телефон:
+                  .controls
+                    %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
+                .control-group
+                  .control-label Факс:
+                  .controls
+                    %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
+                .control-group
+                  .control-label Сайт:
+                  .controls
+                    %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
+                .control-group
+                  .control-label Страна:
+                  .controls
+                    %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
+                .control-group
+                  .control-label Почтовый индекс:
+                  .controls
+                    %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
+                .control-group
+                  .control-label Адрес:
+                  .controls
+                    %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
+                .text-right
+                  %input.btn.btn-success{:type=>"submit", :value=>"Обновить контактные данные"}
         .boxed-group
-          .boxed-group-head Изменить пароль
-          .boxed-group-inner.clearfix
-            %form.form-horizontal.form-registration{:action=>"/users.html"}
-              .control-group
-                .control-label Старый пароль:
-                .controls
-                  %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                  =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
-              .control-group
-                .control-label Новый пароль:
-                .controls
-                  %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
-              .control-group
-                .control-label Повтор пароля:
-                .controls
-                  %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
+          .boxed-group-head
+            Изменить пароль
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#change_password"}
+              %i.fa.fa-eye
+          .collapse#change_password
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
+                .control-group
+                  .control-label.required Старый пароль:
+                  .controls
+                    %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                    =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
+                .control-group
+                  .control-label.required Новый пароль:
+                  .controls
+                    %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                .control-group
+                  .control-label.required Повтор пароля:
+                  .controls
+                    %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                .text-right
+                  %input.btn.btn-success{:type=>"submit", :value=>"Изменить пароль"}
         .boxed-group
-          .boxed-group-head Рассылка
-          .boxed-group-inner.clearfix
-            %form.form-horizontal.form-registration{:action=>"/users.html"}
+          .boxed-group-head
+            Рассылка
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#maillist"}
+              %i.fa.fa-eye
+          .collapse#maillist
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
