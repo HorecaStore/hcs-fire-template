@@ -9,6 +9,10 @@ head.ready("bootstrap_tab", function() {
     e.preventDefault();
     $(this).tab('show');
   });
+  $('#tab_profile').on('click', function(e) {
+    e.preventDefault();
+    $('#profile-user a[href="#profile"]').tab('show');
+  });
 });
 head.ready("bootstrap_collapse", function() {
   $("#ordersCollapse, #messagesCollapse").on('click.collapse.data-api', '[data-toggle=collapse]', function(e){
@@ -24,10 +28,3 @@ head.ready("bootstrap_tooltip", function() {
     selector: "a[data-toggle=tooltip]"
   });
 });
-head.ready('mfp', function(){
-  $('.mfp-message').magnificPopup({
-  type: 'inline',
-  preloader: false
-  });
-});
-

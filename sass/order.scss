@@ -1,0 +1,32 @@
+@import "base";
+.form-order{
+  .control-group{
+    margin-bottom: 10px;
+  }
+}
+.form-claim{
+  .table{
+    tbody{
+      tr{
+        > td{
+          vertical-align: middle;
+          input{
+            margin-bottom: 0;
+          }
+        }
+      }
+      tr:first-child{
+        > td{
+          border-top: 0;
+        }
+      }
+    }
+    tfoot{
+      tr{
+        td{
+          border-top: 1px solid #dddddd;
+        }
+      }
+    }
+  }
+}

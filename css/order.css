@@ -1,0 +1,6 @@
+.form-order .control-group { margin-bottom: 10px; }
+
+.form-claim .table tbody tr > td { vertical-align: middle; }
+.form-claim .table tbody tr > td input { margin-bottom: 0; }
+.form-claim .table tbody tr:first-child > td { border-top: 0; }
+.form-claim .table tfoot tr td { border-top: 1px solid #dddddd; }

@@ -9,7 +9,7 @@
 .row-fluid
   .span3.left-user-profile
     .thumbnails
-      = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'/actions/action.html', :class=>'thumbnail', :title=>"Изменить аватар")
+      = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile")
     .h3.profile-header.text-center Иван Сидорович Иванов
     .line.line-dotted
     %ul.nav.fa-ul
