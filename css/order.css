@@ -4,3 +4,5 @@
 .form-claim .table tbody tr > td input { margin-bottom: 0; }
 .form-claim .table tbody tr:first-child > td { border-top: 0; }
 .form-claim .table tfoot tr td { border-top: 1px solid #dddddd; }
+
+.user-menu .nav-header { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; font-weight: 500; text-transform: uppercase; line-height: 28px; }

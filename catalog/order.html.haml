@@ -89,5 +89,5 @@
               %td{:colspan=>"2"}
                 %strong 4500 руб.
       .line.line-dotted
-      %button.btn.btn-success.pull-right Оформить заказ
-
+      =link_to('Оформить заказ', '#mfp-order', :class=>"mfp-order btn btn-success pull-right")
+= render :partial => "/layouts/mfp_order"

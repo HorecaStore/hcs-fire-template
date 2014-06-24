@@ -1,0 +1,12 @@
+.mfp-hide.white-popup-block#mfp-order
+  %form.form-horizontal.form-user{:action=>"/catalog/order/create_order.html"}
+    .modal-header
+      .modal-label Оформить заказ
+    .modal-body
+      .control-group
+        .control-label Ваш e-mail:
+        .controls
+          %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}
+    .modal-footer
+      .pull-right
+        %input.btn.btn-primary{:type=>"submit", :name=>"apply", :value=>"Оформить заказ"}

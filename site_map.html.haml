@@ -1,0 +1,102 @@
+-@view = {:title=>"Карта сайта", :description=>"Карта сайта", :keywords=>"Карта сайта"}
+-@breadcrumbs = [{:path=>'site_map',:name=>@view[:title]}]
+
+.row-fluid
+  .span9.offset3
+    %h1.unified.page-title= @view[:title]
+
+.row-fluid
+  .span3
+    = render :partial => "/layouts/catalog_menu", :locals=>{:nav_header => "Каталог", :count_item => 12, :link_path => "/catalog/category/group.html", :item_name=>"Группа товаров в категории"}
+  .span8.offset1
+    %ul
+      %li= link_to("Главная", "/")
+      %li= link_to("О компании", "/about.html")
+      %li
+        = link_to("Каталог товаров", "/catalog.html")
+        %ul
+          %li
+            = link_to("Для отелей", "/catalog/category.html")
+            %ul
+              %li
+                = link_to("Халаты", "/catalog/category/group.html")
+                %ul
+                  -6.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Полотенца", "/catalog/category/group.html")
+                %ul
+                  -6.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Постель", "/catalog/category/group.html")
+                %ul
+                  -6.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Тапочки", "/catalog/category/group.html")
+                %ul
+                  -6.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Покрывала", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Наматрасники", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Матрасы", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Подушки", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Одеяла", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Косметика для номеров", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Скатерти", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+              %li
+                = link_to("Салфетки", "/catalog/category/group.html")
+                %ul
+                  -3.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+          %li
+            = link_to("Для ресторанов", "/catalog/category.html")
+            %ul
+              %li
+                = link_to("Посуда", "/catalog/category/group.html")
+                %ul
+                  -6.times do
+                    %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+          %li
+            = link_to("Товары на складе", "/catalog/category.html")
+            %ul
+              -3.times do
+                %li
+                  = link_to("Группа товаров", "/catalog/category/group.html")
+                  %ul
+                    -6.times do
+                      %li= link_to("Наименование товара", "/catalog/category/group/item.html")
+      %li= link_to("Акции", "/actions.html")
+      %li= link_to("Контакты", "/contact.html")
+      %li= link_to("Личный кабинет", "/users.html")
+      %li= link_to("Карта сайта", "/site_map.html")
+      %li= link_to("Поиск по сайту", "/search.html")

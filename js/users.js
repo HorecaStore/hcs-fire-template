@@ -13,6 +13,11 @@ head.ready("bootstrap_tab", function() {
     e.preventDefault();
     $('#profile-user a[href="#profile"]').tab('show');
   });
+  var hash = window.location.hash;
+  if (hash != ''){
+    $('#profile-user a[href="'+hash+'"]').tab('show');
+    console.log('#profile-user a[href="'+hash+'"]');
+  }
 });
 head.ready("bootstrap_collapse", function() {
   $("#ordersCollapse, #messagesCollapse").on('click.collapse.data-api', '[data-toggle=collapse]', function(e){
