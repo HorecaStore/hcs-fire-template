@@ -12,3 +12,9 @@ head.ready("bootstrap_tab", function() {
     $(this).tab('show');
   });
 });
+head.ready('mfp', function(){
+  $('.mfp-add-order').magnificPopup({
+    type: 'inline',
+    preloader: false
+  });
+});

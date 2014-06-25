@@ -9,7 +9,7 @@
 .row-fluid
   .span3.left-user-profile
     .thumbnails
-      = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile")
+      = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile", "data-tab"=>"profile")
     .h3.profile-header.text-center Иван Сидорович Иванов
     .line.line-dotted
     %ul.nav.fa-ul
@@ -23,11 +23,11 @@
     .row-fluid
       .span6
         .stat-count.text-center
-          = link_to("20","#")
+          = link_to("20","#orders", "data-tab"=>"orders")
           %span Заказов
       .span6
         .stat-count.text-center
-          = link_to("5","#")
+          = link_to("5","#messages", "data-tab"=>"messages")
           %span Отзывов
 
   .span9
@@ -123,8 +123,7 @@
                   .control-label Город:
                   .controls
                     %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
-                .text-right
-                  %input.btn.btn-success{:type=>"submit", :value=>"Обновить личные данные"}
+                .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
         .boxed-group
           .boxed-group-head
             Контактные данные
@@ -161,8 +160,7 @@
                   .control-label Адрес:
                   .controls
                     %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
-                .text-right
-                  %input.btn.btn-success{:type=>"submit", :value=>"Обновить контактные данные"}
+                .text-right=link_to("Обновить контактные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
         .boxed-group
           .boxed-group-head
             Изменить пароль
@@ -184,8 +182,7 @@
                   .control-label.required Повтор пароля:
                   .controls
                     %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                .text-right
-                  %input.btn.btn-success{:type=>"submit", :value=>"Изменить пароль"}
+                .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
         .boxed-group
           .boxed-group-head
             Рассылка

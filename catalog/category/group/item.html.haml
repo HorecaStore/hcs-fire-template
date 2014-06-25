@@ -76,8 +76,7 @@
             .span4.text-center
               = "x   "
               %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
-            .span4.text-center
-              %button.btn.btn-block.btn-success{:type=>"submit"} В заказ
+            .span4.text-center= link_to("В заказ", '#mfp-add-order', :class=>"btn btn-success btn-block mfp-add-order")
     .row-fluid.specifications-item
       %ul.nav.nav-tabs#specifications-item
         %li.active= link_to('Описание', '#settings', 'data-toogle'=>'tab')
@@ -101,5 +100,5 @@
                   %i.fa.fa-calendar-o
                   = lorem_date("%d.%m.%Y", 2014..2014)+' г.'
               %p.message-body= lorem_paragraph
-          %button.btn Добавить отзыв
-
+          = link_to("Добавить отзыв", '#mfp-message', :class=>"btn mfp-message")
+= render :partial => "/layouts/mfp_add_order"

@@ -9,9 +9,11 @@ head.ready("bootstrap_tab", function() {
     e.preventDefault();
     $(this).tab('show');
   });
-  $('#tab_profile').on('click', function(e) {
+  $('a[data-tab]').on('click', function(e) {
     e.preventDefault();
-    $('#profile-user a[href="#profile"]').tab('show');
+    href = $(this).attr("data-tab");
+    $('#profile-user a[href="#'+href+'"]').tab('show');
+    //console.log($(this).attr("data-tab"));
   });
   var hash = window.location.hash;
   if (hash != ''){

@@ -1,0 +1,11 @@
+.mfp-hide.white-popup-block#mfp-add-order
+  .modal-header
+    .modal-label Выбранный товар добавлен в заказ
+  .modal-body
+    .text-center
+      %p=link_to("Наименование товара", "/catalog/category/group/item.html")
+      %p добавлен в Ваш заказ
+  .modal-footer
+    .pull-right
+      %button.btn{:type=>"button", "onClick"=>"$.magnificPopup.close();"} Продолжить выбор товара
+      =link_to("Оформить заказ", "/catalog/order.html", :class=>"btn btn-success")
