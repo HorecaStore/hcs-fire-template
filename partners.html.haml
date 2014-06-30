@@ -1,0 +1,324 @@
+-@view = {:title=>"Скрытый раздел", :description=>"Скрытый раздел", :keywords=>"Скрытый раздел"}
+-@script = "partners"
+-@css = "partners"
+-@breadcrumbs = [{:path=>'partners',:name=>@view[:title]}]
+
+.row-fluid
+  .span9.offset3
+    %h1.unified.page-title= @view[:title]
+.row-fluid
+  .span3.left-company-profile
+    .thumbnails
+      = link_to(image_tag(lorem_image("260x180"), :alt=>"Логотип компании"),'#profile', :class=>'thumbnail', :title=>"Изменить логотип", :id=>"tab_profile", "data-tab"=>"profile")
+    .h3.profile-header.text-center ООО "Компания"
+    .line.line-dotted
+    %ul.nav.fa-ul
+      %li= '<i class="fa fa-li fa-map-marker"></i>Санкт-Петербург'
+      %li= '<i class="fa fa-li fa-envelope-o"></i>mail@mail.tt'
+      %li= '<i class="fa fa-li fa-phone"></i>+7-111-222-33-44'
+    .line.line-dotted
+    .row-fluid
+      .span6
+        .stat-count.text-center
+          = link_to("30","#goods", "data-tab"=>"goods")
+          %span Товаров
+      .span6
+        .stat-count.text-center
+          = link_to("5","#messages", "data-tab"=>"messages")
+          %span Отзывов
+
+  .span9
+    %ul.nav.nav-tabs#profile-company
+      %li.active= link_to('Товары на складе', '#goods', 'data-toogle'=>'tab')
+      %li= link_to('Отзывы о товаре', '#messages', 'data-toogle'=>'tab')
+      %li= link_to('Профиль компании', '#profile', 'data-toogle'=>'tab')
+    .tab-content
+      .tab-pane.active#goods
+        .accordion#goodsCollapse
+          .accordion-group
+            .accordion-heading
+              .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#goodsCollapse", "data-target"=>"#goods_1"}
+                .row-fluid
+                  .span5.head
+                    %i.fa.fa-cogs.fa-lg
+                    %strong Наименование товара
+                  .span4.info
+                    %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                    %span.text-warning= content_tag(:i, "", :class => "fa fa-wrench")+"&nbsp;"+"на модерации"
+                    /%span= content_tag(:i, "", :class => "fa fa-rub")+"&nbsp;"+"2500 руб."
+                  .span3.actions
+                    %ul.inline.pull-right
+                      %li=link_to(content_tag(:i, "", :class => "fa fa-wrench"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Товар на модерации", :class=>"btn btn-mini btn-warning mfp-message")
+            .accordion-body.collapse{:id => "goods_1"}
+              .accordion-inner
+                .row-fluid
+                  .span3.text-center
+                    = image_tag(lorem_image("140x100"),:class=>'img-polaroid')
+                    .pagination.pagination-centered.pagination-mini
+                      %ul
+                        %li.disabled= link_to('&#171;', '#')
+                        %li.active= link_to('1', '#')
+                        %li= link_to('2', '#')
+                        %li= link_to('3', '#')
+                        %li= link_to('&#187;', '#')
+                  .span9
+                    %dl.dl-horizontal
+                      %dt Артикул:
+                      %dd 123456
+                      %dt Раздел:
+                      %dd Текстиль
+                      %dt Материал:
+                      %dd Хлопок
+                      %dt Состав:
+                      %dd 80% Хлопок, 20% Полиэстер
+                      %dt Цвет:
+                      %dd Белый
+                      %dt Размер:
+                      %dd 70х140 см.
+                      %dt Плотность:
+                      %dd 400 гр/м2.
+                      %dt Количество:
+                      %dd 500 шт.
+                      %dt Где готов к отгрузке:
+                      %dd г.Москва
+                      %dt Описание:
+                      %dd= lorem_paragraph
+                      %dt Цена поставки:
+                      %dd 500 уе.
+          .accordion-group
+            .accordion-heading
+              .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#goodsCollapse", "data-target"=>"#goods_1"}
+                .row-fluid
+                  .span5.head
+                    %i.fa.fa-cogs.fa-lg
+                    %strong Наименование товара
+                  .span4.info
+                    %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                    %span.text-error= content_tag(:i, "", :class => "fa fa-eye-slash")+"&nbsp;"+"не активный"
+                    /%span= content_tag(:i, "", :class => "fa fa-rub")+"&nbsp;"+"2500 руб."
+                  .span3.actions
+                    %ul.inline.pull-right
+                      %li=link_to(content_tag(:i, "", :class => "fa fa-eye"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Показать в каталоге", :class=>"btn btn-mini mfp-message")
+                      %li=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать товар", :class=>"btn btn-mini mfp-message")
+                      %li=link_to(content_tag(:i, "", :class => "fa fa-trash-o"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Удалить товар", :class=>"btn btn-mini mfp-message")
+            .accordion-body.collapse{:id => "goods_1"}
+              .accordion-inner
+                .row-fluid
+                  .span3.text-center
+                    = image_tag(lorem_image("140x100"),:class=>'img-polaroid')
+                    .pagination.pagination-centered.pagination-mini
+                      %ul
+                        %li.disabled= link_to('&#171;', '#')
+                        %li.active= link_to('1', '#')
+                        %li= link_to('2', '#')
+                        %li= link_to('3', '#')
+                        %li= link_to('&#187;', '#')
+                    = link_to(content_tag(:i, "", :class => "fa fa-mail-forward")+"&nbsp;"+"Открыть товар", '#', :class=>"btn disabled")
+                  .span9
+                    %dl.dl-horizontal
+                      %dt Артикул:
+                      %dd 123456
+                      %dt Раздел:
+                      %dd Текстиль
+                      %dt Материал:
+                      %dd Хлопок
+                      %dt Состав:
+                      %dd 80% Хлопок, 20% Полиэстер
+                      %dt Цвет:
+                      %dd Белый
+                      %dt Размер:
+                      %dd 70х140 см.
+                      %dt Плотность:
+                      %dd 400 гр/м2.
+                      %dt Количество:
+                      %dd 500 шт.
+                      %dt Где готов к отгрузке:
+                      %dd г.Москва
+                      %dt Описание:
+                      %dd= lorem_paragraph
+                      %dt Цена поставки:
+                      %dd 500 уе.
+          -3.upto(10) do |i|
+            .accordion-group
+              .accordion-heading
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#goodsCollapse", "data-target"=>"#goods_#{i}"}
+                  .row-fluid
+                    .span5.head
+                      %i.fa.fa-cogs.fa-lg
+                      %strong Наименование товара
+                    .span4.info
+                      %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                      %span.text-success= content_tag(:i, "", :class => "fa fa-eye")+"&nbsp;"+"активный"
+                      /%span= content_tag(:i, "", :class => "fa fa-rub")+"&nbsp;"+"2500 руб."
+                    .span3.actions
+                      %ul.inline.pull-right
+                        %li=link_to(content_tag(:i, "", :class => "fa fa-eye-slash"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Не показывать в каталоге", :class=>"btn btn-mini mfp-message")
+                        %li=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать товар", :class=>"btn btn-mini mfp-message")
+                        %li=link_to(content_tag(:i, "", :class => "fa fa-trash-o"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Удалить товар", :class=>"btn btn-mini mfp-message")
+              .accordion-body.collapse{:id => "goods_#{i}"}
+                .accordion-inner
+                  .row-fluid
+                    .span3.text-center
+                      = image_tag(lorem_image("140x100"),:class=>'img-polaroid')
+                      .pagination.pagination-centered.pagination-mini
+                        %ul
+                          %li.disabled= link_to('&#171;', '#')
+                          %li.active= link_to('1', '#')
+                          %li= link_to('2', '#')
+                          %li= link_to('3', '#')
+                          %li= link_to('&#187;', '#')
+                      = link_to(content_tag(:i, "", :class => "fa fa-mail-forward")+"&nbsp;"+"Открыть товар", '/catalog/category/group/item.html', :class=>"btn")
+                    .span9
+                      %dl.dl-horizontal
+                        %dt Артикул:
+                        %dd 123456
+                        %dt Раздел:
+                        %dd Текстиль
+                        %dt Материал:
+                        %dd Хлопок
+                        %dt Состав:
+                        %dd 80% Хлопок, 20% Полиэстер
+                        %dt Цвет:
+                        %dd Белый
+                        %dt Размер:
+                        %dd 70х140 см.
+                        %dt Плотность:
+                        %dd 400 гр/м2.
+                        %dt Количество:
+                        %dd 500 шт.
+                        %dt Где готов к отгрузке:
+                        %dd г.Москва
+                        %dt Описание:
+                        %dd= lorem_paragraph
+                        %dt Цена поставки:
+                        %dd 500 уе.
+
+        = render :partial => "/layouts/pagination"
+      .tab-pane#messages
+        .accordion#messagesCollapse
+          -1.upto(5) do |i|
+            .accordion-group
+              .accordion-heading
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#messagesCollapse", "data-target"=>"#message_#{i}"}
+                  .row-fluid
+                    .span5.head
+                      %i.fa.fa-comments-o.fa-lg
+                      %strong Наименование товара
+                    .span4.info
+                      %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                      %span.rating
+                        %i.fa.fa-star.fa-fw
+                        %i.fa.fa-star.fa-fw
+                        %i.fa.fa-star.fa-fw
+                        %i.fa.fa-star-half-o.fa-fw
+                        %i.fa.fa-star-o.fa-fw
+                    .span3.actions
+                      %ul.inline
+                        %li=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini mfp-message")
+                        %li=link_to(content_tag(:i, "", :class => "fa fa-mail-forward"), '/catalog/category/group/item.html', 'data-toggle'=>"tooltip", 'data-original-title'=>"Перейти к товару", :class=>"btn btn-mini")
+              .accordion-body.collapse{:id => "message_#{i}"}
+                .accordion-inner
+                  %blockquote.message
+                    %p= lorem_paragraph
+      .tab-pane#profile
+        .boxed-group
+          .boxed-group-head
+            Личные данные
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#company_profile"}
+              %i.fa.fa-eye-slash
+          .collapse.in#company_profile
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
+                .control-group.profile-avatar
+                  .control-label=image_tag(lorem_image("85x59"), :alt=>"Аватар", :class=>"img-polaroid")
+                  .controls
+                    %label Фото (аватар)
+                    %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}
+                .control-group
+                  .control-label Имя:
+                  .controls
+                    %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
+                .control-group
+                  .control-label Фамилия:
+                  .controls
+                    %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
+                .control-group
+                  .control-label Отчетство:
+                  .controls
+                    %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
+                .control-group
+                  .control-label Компания:
+                  .controls
+                    %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
+                .control-group
+                  .control-label Город:
+                  .controls
+                    %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
+                .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
+        .boxed-group
+          .boxed-group-head
+            Контактные данные
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#contact_data"}
+              %i.fa.fa-eye
+          .collapse#contact_data
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
+                .control-group
+                  .control-label.required E-mail:
+                  .controls
+                    %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
+                .control-group
+                  .control-label Телефон:
+                  .controls
+                    %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
+                .control-group
+                  .control-label Факс:
+                  .controls
+                    %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
+                .control-group
+                  .control-label Сайт:
+                  .controls
+                    %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
+                .control-group
+                  .control-label Страна:
+                  .controls
+                    %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
+                .control-group
+                  .control-label Почтовый индекс:
+                  .controls
+                    %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
+                .control-group
+                  .control-label Адрес:
+                  .controls
+                    %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
+                .text-right=link_to("Обновить контактные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
+        .boxed-group
+          .boxed-group-head
+            Изменить пароль
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#change_password"}
+              %i.fa.fa-eye
+          .collapse#change_password
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}
+                .control-group
+                  .control-label.required Старый пароль:
+                  .controls
+                    %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                    =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
+                .control-group
+                  .control-label.required Новый пароль:
+                  .controls
+                    %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                .control-group
+                  .control-label.required Повтор пароля:
+                  .controls
+                    %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
+        .boxed-group
+          .boxed-group-head
+            Рассылка
+            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#maillist"}
+              %i.fa.fa-eye
+          .collapse#maillist
+            .boxed-group-inner.clearfix
+              %form.form-horizontal.form-registration{:action=>"/users.html"}

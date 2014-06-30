@@ -1,0 +1,28 @@
+.left-company-profile .line-dotted { border-bottom-color: #ccc; }
+.left-company-profile .profile-header { margin-top: 10px; margin-bottom: 15px; }
+.left-company-profile .fa-ul li .fa { color: #ccc; }
+.left-company-profile .stat-count > a { display: block; font-size: 28px; font-weight: bold; line-height: 1; color: inherit; }
+.left-company-profile .stat-count > a:hover { color: #4183c4; }
+.left-company-profile .stat-count > a:hover { text-decoration: none; }
+.left-company-profile .stat-count > span { display: block; font-size: 11px; color: #999; text-transform: capitalize; }
+
+.accordion-group .accordion-toggle:hover { background-color: #dff0d8; }
+.accordion-group .active { color: #468847; background-color: #dff0d8; text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0; }
+.accordion-group .row-fluid [class*="span"] { min-height: 20px; }
+.accordion-group .head { font-size: 13px; }
+.accordion-group .head .fa { color: #999; }
+.accordion-group .head .fa:before { line-height: 1; margin-right: 20px; }
+.accordion-group .info > span { display: inline-block; font-size: 11px; margin-right: 10px; }
+.accordion-group .info > span:not([class*="text"]) { color: #999; }
+.accordion-group .info > span.rating { color: #EA2125; }
+.accordion-group .actions > ul { margin-bottom: 0; }
+.accordion-group .accordion-inner .message { margin-top: 10px; margin-left: 20px; }
+.accordion-group .accordion-inner .message > p { font-size: inherit; }
+
+.boxed-group { border-radius: 4px; margin-bottom: 15px; }
+.boxed-group .collapse { border-bottom: 1px solid #d8d8d8; }
+.boxed-group .collapse.in { border-bottom: 0; }
+.boxed-group .boxed-group-head { background-color: #f5f5f5; margin: 0; border: 1px solid #d8d8d8; border-bottom: 0; padding-top: 10px; padding-bottom: 11px; padding-left: 10px; padding-right: 10px; font-size: 13px; font-weight: bold; -webkit-border-radius: 4px 4px 0px 0px; -moz-border-radius: 4px 4px 0px 0px; -ms-border-radius: 4px 4px 0px 0px; -o-border-radius: 4px 4px 0px 0px; border-radius: 4px 4px 0px 0px; text-shadow: white 0 1px 0; }
+.boxed-group .boxed-group-inner { padding-top: 20px; padding-right: 10px; padding-bottom: 1px; padding-left: 10px; background: #fff; border: 1px solid #d8d8d8; border-bottom-left-radius: 1px; border-bottom-right-radius: 1px; }
+
+.profile-avatar .controls > label { line-height: 30px; margin-top: 5px; }

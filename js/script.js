@@ -12,7 +12,7 @@ head.ready('mfp', function(){
     preloader: false,
     callbacks: {
       open: function() {
-        setTimeout(function(){$.magnificPopup.close()}, 1000);
+        setTimeout(function(){$.magnificPopup.close();}, 1000);
       }
     }
   });

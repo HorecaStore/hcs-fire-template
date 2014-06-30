@@ -1,0 +1,142 @@
+@import "base";
+
+.left-company-profile{
+  .line-dotted{
+    border-bottom-color: #ccc;
+  }
+  .profile-header{
+    margin:{
+      top: 10px;
+      bottom: 15px;
+    }
+  }
+  .fa-ul{
+    li{
+      .fa{
+        color: #ccc;
+      }
+    }
+  }
+  .stat-count{
+    >a{
+      display: block;
+      font:{
+        size: 28px;
+        weight: bold;
+      }
+      line-height: 1;
+      @include link-colors(inherit, #4183c4);
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    >span{
+      display: block;
+      font-size: 11px;
+      color: #999;
+      text-transform: capitalize;
+    }
+  }
+}
+.accordion-group{
+  .accordion-toggle{
+    &:hover{
+      background-color: #dff0d8;
+    }
+  }
+  .active{
+    color: #468847;
+    background-color: #dff0d8;
+    @include text-shadow(rgba(255, 255, 255, 0.5) 0 1px 0);
+  }
+  .row-fluid [class*="span"]{
+    min-height: 20px;
+  }
+  .head{
+    font-size: 13px;
+    .fa{
+      color: #999;
+      &:before{
+        line-height: 1;
+        margin-right: 20px;
+      }
+    }
+  }
+  .info{
+    >span{
+      display: inline-block;
+      font-size: 11px;
+      margin-right: 10px;
+      &:not([class*="text"]){
+        color: #999;
+      }
+      &.rating{
+        color: #EA2125;
+      }
+    }
+  }
+  .actions{
+    > ul{
+      margin-bottom: 0;
+    }
+  }
+  .accordion-inner{
+    .message{
+      margin:{
+        top: 10px;
+        left: 20px;
+      }
+      >p{
+        font-size: inherit;
+      }
+    }
+  }
+}
+.boxed-group{
+  border-radius: 4px;
+  margin-bottom:15px;
+  .collapse{
+    border-bottom: 1px solid #d8d8d8;
+    &.in{
+      border-bottom: 0;
+    }
+  }
+  .boxed-group-head{
+    background-color: #f5f5f5;
+    margin: 0;
+    border: 1px solid #d8d8d8;
+    border-bottom: 0;
+    padding:{
+      top: 10px;
+      bottom: 11px;
+      left: 10px;
+      right: 10px;
+    }
+    font:{
+      size: 13px;
+      weight: bold;
+    }
+    @include border-radius(4px 4px 0px 0px);
+    @include text-shadow(#fff 0 1px 0);
+  }
+  .boxed-group-inner{
+    padding:{
+      top: 20px;
+      right: 10px;
+      bottom: 1px;
+      left: 10px;
+    }
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+  }
+}
+.profile-avatar{
+  .controls{
+    >label{
+      line-height: 30px;
+      margin-top: 5px;
+    }
+  }
+}

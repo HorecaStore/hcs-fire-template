@@ -46,6 +46,8 @@ h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > 
 .img-hover:hover { -webkit-box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 6px; box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 6px; }
 .thumbnail .img-hover { margin: 0; }
 
+a.img-hover { display: inline-block; }
+
 .line { height: 1px; margin: 25px auto; overflow: hidden; }
 
 .line-dotted { border-bottom: 1px dotted #524E4E; border-top: 0; }
