@@ -15,7 +15,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 310px; }
 
-body { background-image: url('/img/body.jpg?1400756304'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
+body { background-image: url('/images/body.jpg?1400756304'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
 
 h1, h2, h3, h4, h5, h6 { color: #777; text-shadow: white 0px 1px 0px; }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a { color: #2f2f2f; }
@@ -76,8 +76,8 @@ a.img-hover { display: inline-block; }
 .main .price { font-size: 22px; font-weight: bold; line-height: 30px; color: #EA2125; }
 .main .img-content.pull-left { margin-right: 30px; margin-bottom: 20px; }
 
-.footer { position: relative; background-color: #727272; color: #999; font-size: 12px; }
-.footer .container { padding-top: 20px; }
+.footer { position: relative; background-color: transparent; color: #999; font-size: 12px; }
+.footer .container { padding-top: 20px; min-height: 310px; }
 .footer .copyright { margin-bottom: 20px; }
 .footer .nav:last-child { margin-bottom: 0; }
 .footer .nav .nav-header { border-bottom: 1px dotted #524E4E; margin-bottom: 10px; margin-right: 25px; padding-top: 0; padding-bottom: 3px; padding-left: 0; padding-right: 0; text-shadow: none; font-size: 13px; }
@@ -89,10 +89,10 @@ a.img-hover { display: inline-block; }
 .footer .nav.contact > li > a:hover { border-bottom-style: solid; }
 .footer .social { margin-top: 40px; }
 .footer .social .soc-ico { display: block; height: 24px; width: 25px; }
-.footer .social .soc-ico.vk { background: url('/img/social-s45d308d236.png') -1px -87px; }
-.footer .social .soc-ico.facebook { background: url('/img/social-s45d308d236.png') -1px -29px; }
-.footer .social .soc-ico.odnoklassniki { background: url('/img/social-s45d308d236.png') 0 0; }
-.footer .social .soc-ico.twitter { background: url('/img/social-s45d308d236.png') -2px -58px; }
+.footer .social .soc-ico.vk { background: url('/images/social-s45d308d236.png') -1px -87px; }
+.footer .social .soc-ico.facebook { background: url('/images/social-s45d308d236.png') -1px -29px; }
+.footer .social .soc-ico.odnoklassniki { background: url('/images/social-s45d308d236.png') 0 0; }
+.footer .social .soc-ico.twitter { background: url('/images/social-s45d308d236.png') -2px -58px; }
 .footer .line-solid { background-color: black; border-bottom: 1px solid #4c4345; }
 
 .catalog-menu { border-color: #ddd; -webkit-border-radius: 4px 4px; -moz-border-radius: 4px / 4px; border-radius: 4px / 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; background-color: #f9f9f9; }

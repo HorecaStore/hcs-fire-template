@@ -12,15 +12,15 @@
 .main .groups-list .group-list-item > a { display: block; position: relative; width: 201px; height: 150px; margin: 0 auto; background-color: #EBECEC; border-top: 5px solid white; border-left: 5px solid white; border-right: 5px solid white; border-bottom: 40px solid white; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; margin-bottom: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .main .groups-list .group-list-item > a:hover { cursor: pointer; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 6px; }
 .main .groups-list .group-list-item > a > span { content: "Группа товара"; position: absolute; bottom: -30px; left: 0; width: 100%; }
-.main .groups-list .group-list-item.bathrobe > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -1248px; }
-.main .groups-list .group-list-item.towel > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -1404px; }
-.main .groups-list .group-list-item.bed > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -1092px; }
-.main .groups-list .group-list-item.sneakers > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -1716px; }
-.main .groups-list .group-list-item.bedspreads > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -468px; }
-.main .groups-list .group-list-item.toppers > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -624px; }
-.main .groups-list .group-list-item.pillows > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -1560px; }
-.main .groups-list .group-list-item.mattress > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -936px; }
-.main .groups-list .group-list-item.cosmetics > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -156px; }
-.main .groups-list .group-list-item.tablecloth > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -312px; }
-.main .groups-list .group-list-item.napkin > a { background: url('/img/catalog/group-se5572a82ad.png') 0 0; }
-.main .groups-list .group-list-item.tableware > a { background: url('/img/catalog/group-se5572a82ad.png') 0 -780px; }
+.main .groups-list .group-list-item.bathrobe > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -1248px; }
+.main .groups-list .group-list-item.towel > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -1404px; }
+.main .groups-list .group-list-item.bed > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -1092px; }
+.main .groups-list .group-list-item.sneakers > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -1716px; }
+.main .groups-list .group-list-item.bedspreads > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -468px; }
+.main .groups-list .group-list-item.toppers > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -624px; }
+.main .groups-list .group-list-item.pillows > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -1560px; }
+.main .groups-list .group-list-item.mattress > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -936px; }
+.main .groups-list .group-list-item.cosmetics > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -156px; }
+.main .groups-list .group-list-item.tablecloth > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -312px; }
+.main .groups-list .group-list-item.napkin > a { background: url('/images/catalog/group-se5572a82ad.png') 0 0; }
+.main .groups-list .group-list-item.tableware > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -780px; }
