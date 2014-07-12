@@ -5,100 +5,100 @@
 -@activeCatalog = "item"
 -@breadcrumbs = [{:path=>'catalog',:name=>'Каталог'},{:path=>'catalog/category',:name=>'Категория товаров'},{:path=>'catalog/category/group',:name=>'Группа товаров в категории'},{:path=>'catalog/category/group/item',:name=>'Наименование товара'}]
 
-.row-fluid
-  .span9.offset3
-    %h1.unified.page-title= @view[:title]
-
-.row-fluid
-  .span3
-    %ul.nav.nav-tabs.nav-stacked.catalog-menu
-      %li.nav-header Группа товаров
-      %li.active= link_to("Наименование товара #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group/item.html')
-      -8.times do
-        %li= link_to("Наименование товара #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group/item.html')
-  .span9.catalog-item
-    .row-fluid
-      .span6
-        %ul.thumbnails
-          %li.span12
-            .thumbnail= image_tag(lorem_image("350x250"))
-          .row-fluid
-            -3.times do
-              %li.span4
-                .thumbnail.img-hover= link_to(image_tag(lorem_image("350x250")),"#")
-      .span6
-        %form.form-horizontal
-          .properties-item
-            .control-group
-              %label.control-label Артикул:
-              .controls
-                %input.span8{:type=>"text", :value=>"123456"}
-            .control-group
-              %label.control-label Размер:
-              .controls
-                %select.span8
-                  %option XXL
-                  %option 50x70 см.
-                  %option 70x140 см.
-            .control-group
-              %label.control-label Плотность:
-              .controls
-                %select.span8
-                  %option 400 гр/м2
-                  %option 500 гр/м2
-                  %option 400 ТС
-            .control-group
-              %label.control-label Орнамент:
-              .controls
-                %select.span8
-                  %option без орнамента
-                  %option греческий
-                  %option гладкий
-                  %option полоса 1x1 см.
-            .control-group
-              %label.control-label Толщина нитей:
-              .controls
-                %select.span8
-                  %option 40х40
-                  %option 40х60
-            .control-group
-              %label.control-label Цвет:
-              .controls
-                %select.span8
-                  %option Под заказ
-                  %option Белый
-                  %option Бежевый
-          .line.line-dotted
-          .row-fluid
-            .span4.text-center.price<
-              = "1500"
-              %i.fa.fa-rub.fa-fw
-            .span4.text-center
-              = "x   "
-              %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
-            .span4.text-center= link_to("В заказ", '#mfp-add-order', :class=>"btn btn-success btn-block mfp-add-order")
-    .row-fluid.specifications-item
-      %ul.nav.nav-tabs#specifications-item
-        %li.active= link_to('Описание', '#settings', 'data-toogle'=>'tab')
-        %li= link_to('Отзывы о товаре', '#messages', 'data-toogle'=>'tab')
-      .tab-content
-        .tab-pane.active#settings
-          -4.times do
-            %p=lorem_paragraph
-        .tab-pane#messages
-          -2.times do
-            .well.messages
-              .message-name= lorem_word
-              .message-info
-                %span.rating
-                  %i.fa.fa-star.fa-fw
-                  %i.fa.fa-star.fa-fw
-                  %i.fa.fa-star.fa-fw
-                  %i.fa.fa-star-half-o.fa-fw
-                  %i.fa.fa-star-o.fa-fw
-                %span.date
-                  %i.fa.fa-calendar-o
-                  = lorem_date("%d.%m.%Y", 2014..2014)+' г.'
-              %p.message-body= lorem_paragraph
-          = link_to("Добавить отзыв", '#mfp-message', :class=>"btn mfp-message")
+.main{:role=>"main"}
+  .row-fluid
+    .span9.offset3
+      %h1.unified.page-title= @view[:title]
+  .row-fluid
+    .span3
+      %ul.nav.nav-tabs.nav-stacked.catalog-menu
+        %li.nav-header Группа товаров
+        %li.active= link_to("Наименование товара #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group/item.html')
+        -8.times do
+          %li= link_to("Наименование товара #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group/item.html')
+    .span9.catalog-item
+      .row-fluid
+        .span6
+          %ul.thumbnails
+            %li.span12
+              .thumbnail= image_tag(lorem_image("350x250"))
+            .row-fluid
+              -3.times do
+                %li.span4
+                  .thumbnail.img-hover= link_to(image_tag(lorem_image("350x250")),"#")
+        .span6
+          %form.form-horizontal
+            .properties-item
+              .control-group
+                %label.control-label Артикул:
+                .controls
+                  %input.span8{:type=>"text", :value=>"123456"}
+              .control-group
+                %label.control-label Размер:
+                .controls
+                  %select.span8
+                    %option XXL
+                    %option 50x70 см.
+                    %option 70x140 см.
+              .control-group
+                %label.control-label Плотность:
+                .controls
+                  %select.span8
+                    %option 400 гр/м2
+                    %option 500 гр/м2
+                    %option 400 ТС
+              .control-group
+                %label.control-label Орнамент:
+                .controls
+                  %select.span8
+                    %option без орнамента
+                    %option греческий
+                    %option гладкий
+                    %option полоса 1x1 см.
+              .control-group
+                %label.control-label Толщина нитей:
+                .controls
+                  %select.span8
+                    %option 40х40
+                    %option 40х60
+              .control-group
+                %label.control-label Цвет:
+                .controls
+                  %select.span8
+                    %option Под заказ
+                    %option Белый
+                    %option Бежевый
+            .line.line-dotted
+            .row-fluid
+              .span4.text-center.price<
+                = "1500"
+                %i.fa.fa-rub.fa-fw
+              .span4.text-center
+                = "x   "
+                %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
+              .span4.text-center= link_to("В заказ", '#mfp-add-order', :class=>"btn btn-success btn-block mfp-add-order")
+      .row-fluid.specifications-item
+        %ul.nav.nav-tabs#specifications-item
+          %li.active= link_to('Описание', '#settings', 'data-toogle'=>'tab')
+          %li= link_to('Отзывы о товаре', '#messages', 'data-toogle'=>'tab')
+        .tab-content
+          .tab-pane.active#settings
+            -4.times do
+              %p=lorem_paragraph
+          .tab-pane#messages
+            -2.times do
+              .well.messages
+                .message-name= lorem_word
+                .message-info
+                  %span.rating
+                    %i.fa.fa-star.fa-fw
+                    %i.fa.fa-star.fa-fw
+                    %i.fa.fa-star.fa-fw
+                    %i.fa.fa-star-half-o.fa-fw
+                    %i.fa.fa-star-o.fa-fw
+                  %span.date
+                    %i.fa.fa-calendar-o
+                    = lorem_date("%d.%m.%Y", 2014..2014)+' г.'
+                %p.message-body= lorem_paragraph
+            = link_to("Добавить отзыв", '#mfp-message', :class=>"btn mfp-message")
 = render :partial => "/layouts/mfp_add_order"

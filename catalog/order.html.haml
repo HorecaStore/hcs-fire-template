@@ -3,91 +3,92 @@
 -@script = "order"
 -@breadcrumbs = [{:path=>'catalog',:name=>'Каталог'},{:path=>'catalog/order',:name=>'Заказ товара'}]
 
-%h1.hide-text= @view[:title]
-.row-fluid
-  .span4
-    %form.form-order
-      %fieldset
-        %legend
-          %h2.unified Форма заказа
-        %select.span12
-          %option Группа товаров
-          %option{:value=>"1"} Халаты
-          %option{:value=>"2"} Полотенца
-          %option{:value=>"3"} Постель
-          %option{:value=>"4"} Тапочки
-          %option{:value=>"5"} Покрывала
-          %option{:value=>"6"} Наматрасники
-          %option{:value=>"7"} Подушки
-          %option{:value=>"8"} Матрасы
-          %option{:value=>"9"} Косметика для номеров
-          %option{:value=>"10"} Скатерти
-          %option{:value=>"11"} Салфетки
-          %option{:value=>"12"} Посуда
-        %select.span12
-          %option Наименование товара
-          -1.upto(6) do |i|
-            %option{:value=>i} Наименование товара
-        .form-horizontal
-          .control-group
-            %label.control-label Размер:
-            .controls
-              %select.span12
-                %option XXL
-                %option 50x70 см.
-                %option 70x140 см.
-          .control-group
-            %label.control-label Плотность:
-            .controls
-              %select.span12
-                %option 400 гр/м2
-                %option 500 гр/м2
-                %option 400 ТС
-          .control-group
-            %label.control-label Орнамент:
-            .controls
-              %select.span12
-                %option без орнамента
-                %option греческий
-                %option гладкий
-                %option полоса 1x1 см.
-          .control-group
-            %label.control-label Толщина нитей:
-            .controls
-              %select.span12
-                %option 40х40
-                %option 40х60
-          .control-group
-            %label.control-label Цвет:
-            .controls
-              %select.span12
-                %option Под заказ
-                %option Белый
-                %option Бежевый
-        =link_to("Добавить в заказ", '#mfp-ajax-load', 'data-toggle'=>"tooltip", 'data-original-title'=>"Удалить из заказа", :class=>"btn btn-danger pull-right mfp-ajax-load")
-  .span7.offset1
-    %form.form-claim#claim
-      %fieldset
-        %legend
-          %h2.unified Ваш текущий заказ
-        %table.table.table-hover
-          %tbody
-            -3.times do
+.main{:role=>"main"}
+  %h1.hide-text= @view[:title]
+  .row-fluid
+    .span4
+      %form.form-order
+        %fieldset
+          %legend
+            %h2.unified Форма заказа
+          %select.span12
+            %option Группа товаров
+            %option{:value=>"1"} Халаты
+            %option{:value=>"2"} Полотенца
+            %option{:value=>"3"} Постель
+            %option{:value=>"4"} Тапочки
+            %option{:value=>"5"} Покрывала
+            %option{:value=>"6"} Наматрасники
+            %option{:value=>"7"} Подушки
+            %option{:value=>"8"} Матрасы
+            %option{:value=>"9"} Косметика для номеров
+            %option{:value=>"10"} Скатерти
+            %option{:value=>"11"} Салфетки
+            %option{:value=>"12"} Посуда
+          %select.span12
+            %option Наименование товара
+            -1.upto(6) do |i|
+              %option{:value=>i} Наименование товара
+          .form-horizontal
+            .control-group
+              %label.control-label Размер:
+              .controls
+                %select.span12
+                  %option XXL
+                  %option 50x70 см.
+                  %option 70x140 см.
+            .control-group
+              %label.control-label Плотность:
+              .controls
+                %select.span12
+                  %option 400 гр/м2
+                  %option 500 гр/м2
+                  %option 400 ТС
+            .control-group
+              %label.control-label Орнамент:
+              .controls
+                %select.span12
+                  %option без орнамента
+                  %option греческий
+                  %option гладкий
+                  %option полоса 1x1 см.
+            .control-group
+              %label.control-label Толщина нитей:
+              .controls
+                %select.span12
+                  %option 40х40
+                  %option 40х60
+            .control-group
+              %label.control-label Цвет:
+              .controls
+                %select.span12
+                  %option Под заказ
+                  %option Белый
+                  %option Бежевый
+          =link_to("Добавить в заказ", '#mfp-ajax-load', 'data-toggle'=>"tooltip", 'data-original-title'=>"Удалить из заказа", :class=>"btn btn-danger pull-right mfp-ajax-load")
+    .span7.offset1
+      %form.form-claim#claim
+        %fieldset
+          %legend
+            %h2.unified Ваш текущий заказ
+          %table.table.table-hover
+            %tbody
+              -3.times do
+                %tr
+                  %td{:width=>"15%"}= image_tag(lorem_image("100x70"), :alt=>"Фото товара")
+                  %td= link_to("Hаименование товара", "/catalog/category/group/item.html")
+                  %td.text-center
+                    %span x
+                    %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
+                    %span шт.
+                  %td.text-center
+                    %span.price 1500 руб.
+                  %td=link_to(content_tag(:i, "", :class => "fa fa-trash-o"), '#mfp-ajax-load', 'data-toggle'=>"tooltip", 'data-original-title'=>"Удалить из заказа", :class=>"btn btn-mini mfp-ajax-load")
+            %tfoot
               %tr
-                %td{:width=>"15%"}= image_tag(lorem_image("100x70"), :alt=>"Фото товара")
-                %td= link_to("Hаименование товара", "/catalog/category/group/item.html")
-                %td.text-center
-                  %span x
-                  %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
-                  %span шт.
-                %td.text-center
-                  %span.price 1500 руб.
-                %td=link_to(content_tag(:i, "", :class => "fa fa-trash-o"), '#mfp-ajax-load', 'data-toggle'=>"tooltip", 'data-original-title'=>"Удалить из заказа", :class=>"btn btn-mini mfp-ajax-load")
-          %tfoot
-            %tr
-              %td{:colspan=>"3"} Итого 3 наименования на сумму:
-              %td{:colspan=>"2"}
-                %strong 4500 руб.
-      .line.line-dotted
-      =link_to('Оформить заказ', '#mfp-order', :class=>"mfp-order btn btn-success pull-right")
+                %td{:colspan=>"3"} Итого 3 наименования на сумму:
+                %td{:colspan=>"2"}
+                  %strong 4500 руб.
+        .line.line-dotted
+        =link_to('Оформить заказ', '#mfp-order', :class=>"mfp-order btn btn-success pull-right")
 = render :partial => "/layouts/mfp_order"

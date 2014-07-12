@@ -2,36 +2,36 @@
 -@breadcrumbs = [{:path=>'search',:name=>@view[:title]}]
 -@css = "search"
 
-.row-fluid
-  .span9.offset3
-    %h1.unified.page-title= @view[:title]
-
-.row-fluid
-  .span3
-    %ul.unstyled.search-form
-      %li.nav-header Форма поиска
-      %li
-        %form.form-search{:action=>"/search.html", :method=>"get", :enctype=>"multipart/form-data"}
-          .input-append
-            %input.span10.search-query{:type=>'text', :placeholder=>"Поиск по сайту", :name=>"text"}
-            %button.btn{:type=>"submit"}
-              %i.fa.fa-search
-  .span9
-    .result-search-info
-      .result-info
-        .row-fluid
-          .span9 Результаты поиска по запросу: #{content_tag(:strong, lorem_word)}
-          .span3 Найдено 20 стр.
-    .result-search
-      -10.times do
-        .result-item
-          .result-item-title= link_to(lorem_words(2+rand(4)),"/catalog/category/group/item.html")
-          .result-item-path
-            .row-fluid
-              .span9 http://horecastore.ru/catalog/category/group/item.html
-              .span1 3 Кб
-              .span2= lorem_date("%d.%m.%Y", 2014..2014)
-          %p.result-item-text= lorem_paragraph
-      .line.line-dotted
-      = render :partial => "/layouts/pagination"
+.main{:role=>"main"}
+  .row-fluid
+    .span9.offset3
+      %h1.unified.page-title= @view[:title]
+  .row-fluid
+    .span3
+      %ul.unstyled.search-form
+        %li.nav-header Форма поиска
+        %li
+          %form.form-search{:action=>"/search.html", :method=>"get", :enctype=>"multipart/form-data"}
+            .input-append
+              %input.span10.search-query{:type=>'text', :placeholder=>"Поиск по сайту", :name=>"text"}
+              %button.btn{:type=>"submit"}
+                %i.fa.fa-search
+    .span9
+      .result-search-info
+        .result-info
+          .row-fluid
+            .span9 Результаты поиска по запросу: #{content_tag(:strong, lorem_word)}
+            .span3 Найдено 20 стр.
+      .result-search
+        -10.times do
+          .result-item
+            .result-item-title= link_to(lorem_words(2+rand(4)),"/catalog/category/group/item.html")
+            .result-item-path
+              .row-fluid
+                .span9 http://horecastore.ru/catalog/category/group/item.html
+                .span1 3 Кб
+                .span2= lorem_date("%d.%m.%Y", 2014..2014)
+            %p.result-item-text= lorem_paragraph
+        .line.line-dotted
+        = render :partial => "/layouts/pagination"
 

@@ -3,191 +3,192 @@
 -@css = "user"
 -@breadcrumbs = [{:path=>'users',:name=>@view[:title]}]
 
-.row-fluid
-  .span9.offset3
-    %h1.unified.page-title= @view[:title]
-.row-fluid
-  .span3.left-user-profile
-    .thumbnails
-      = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile", "data-tab"=>"profile")
-    .h3.profile-header.text-center Иван Сидорович Иванов
-    .line.line-dotted
-    %ul.nav.fa-ul
-      %li= '<i class="fa fa-li fa-map-marker"></i>Санкт-Петербург'
-      %li= '<i class="fa fa-li fa-envelope-o"></i>mail@mail.tt'
-      %li= '<i class="fa fa-li fa-phone"></i>+7-111-222-33-44'
-    .h4.profile-header.line-dotted Компания
-    %ul.nav.fa-ul
-      %li= '<i class="fa fa-li fa-bank"></i>ООО "Компания"'
-    .line.line-dotted
-    .row-fluid
-      .span6
-        .stat-count.text-center
-          = link_to("20","#orders", "data-tab"=>"orders")
-          %span Заказов
-      .span6
-        .stat-count.text-center
-          = link_to("5","#messages", "data-tab"=>"messages")
-          %span Отзывов
+.main{:role=>"main"}
+  .row-fluid
+    .span9.offset3
+      %h1.unified.page-title= @view[:title]
+  .row-fluid
+    .span3.left-user-profile
+      .thumbnails
+        = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile", "data-tab"=>"profile")
+      .h3.profile-header.text-center Иван Сидорович Иванов
+      .line.line-dotted
+      %ul.nav.fa-ul
+        %li= '<i class="fa fa-li fa-map-marker"></i>Санкт-Петербург'
+        %li= '<i class="fa fa-li fa-envelope-o"></i>mail@mail.tt'
+        %li= '<i class="fa fa-li fa-phone"></i>+7-111-222-33-44'
+      .h4.profile-header.line-dotted Компания
+      %ul.nav.fa-ul
+        %li= '<i class="fa fa-li fa-bank"></i>ООО "Компания"'
+      .line.line-dotted
+      .row-fluid
+        .span6
+          .stat-count.text-center
+            = link_to("20","#orders", "data-tab"=>"orders")
+            %span Заказов
+        .span6
+          .stat-count.text-center
+            = link_to("5","#messages", "data-tab"=>"messages")
+            %span Отзывов
 
-  .span9
-    %ul.nav.nav-tabs#profile-user
-      %li.active= link_to('История заказов', '#orders', 'data-toogle'=>'tab')
-      %li= link_to('Мои отзывы о товаре', '#messages', 'data-toogle'=>'tab')
-      %li= link_to('Мой профиль', '#profile', 'data-toogle'=>'tab')
-    .tab-content
-      .tab-pane.active#orders
-        .accordion#ordersCollapse
-          -1.upto(10) do |i|
-            .accordion-group
-              .accordion-heading
-                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#ordersCollapse", "data-target"=>"#order_#{i}"}
-                  .row-fluid
-                    .span3.order-head
-                      %i.fa.fa-book.fa-lg
-                      %strong="Заказ № "+"#{i}"
-                    .span6.order-structure
-                      %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
-                      %span= content_tag(:i, "", :class => "fa fa-check-square-o")+"&nbsp;"+"5 наименований, "
-                      %span= content_tag(:i, "", :class => "fa fa-rub")+"&nbsp;"+"2500 руб."
-                    .span3.order-actions
-                      %ul.inline
-                        %li=link_to(content_tag(:i, "", :class => "fa fa-retweet"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Повторить заказ", :class=>"btn btn-mini mfp-message")
-              .accordion-body.collapse{:id => "order_#{i}"}
-                .accordion-inner
-                  %table.table.table-hover
-                    -5.times do
-                      %tr
-                        %td=content_tag(:i, "", :class => "fa fa-tag")
-                        %td=link_to("Наименование товара", "/catalog/category/group/item.html")
-                        %td 5 шт.
-                        %td 500 руб.
-        = render :partial => "/layouts/pagination"
-      .tab-pane#messages
-        .accordion#messagesCollapse
-          -1.upto(5) do |i|
-            .accordion-group
-              .accordion-heading
-                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#messagesCollapse", "data-target"=>"#message_#{i}"}
-                  .row-fluid
-                    .span5.message-head
-                      %i.fa.fa-comments-o.fa-lg
-                      %strong Наименование товара
-                    .span4.message-info
-                      %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
-                      %span.rating
-                        %i.fa.fa-star.fa-fw
-                        %i.fa.fa-star.fa-fw
-                        %i.fa.fa-star.fa-fw
-                        %i.fa.fa-star-half-o.fa-fw
-                        %i.fa.fa-star-o.fa-fw
-                    .span3.message-actions
-                      %ul.inline
-                        %li=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini mfp-message")
-                        %li=link_to(content_tag(:i, "", :class => "fa fa-mail-forward"), '/catalog/category/group/item.html', 'data-toggle'=>"tooltip", 'data-original-title'=>"Перейти к товару", :class=>"btn btn-mini")
-              .accordion-body.collapse{:id => "message_#{i}"}
-                .accordion-inner
-                  %blockquote.message
-                    %p= lorem_paragraph
-      .tab-pane#profile
-        .boxed-group
-          .boxed-group-head
-            Личные данные
-            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#user_profile"}
-              %i.fa.fa-eye-slash
-          .collapse.in#user_profile
-            .boxed-group-inner.clearfix
-              %form.form-horizontal.form-registration{:action=>"/users.html"}
-                .control-group.profile-avatar
-                  .control-label=image_tag(lorem_image("85x59"), :alt=>"Аватар", :class=>"img-polaroid")
-                  .controls
-                    %label Фото (аватар)
-                    %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}
-                .control-group
-                  .control-label Имя:
-                  .controls
-                    %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
-                .control-group
-                  .control-label Фамилия:
-                  .controls
-                    %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
-                .control-group
-                  .control-label Отчетство:
-                  .controls
-                    %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
-                .control-group
-                  .control-label Компания:
-                  .controls
-                    %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
-                .control-group
-                  .control-label Город:
-                  .controls
-                    %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
-                .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
-        .boxed-group
-          .boxed-group-head
-            Контактные данные
-            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#contact_data"}
-              %i.fa.fa-eye
-          .collapse#contact_data
-            .boxed-group-inner.clearfix
-              %form.form-horizontal.form-registration{:action=>"/users.html"}
-                .control-group
-                  .control-label.required E-mail:
-                  .controls
-                    %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
-                .control-group
-                  .control-label Телефон:
-                  .controls
-                    %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
-                .control-group
-                  .control-label Факс:
-                  .controls
-                    %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
-                .control-group
-                  .control-label Сайт:
-                  .controls
-                    %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
-                .control-group
-                  .control-label Страна:
-                  .controls
-                    %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
-                .control-group
-                  .control-label Почтовый индекс:
-                  .controls
-                    %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
-                .control-group
-                  .control-label Адрес:
-                  .controls
-                    %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
-                .text-right=link_to("Обновить контактные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
-        .boxed-group
-          .boxed-group-head
-            Изменить пароль
-            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#change_password"}
-              %i.fa.fa-eye
-          .collapse#change_password
-            .boxed-group-inner.clearfix
-              %form.form-horizontal.form-registration{:action=>"/users.html"}
-                .control-group
-                  .control-label.required Старый пароль:
-                  .controls
-                    %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                    =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
-                .control-group
-                  .control-label.required Новый пароль:
-                  .controls
-                    %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                .control-group
-                  .control-label.required Повтор пароля:
-                  .controls
-                    %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
-        .boxed-group
-          .boxed-group-head
-            Рассылка
-            %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#maillist"}
-              %i.fa.fa-eye
-          .collapse#maillist
-            .boxed-group-inner.clearfix
-              %form.form-horizontal.form-registration{:action=>"/users.html"}
+    .span9
+      %ul.nav.nav-tabs#profile-user
+        %li.active= link_to('История заказов', '#orders', 'data-toogle'=>'tab')
+        %li= link_to('Мои отзывы о товаре', '#messages', 'data-toogle'=>'tab')
+        %li= link_to('Мой профиль', '#profile', 'data-toogle'=>'tab')
+      .tab-content
+        .tab-pane.active#orders
+          .accordion#ordersCollapse
+            -1.upto(10) do |i|
+              .accordion-group
+                .accordion-heading
+                  .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#ordersCollapse", "data-target"=>"#order_#{i}"}
+                    .row-fluid
+                      .span3.order-head
+                        %i.fa.fa-book.fa-lg
+                        %strong="Заказ № "+"#{i}"
+                      .span6.order-structure
+                        %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                        %span= content_tag(:i, "", :class => "fa fa-check-square-o")+"&nbsp;"+"5 наименований, "
+                        %span= content_tag(:i, "", :class => "fa fa-rub")+"&nbsp;"+"2500 руб."
+                      .span3.order-actions
+                        %ul.inline
+                          %li=link_to(content_tag(:i, "", :class => "fa fa-retweet"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Повторить заказ", :class=>"btn btn-mini mfp-message")
+                .accordion-body.collapse{:id => "order_#{i}"}
+                  .accordion-inner
+                    %table.table.table-hover
+                      -5.times do
+                        %tr
+                          %td=content_tag(:i, "", :class => "fa fa-tag")
+                          %td=link_to("Наименование товара", "/catalog/category/group/item.html")
+                          %td 5 шт.
+                          %td 500 руб.
+          = render :partial => "/layouts/pagination"
+        .tab-pane#messages
+          .accordion#messagesCollapse
+            -1.upto(5) do |i|
+              .accordion-group
+                .accordion-heading
+                  .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#messagesCollapse", "data-target"=>"#message_#{i}"}
+                    .row-fluid
+                      .span5.message-head
+                        %i.fa.fa-comments-o.fa-lg
+                        %strong Наименование товара
+                      .span4.message-info
+                        %span= content_tag(:i, "", :class => "fa fa-calendar-o")+"&nbsp;"+lorem_date("%d.%m.%Y", 2014..2014)+", "
+                        %span.rating
+                          %i.fa.fa-star.fa-fw
+                          %i.fa.fa-star.fa-fw
+                          %i.fa.fa-star.fa-fw
+                          %i.fa.fa-star-half-o.fa-fw
+                          %i.fa.fa-star-o.fa-fw
+                      .span3.message-actions
+                        %ul.inline
+                          %li=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#mfp-message', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini mfp-message")
+                          %li=link_to(content_tag(:i, "", :class => "fa fa-mail-forward"), '/catalog/category/group/item.html', 'data-toggle'=>"tooltip", 'data-original-title'=>"Перейти к товару", :class=>"btn btn-mini")
+                .accordion-body.collapse{:id => "message_#{i}"}
+                  .accordion-inner
+                    %blockquote.message
+                      %p= lorem_paragraph
+        .tab-pane#profile
+          .boxed-group
+            .boxed-group-head
+              Личные данные
+              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#user_profile"}
+                %i.fa.fa-eye-slash
+            .collapse.in#user_profile
+              .boxed-group-inner.clearfix
+                %form.form-horizontal.form-registration{:action=>"/users.html"}
+                  .control-group.profile-avatar
+                    .control-label=image_tag(lorem_image("85x59"), :alt=>"Аватар", :class=>"img-polaroid")
+                    .controls
+                      %label Фото (аватар)
+                      %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}
+                  .control-group
+                    .control-label Имя:
+                    .controls
+                      %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
+                  .control-group
+                    .control-label Фамилия:
+                    .controls
+                      %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
+                  .control-group
+                    .control-label Отчетство:
+                    .controls
+                      %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
+                  .control-group
+                    .control-label Компания:
+                    .controls
+                      %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
+                  .control-group
+                    .control-label Город:
+                    .controls
+                      %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
+                  .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
+          .boxed-group
+            .boxed-group-head
+              Контактные данные
+              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#contact_data"}
+                %i.fa.fa-eye
+            .collapse#contact_data
+              .boxed-group-inner.clearfix
+                %form.form-horizontal.form-registration{:action=>"/users.html"}
+                  .control-group
+                    .control-label.required E-mail:
+                    .controls
+                      %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
+                  .control-group
+                    .control-label Телефон:
+                    .controls
+                      %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
+                  .control-group
+                    .control-label Факс:
+                    .controls
+                      %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
+                  .control-group
+                    .control-label Сайт:
+                    .controls
+                      %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
+                  .control-group
+                    .control-label Страна:
+                    .controls
+                      %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
+                  .control-group
+                    .control-label Почтовый индекс:
+                    .controls
+                      %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
+                  .control-group
+                    .control-label Адрес:
+                    .controls
+                      %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
+                  .text-right=link_to("Обновить контактные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
+          .boxed-group
+            .boxed-group-head
+              Изменить пароль
+              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#change_password"}
+                %i.fa.fa-eye
+            .collapse#change_password
+              .boxed-group-inner.clearfix
+                %form.form-horizontal.form-registration{:action=>"/users.html"}
+                  .control-group
+                    .control-label.required Старый пароль:
+                    .controls
+                      %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                      =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
+                  .control-group
+                    .control-label.required Новый пароль:
+                    .controls
+                      %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                  .control-group
+                    .control-label.required Повтор пароля:
+                    .controls
+                      %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                  .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
+          .boxed-group
+            .boxed-group-head
+              Рассылка
+              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#maillist"}
+                %i.fa.fa-eye
+            .collapse#maillist
+              .boxed-group-inner.clearfix
+                %form.form-horizontal.form-registration{:action=>"/users.html"}

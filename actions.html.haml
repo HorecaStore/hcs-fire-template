@@ -2,23 +2,23 @@
 -@css = "action"
 -@breadcrumbs = [{:path=>'actions',:name=>'Акции'}]
 
-.row-fluid
-  .span9.offset3
-    %h1.unified.page-title= @view[:title]
-
-.row-fluid
-  .span3
-    = render :partial => "/layouts/media_menu", :locals=>{:nav_header => "Последние акции", :media_head => "Заголовок акции", :link_path => "/actions/action.html"}
-  .span9
-    -3.times do
-      .row-fluid
-        -2.times do
-          .span6
-            .media
-              = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'/actions/action.html', :class=>'pull-left img-hover')
-              .media-body
-                %h2.h4.media-head.unified Заголовок акции
-                %p= lorem_words(20)+'...'
-                %p=link_to('Подробнее...', '/actions/action.html', :class=>'btn btn-link')
-      .line.line-dotted
-    = render :partial => "/layouts/pagination"
+.main{:role=>"main"}
+  .row-fluid
+    .span9.offset3
+      %h1.unified.page-title= @view[:title]
+  .row-fluid
+    .span3
+      = render :partial => "/layouts/media_menu", :locals=>{:nav_header => "Последние акции", :media_head => "Заголовок акции", :link_path => "/actions/action.html"}
+    .span9
+      -3.times do
+        .row-fluid
+          -2.times do
+            .span6
+              .media
+                = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'/actions/action.html', :class=>'pull-left img-hover')
+                .media-body
+                  %h2.h4.media-head.unified Заголовок акции
+                  %p= lorem_words(20)+'...'
+                  %p=link_to('Подробнее...', '/actions/action.html', :class=>'btn btn-link')
+        .line.line-dotted
+      = render :partial => "/layouts/pagination"

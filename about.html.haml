@@ -2,33 +2,33 @@
 -@script = "home"
 -@breadcrumbs = [{:path=>'about',:name=>'О компании'}]
 
-.row-fluid
-  .span9.offset3
-    %h1.unified.page-title= @view[:title]
-
-.row-fluid
-  .span3
-    = render :partial => "/layouts/catalog_menu", :locals=>{:nav_header => "Каталог", :count_item => 12, :link_path => "/catalog/category/group.html", :item_name=>"Группа товаров в категории"}
-  .span9
-    .img-content.pull-left= image_tag(lorem_image("300x200"), :class=>"img-polaroid", :alt=>"HoReCa Store")
-    -5.times do
-      %p=lorem_paragraph
-    .line.line-dotted
-    .row-fluid
-      .span6
-        %h2.unified Наш ассортимент
-        .img-content.pull-left= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
-        -2.times do
-          %p=lorem_paragraph
-      .span6
-        %h2.unified Наши услуги
-        .img-content.pull-left= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
-        -2.times do
-          %p=lorem_paragraph
-    .line.line-dotted
-    .row-fluid
-      .span12.clients
-        %h2.unified Наши клиенты
-        .carousel_clients
-          -12.times do
-            .text-center= image_tag(lorem_image("100x80"), :alt=>"HoReCa Store")
+.main{:role=>"main"}
+  .row-fluid
+    .span9.offset3
+      %h1.unified.page-title= @view[:title]
+  .row-fluid
+    .span3
+      = render :partial => "/layouts/catalog_menu", :locals=>{:nav_header => "Каталог", :count_item => 12, :link_path => "/catalog/category/group.html", :item_name=>"Группа товаров в категории"}
+    .span9
+      .img-content.pull-left= image_tag(lorem_image("300x200"), :class=>"img-polaroid", :alt=>"HoReCa Store")
+      -5.times do
+        %p=lorem_paragraph
+      .line.line-dotted
+      .row-fluid
+        .span6
+          %h2.unified Наш ассортимент
+          .img-content.pull-left= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
+          -2.times do
+            %p=lorem_paragraph
+        .span6
+          %h2.unified Наши услуги
+          .img-content.pull-left= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
+          -2.times do
+            %p=lorem_paragraph
+      .line.line-dotted
+      .row-fluid
+        .span12.clients
+          %h2.unified Наши клиенты
+          .carousel_clients
+            -12.times do
+              .text-center= image_tag(lorem_image("100x80"), :alt=>"HoReCa Store")

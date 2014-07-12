@@ -8,8 +8,7 @@
         = render :partial => "/layouts/header"
       -if @middle
         = render :partial => "/layouts/"+@middle
-      .main{:role=>"main"}
-        = yield
+      = yield
       .layout-footer
     .footer{:role=>"contentinfo"}
       .container.wrapper
