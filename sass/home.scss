@@ -79,37 +79,37 @@
           width: 100%;
         }
       }
-      &.bathrobe>a{
+      &.bathrobes>a{
         background: sprite($group-sprite, bathrobe);
       }
-      &.towel>a{
+      &.towels>a{
         background: sprite($group-sprite, towel);
       }
       &.bed>a{
         background: sprite($group-sprite, bed);
       }
-      &.sneakers>a{
+      &.slippers>a{
         background: sprite($group-sprite, sneakers);
       }
       &.bedspreads>a{
         background: sprite($group-sprite, bedspreads);
       }
-      &.toppers>a{
+      &.mattress-covers>a{
         background: sprite($group-sprite, toppers);
       }
       &.pillows>a{
         background: sprite($group-sprite, pillows);
       }
-      &.mattress>a{
+      &.mattresses>a{
         background: sprite($group-sprite, mattress);
       }
       &.cosmetics>a{
         background: sprite($group-sprite, cosmetics);
       }
-      &.tablecloth>a{
+      &.tablecloths>a{
         background: sprite($group-sprite, tablecloth);
       }
-      &.napkin>a{
+      &.napkins>a{
         background: sprite($group-sprite, napkin);
       }
       &.tableware>a{

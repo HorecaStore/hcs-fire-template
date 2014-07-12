@@ -15,7 +15,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 310px; }
 
-body { background-image: url('/images/body.jpg?1400756304'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
+body { background-image: url('/images/body.jpg?1405161367'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
 
 h1, h2, h3, h4, h5, h6 { color: #777; text-shadow: white 0px 1px 0px; }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a { color: #2f2f2f; }
