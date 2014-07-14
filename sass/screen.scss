@@ -204,6 +204,9 @@ a.img-hover{
     }
   }
 }
+.row-fluid .left-menu{
+  margin-left: 0;
+}
 .footer{
   position: relative;
   background-color: transparent; //#727272;
@@ -303,6 +306,7 @@ a.img-hover{
   @include border-radius(4px, 4px);
   @include box-shadow (rgba(0, 0, 0, .0555) 0 1px 3px);
   background-color: #f9f9f9;
+  margin-top: 44px;
   .nav-header{
     background-color: #e4e4e4;
     color: #6e6e6e;
