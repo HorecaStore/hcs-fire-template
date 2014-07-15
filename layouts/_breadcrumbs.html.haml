@@ -1,7 +1,7 @@
 .row-fluid
   %ul.breadcrumb
     %li
-      =link_to('Home', '/')
+      =link_to(content_tag(:i, '', :class=>"fa fa-home"), '/')
       %span.divider='/'
     -@breadcrumbs.each do |breadcrumb|
       %li
