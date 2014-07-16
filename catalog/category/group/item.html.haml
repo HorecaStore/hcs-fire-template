@@ -11,9 +11,9 @@
     %h1.unified.page-title= @view[:title]
     .row-fluid
       .span6
-        %ul.thumbnails
+        %ul.thumbnails.popup-gallery
           %li.span12
-            .thumbnail= image_tag(lorem_image("350x250"))
+            .thumbnail= link_to(image_tag(lorem_image("800x572")),"#mfp-img-gallery", :class=>"open-mfp-gallery")
           .row-fluid
             -3.times do
               %li.span4
@@ -100,3 +100,4 @@
       -8.times do
         %li= link_to("Наименование товара #{'<i class="fa fa-caret-right pull-right fa-fw"></i>'}", '/catalog/category/group/item.html')
 = render :partial => "/layouts/mfp_add_order"
+= render :partial => "/layouts/mfp_img_gallery"
