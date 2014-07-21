@@ -16,7 +16,11 @@
           %input.text-input.span12#e-mail{:type=>'text', :name=>'email', :placeholder=>'E-mail'}
         .row-fluid
           %textarea.span12.text-area#messages{:type=>'text', :name=>'messages', :placeholder=>'Ваше сообщение', :rows=>'7'}
-        %button.btn.btn-info Отправить сообщение
+        .row-fluid
+          .span6
+
+          .span6.text-right
+            %button.btn.btn-info Отправить сообщение
     .span4.offset1
       .address
         %h2.unified Наш адрес

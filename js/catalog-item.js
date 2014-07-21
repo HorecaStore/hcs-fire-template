@@ -19,7 +19,7 @@ head.ready('mfp', function(){
   });
   $('.open-mfp-gallery').on('click', function () {
     $('.mfp-img-gallery').magnificPopup('open');
-});
+  });
   $('.mfp-img-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
