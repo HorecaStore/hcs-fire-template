@@ -18,6 +18,7 @@
 .catalog-item .form-horizontal .control-group .control-label { width: 120px; font-weight: bold; }
 .catalog-item .form-horizontal .control-group .controls { margin-left: 150px; }
 .catalog-item .form-horizontal .control-group .controls input { border-color: transparent; box-shadow: none; }
+.catalog-item .form-horizontal .count-item > span { line-height: 30px; }
 .catalog-item .specifications-item { margin-top: 30px; }
 .catalog-item .specifications-item .messages .message-name { text-transform: capitalize; font-weight: bold; }
 .catalog-item .specifications-item .messages .message-info { line-height: 30px; font-size: 80%; }

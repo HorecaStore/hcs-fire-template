@@ -65,8 +65,8 @@
             .span4.text-center.price<
               = "1500"
               %i.fa.fa-rub.fa-fw
-            .span4.text-center
-              = "x   "
+            .span4.text-center.count-item
+              %span.span1= "&#x2715;"
               %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
             .span4.text-center= link_to("В заказ", '#mfp-add-order', :class=>"btn btn-success btn-block mfp-add-order")
     .row-fluid.specifications-item
