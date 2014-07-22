@@ -7,18 +7,19 @@
 
 
 .row-fluid
-  .span9.pull-right.catalog-groups.main{:role=>"main"}
+  .span9.pull-right.main{:role=>"main"}
     %h1.unified.page-title= @view[:title]
-    -3.times do
-      .row-fluid.catalog-group-items
-        -2.times do
-          .span6
-            .media-heading.line-dotted= link_to('Наименование товара', '/catalog/category/group/item.html')
-            .media
-              = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'/catalog/category/group/item.html', :class=>'pull-left img-hover')
-              .media-body.item
-                %p= lorem_words(20)+'...'
-                %p=link_to('Подробнее...', '/catalog/category/group/item.html', :class=>'btn btn-link')
+    .catalog-groups
+      -3.times do
+        .row-fluid.catalog-group-items
+          -2.times do
+            .span6
+              .media-heading.line-dotted= link_to('Наименование товара', '/catalog/category/group/item.html')
+              .media
+                = link_to(image_tag(lorem_image("120x140"),:class=>'media-object img-polaroid'),'/catalog/category/group/item.html', :class=>'pull-left img-hover')
+                .media-body.item
+                  %p= lorem_words(20)+'...'
+                  %p=link_to('Подробнее...', '/catalog/category/group/item.html', :class=>'btn btn-link')
   .span3.pull-left.left-menu
     %ul.nav.nav-tabs.nav-stacked.catalog-menu
       %li.nav-header Категория товаров

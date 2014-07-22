@@ -23,6 +23,7 @@
   }
 }
 .catalog-item{
+  margin-bottom: 20px;
   .dl-horizontal{
     margin: auto;
     dt{width: auto;}
@@ -72,4 +73,9 @@
       }
     }
   }
+  /* .open-mfp-gallery{
+    display: block;
+    max-height: 250px;
+    overflow: hidden;
+  } */
 }

@@ -8,6 +8,8 @@
 .catalog-groups .catalog-group-items .media-heading > a:active { color: #777777; }
 .catalog-groups .catalog-group-items .list-items li { margin-bottom: 5px; }
 
+.catalog-item { margin-bottom: 20px; /* .open-mfp-gallery{ display: block; max-height: 250px; overflow: hidden;
+} */ }
 .catalog-item .dl-horizontal { margin: auto; }
 .catalog-item .dl-horizontal dt { width: auto; }
 .catalog-item .dl-horizontal dd { margin-left: 80px; }

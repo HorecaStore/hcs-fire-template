@@ -52,11 +52,11 @@ head.ready('jquery', function(){
   })(jQuery);
 });
 
-head.ready('mfp', function(){
+/*head.ready('mfp', function(){
   $.magnificPopup.open({
     items:{
       src: '#mfp-message'
     },
     type: 'inline'
   }, 0);
-});
+});*/
