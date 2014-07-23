@@ -28,7 +28,7 @@
             .control-group
               %label.control-label Размер:
               .controls
-                %select.span8
+                %select.span10
                   %option ...
                   %option XXL
                   %option 50x70 см.
@@ -36,7 +36,7 @@
             .control-group
               %label.control-label Плотность:
               .controls
-                %select.span8
+                %select.span10
                   %option ...
                   %option 400 гр/м2
                   %option 500 гр/м2
@@ -44,7 +44,7 @@
             .control-group
               %label.control-label Орнамент:
               .controls
-                %select.span8
+                %select.span10
                   %option ...
                   %option без орнамента
                   %option греческий
@@ -53,14 +53,14 @@
             .control-group
               %label.control-label Толщина нитей:
               .controls
-                %select.span8
+                %select.span10
                   %option ...
                   %option 40х40
                   %option 40х60
             .control-group
               %label.control-label Цвет:
               .controls
-                %select.span8
+                %select.span10
                   %option ...
                   %option Под заказ
                   %option Белый
@@ -97,47 +97,45 @@
                 %th Орнамент
                 %th Толщина нитей
                 %th Цвет
-                %th Количество
                 %th Цена
                 %th В заказ
               %tr{:role=>"row"}
                 %th
-                  %select
+                  %select.input-block-level
                     %option ...
                     %option Польша
                     %option Туркменистан
                     %option Турция
                 %th
-                  %select
+                  %select.input-block-level
                     %option ...
                     %option XXL
                     %option 50x70 см.
                     %option 70x140 см.
                 %th
-                  %select
+                  %select.input-block-level
                     %option ...
                     %option 400 гр/м2
                     %option 500 гр/м2
                     %option 400 ТС
                 %th
-                  %select
+                  %select.input-block-level
                     %option ...
                     %option без орнамента
                     %option греческий
                     %option гладкий
                     %option полоса 1x1 см.
                 %th
-                  %select
+                  %select.input-block-level
                     %option ...
                     %option 40х40
                     %option 40х60
                 %th
-                  %select
+                  %select.input-block-level
                     %option ...
                     %option Под заказ
                     %option Белый
                     %option Бежевый
-                %th
                 %th
                 %th
         .tab-pane#messages
