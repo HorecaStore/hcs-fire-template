@@ -29,6 +29,7 @@
               %label.control-label Размер:
               .controls
                 %select.span8
+                  %option ...
                   %option XXL
                   %option 50x70 см.
                   %option 70x140 см.
@@ -36,6 +37,7 @@
               %label.control-label Плотность:
               .controls
                 %select.span8
+                  %option ...
                   %option 400 гр/м2
                   %option 500 гр/м2
                   %option 400 ТС
@@ -43,6 +45,7 @@
               %label.control-label Орнамент:
               .controls
                 %select.span8
+                  %option ...
                   %option без орнамента
                   %option греческий
                   %option гладкий
@@ -51,17 +54,24 @@
               %label.control-label Толщина нитей:
               .controls
                 %select.span8
+                  %option ...
                   %option 40х40
                   %option 40х60
             .control-group
               %label.control-label Цвет:
               .controls
                 %select.span8
+                  %option ...
                   %option Под заказ
                   %option Белый
                   %option Бежевый
           .line.line-dotted
-          .row-fluid
+          .row-fluid.starting-price
+            .span12.text-center
+              %strong Цена за шт.:
+              %span.price= "от 1500"+content_tag(:i,'',:class=>"fa fa-rub fa-fw")
+              //%i.fa.fa-rub.fa-fw
+          .row-fluid.add-order
             .span4.text-center.price<
               = "1500"
               %i.fa.fa-rub.fa-fw
@@ -69,14 +79,67 @@
               %span.span1= "&#x2715;"
               %input.input-mini.text-center{:type=>"number", :min=>"1", :value=>"1"}
             .span4.text-center= link_to("В заказ", '#mfp-add-order', :class=>"btn btn-success btn-block mfp-add-order")
+    .row-fluid.description
+      %blockquote
+        %p=lorem_paragraph
     .row-fluid.specifications-item
       %ul.nav.nav-tabs#specifications-item
-        %li.active= link_to('Описание', '#settings', 'data-toogle'=>'tab')
+        %li.active= link_to('Все размеры', '#settings', 'data-toogle'=>'tab')
         %li= link_to('Отзывы о товаре', '#messages', 'data-toogle'=>'tab')
       .tab-content
         .tab-pane.active#settings
-          -4.times do
-            %p=lorem_paragraph
+          %table.table.table-striped.table-bordered
+            %thead
+              %tr{:role=>"row"}
+                %th Страна производитель
+                %th Размер
+                %th Плотность
+                %th Орнамент
+                %th Толщина нитей
+                %th Цвет
+                %th Количество
+                %th Цена
+                %th В заказ
+              %tr{:role=>"row"}
+                %th
+                  %select
+                    %option ...
+                    %option Польша
+                    %option Туркменистан
+                    %option Турция
+                %th
+                  %select
+                    %option ...
+                    %option XXL
+                    %option 50x70 см.
+                    %option 70x140 см.
+                %th
+                  %select
+                    %option ...
+                    %option 400 гр/м2
+                    %option 500 гр/м2
+                    %option 400 ТС
+                %th
+                  %select
+                    %option ...
+                    %option без орнамента
+                    %option греческий
+                    %option гладкий
+                    %option полоса 1x1 см.
+                %th
+                  %select
+                    %option ...
+                    %option 40х40
+                    %option 40х60
+                %th
+                  %select
+                    %option ...
+                    %option Под заказ
+                    %option Белый
+                    %option Бежевый
+                %th
+                %th
+                %th
         .tab-pane#messages
           -2.times do
             .well.messages
