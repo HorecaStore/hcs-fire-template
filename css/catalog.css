@@ -17,6 +17,7 @@
 .catalog-item .form-horizontal .control-group .control-label { /* width: 120px; */ font-weight: bold; font-size: 13px; }
 .catalog-item .form-horizontal .control-group .controls { /* margin-left: 150px; */ }
 .catalog-item .form-horizontal .control-group .controls input { border-color: transparent; box-shadow: none; }
+.catalog-item .form-horizontal .control-group .controls .control-text { line-height: 32px; padding-left: 7px; }
 .catalog-item .form-horizontal .count-item > span { line-height: 30px; }
 .catalog-item .form-horizontal .add-order { opacity: 0; }
 .catalog-item .specifications-item { margin-top: 30px; }
