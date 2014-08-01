@@ -10,7 +10,7 @@
   .span9.pull-right.main{:role=>"main"}
     %h1.unified.page-title= @view[:title]
     .row-fluid.catalog-item
-      .span6
+      .span5
         %ul.thumbnails.popup-gallery
           %li.span12
             .thumbnail= link_to(image_tag(lorem_image("800x572")),"#mfp-img-gallery", :class=>"open-mfp-gallery")
@@ -18,21 +18,19 @@
             -3.times do
               %li.span4
                 .thumbnail.img-hover= link_to(image_tag(lorem_image("350x250")),"#")
-      .span6
+      .span7
         %form.form-horizontal
           .properties-item
+            /
+              .control-group
+                %label.control-label Артикул:
+                .controls
+                  %input.span8{:type=>"text", :value=>"123456"}
             .control-group
-              %label.control-label Артикул:
+              %label.control-label Цвет:
               .controls
-                %input.span8{:type=>"text", :value=>"123456"}
-            .control-group
-              %label.control-label Размер:
-              .controls
-                %select.span10
-                  %option ...
-                  %option XXL
-                  %option 50x70 см.
-                  %option 70x140 см.
+                %span.control-text белый
+                %input.span8{:type=>"hidden", :value=>"Белый"}
             .control-group
               %label.control-label Плотность:
               .controls
@@ -57,14 +55,6 @@
                   %option ...
                   %option 40х40
                   %option 40х60
-            .control-group
-              %label.control-label Цвет:
-              .controls
-                %select.span10
-                  %option ...
-                  %option Под заказ
-                  %option Белый
-                  %option Бежевый
           .line.line-dotted
           .row-fluid.starting-price
             .span12.text-center
