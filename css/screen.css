@@ -10,12 +10,12 @@
 
 html, body { height: 100%; }
 
-.layout { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -310px; }
-.layout .layout-footer { height: 310px; }
+.layout { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -290px; }
+.layout .layout-footer { height: 290px; }
 
-.footer { clear: both; position: relative; height: 310px; }
+.footer { clear: both; position: relative; height: 290px; }
 
-body { background-image: url('/images/body.jpg?1405161367'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
+body { background-image: url('/images/body.jpg?1405322416'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
 
 h1, h2, h3, h4, h5, h6 { color: #777; text-shadow: white 0px 1px 0px; }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a { color: #2f2f2f; }
@@ -79,7 +79,7 @@ a.img-hover { display: inline-block; }
 .row-fluid .left-menu { margin-left: 0; }
 
 .footer { position: relative; background-color: transparent; color: #999; font-size: 12px; }
-.footer .container { padding-top: 20px; min-height: 310px; }
+.footer .container { padding-top: 20px; min-height: 270px; }
 .footer .copyright { margin-bottom: 20px; }
 .footer .nav:last-child { margin-bottom: 0; }
 .footer .nav .nav-header { border-bottom: 1px dotted #524E4E; margin-bottom: 10px; margin-right: 25px; padding-top: 0; padding-bottom: 3px; padding-left: 0; padding-right: 0; text-shadow: none; font-size: 13px; }

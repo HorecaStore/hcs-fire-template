@@ -1,6 +1,6 @@
 @import "base";
 @import "fonts";
-@include sticky-footer(310px, ".layout", ".layout-footer", ".footer");
+@include sticky-footer(290px, ".layout", ".layout-footer", ".footer");
 
 body{
   //@include red-box(true);
@@ -215,7 +215,7 @@ a.img-hover{
   //@include box-shadow (rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset);
   .container{
     padding-top: 20px;
-    min-height: 310px;
+    min-height: 270px;
   }
   .copyright{
     margin:{
