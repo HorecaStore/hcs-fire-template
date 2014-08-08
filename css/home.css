@@ -24,3 +24,18 @@
 .main .groups-list .group-list-item.tablecloths > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -312px; }
 .main .groups-list .group-list-item.napkins > a { background: url('/images/catalog/group-se5572a82ad.png') 0 0; }
 .main .groups-list .group-list-item.tableware > a { background: url('/images/catalog/group-se5572a82ad.png') 0 -780px; }
+.main .clients .carousel_clients .client-item { display: block; width: 140px; height: 100px; margin: 0 auto; }
+.main .clients .carousel_clients .client-item.domina { background: url('/images/clients-s410c75b94c.png') 0 -1365px; }
+.main .clients .carousel_clients .client-item.domina:hover { background: url('/images/clients-s410c75b94c.png') 0 -1260px; }
+.main .clients .carousel_clients .client-item.forestmix { background: url('/images/clients-s410c75b94c.png') 0 -735px; }
+.main .clients .carousel_clients .client-item.forestmix:hover { background: url('/images/clients-s410c75b94c.png') 0 -315px; }
+.main .clients .carousel_clients .client-item.maryhotel { background: url('/images/clients-s410c75b94c.png') 0 -1050px; }
+.main .clients .carousel_clients .client-item.maryhotel:hover { background: url('/images/clients-s410c75b94c.png') 0 -945px; }
+.main .clients .carousel_clients .client-item.residence { background: url('/images/clients-s410c75b94c.png') 0 -1155px; }
+.main .clients .carousel_clients .client-item.residence:hover { background: url('/images/clients-s410c75b94c.png') 0 -630px; }
+.main .clients .carousel_clients .client-item.taleon { background: url('/images/clients-s410c75b94c.png') 0 -840px; }
+.main .clients .carousel_clients .client-item.taleon:hover { background: url('/images/clients-s410c75b94c.png') 0 -525px; }
+.main .clients .carousel_clients .client-item.terijoki { background: url('/images/clients-s410c75b94c.png') 0 -420px; }
+.main .clients .carousel_clients .client-item.terijoki:hover { background: url('/images/clients-s410c75b94c.png') 0 -210px; }
+.main .clients .carousel_clients .client-item.vhotel { background: url('/images/clients-s410c75b94c.png') 0 -105px; }
+.main .clients .carousel_clients .client-item.vhotel:hover { background: url('/images/clients-s410c75b94c.png') 0 0; }

@@ -117,4 +117,56 @@
       }
     }
   }
+  .clients{
+    .carousel_clients{
+      .client-item{
+        display: block;
+        width: 140px;
+        height: 100px;
+        margin: 0 auto;
+        &.domina{
+          background: sprite($client-sprite, domina);
+          &:hover{
+            background: sprite($client-sprite, domina_hover);
+          }
+        }
+        &.forestmix{
+          background: sprite($client-sprite, forestmix);
+          &:hover{
+            background: sprite($client-sprite, forestmix_hover);
+          }
+        }
+        &.maryhotel{
+          background: sprite($client-sprite, maryhotel);
+          &:hover{
+            background: sprite($client-sprite, maryhotel_hover);
+          }
+        }
+        &.residence{
+          background: sprite($client-sprite, residence);
+          &:hover{
+            background: sprite($client-sprite, residence_hover);
+          }
+        }
+        &.taleon{
+          background: sprite($client-sprite, taleon);
+          &:hover{
+            background: sprite($client-sprite, taleon_hover);
+          }
+        }
+        &.terijoki{
+          background: sprite($client-sprite, terijoki);
+          &:hover{
+            background: sprite($client-sprite, terijoki_hover);
+          }
+        }
+        &.vhotel{
+          background: sprite($client-sprite, vhotel);
+          &:hover{
+            background: sprite($client-sprite, vhotel_hover);
+          }
+        }
+      }
+    }
+  }
 }

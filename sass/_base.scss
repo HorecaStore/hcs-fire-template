@@ -4,6 +4,7 @@
 
 $group-sprite: sprite-map("catalog/group/*.png", $position: 100%, $spacing: 5px, $repeat: no-repeat);
 $social-sprite: sprite-map("social/*.png", $position: 100%, $spacing: 5px, $repeat: no-repeat);
+$client-sprite: sprite-map("clients/*.png", $position: 100%, $spacing: 5px, $repeat: no-repeat);
 
 
 @mixin red-box($all-children: false){

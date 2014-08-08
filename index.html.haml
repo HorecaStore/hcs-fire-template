@@ -52,23 +52,30 @@
             %li.span5.offset1
               .thumbnail.text-center
                 %h3.unified Акция
-                = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover", :alt=>"HoReCa Store"),'/text.html')
+                = link_to(image_tag("action.jpg", :class=>"img-hover", :alt=>"HoReCa Store"),'/text.html')
                 .captions
-                  %div=lorem_words(8)
+                  %div Наши акции и спец. предложения...
                   %p.text-right= link_to('Подробнее...', '/text.html', :class=>'btn btn-link')
             %li.span5.offset1
               .thumbnail.text-center
                 %h3.unified Наши прайс листы
-                = link_to(image_tag(lorem_image("180x120"), :class=>"img-hover", :alt=>"HoReCa Store"),'/text.html')
+                = link_to(image_tag("price.jpg", :class=>"img-hover", :alt=>"HoReCa Store"),'/text.html')
                 .captions
-                  %div=lorem_words(8)
+                  %div Прайс-листы на продукцию Horeca Store.
                   %p.text-right= link_to('Скачать...', '/text.html', :class=>'btn btn-link')
   .line.line-dotted
   .row-fluid
     .span12
       %section.clients
         %h2.unified Наши клиенты
+        /noindex
         .carousel_clients
-          -12.times do
-            .text-center= image_tag(lorem_image("140x100"), :alt=>"HoReCa Store")
+          .text-center=link_to('','http://dominarussia.com/', :class=>'client-item domina', :rel=>"nofollow", :target=>"_blank")
+          .text-center=link_to('','http://www.forrestmix.ru/', :class=>'client-item forestmix', :rel=>"nofollow", :target=>"_blank")
+          .text-center=link_to('','http://www.maryhotel.ru/', :class=>'client-item maryhotel', :rel=>"nofollow", :target=>"_blank")
+          .text-center=link_to('','http://www.repinospa.ru/', :class=>'client-item residence', :rel=>"nofollow", :target=>"_blank")
+          .text-center=link_to('','http://www.taleonimperialhotel.com/ru/', :class=>'client-item taleon', :rel=>"nofollow", :target=>"_blank")
+          .text-center=link_to('','http://terijoki-club.ru/', :class=>'client-item terijoki', :rel=>"nofollow", :target=>"_blank")
+          .text-center=link_to('','http://www.hotel-ligovsky.ru/', :class=>'client-item vhotel', :rel=>"nofollow", :target=>"_blank")
+        //noindex
 
