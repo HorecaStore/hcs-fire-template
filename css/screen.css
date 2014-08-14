@@ -15,7 +15,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 290px; }
 
-body { background-image: url('/images/body.jpg?1405161367'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
+body { background-image: url('/images/body.jpg?1405322416'); background-position: 0 0; background-repeat: repeat; overflow-x: visible; }
 
 h1, h2, h3, h4, h5, h6 { color: #777; text-shadow: white 0px 1px 0px; }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a { color: #2f2f2f; }
@@ -100,7 +100,7 @@ a.img-hover { display: inline-block; }
 .catalog-menu { border-color: #ddd; -webkit-border-radius: 4px 4px; -moz-border-radius: 4px / 4px; border-radius: 4px / 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; box-shadow: rgba(0, 0, 0, 0.0555) 0 1px 3px; background-color: #f9f9f9; margin-top: 44px; font-size: 13px; }
 .catalog-menu .nav-header { background-color: #e4e4e4; color: #6e6e6e; font-family: arial,tahoma,sans-serif; font-size: 14px; font-weight: 500; text-transform: uppercase; line-height: 28px; }
 .catalog-menu > li > a { position: relative; }
-.catalog-menu > li > a > i.pull-right { line-height: inherit; position: absolute; right: 8px; }
+.catalog-menu > li > a > i.pull-right { line-height: inherit; position: absolute; right: 8px; top: 50%; margin-top: -0.65em; }
 
 .white-popup-block .modal-label { font-size: 13px; font-weight: bold; color: #999; line-height: 20px; margin: 10px 0; text-transform: uppercase; }
 .white-popup-block .modal-body { max-height: 100%; margin-top: 20px; }
