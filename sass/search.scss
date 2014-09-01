@@ -1,6 +1,6 @@
 @import "base";
 .search-form{
-  margin-top: 17px;
+  margin-top: 61px;
   .nav-header{
     color: #777;
     border-bottom: 1px dotted #524E4E;
@@ -46,4 +46,13 @@
     }
     .result-item-text{}
   }
+}
+.line{
+  margin:{
+    top: 10px;
+    bottom: 10px;
+  }
+}
+.no-query{
+  margin-top: 78px;
 }
