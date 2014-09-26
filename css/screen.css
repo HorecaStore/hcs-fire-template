@@ -63,6 +63,7 @@ a.img-hover { display: inline-block; }
 .header .logo > span { width: 149px; font-family: "PFDinDisplayProLight"; font-size: 11px; text-transform: uppercase; display: block; }
 .header .top-menu { margin-bottom: 22px; margin-top: 5px; font-size: 13px; }
 .header .top-menu .navbar .divider-vertical { border-right-color: #909090; }
+.header .top-menu .navbar li:last-child > a { padding-right: 0; }
 .header .main-menu { text-shadow: white 0px 1px 0px; }
 .header .main-menu .navbar { margin-bottom: 0; }
 .header .main-menu .navbar .navbar-search .search-query { font-size: 11px; line-height: 20px; margin-top: 2px; padding-top: 2px; padding-bottom: 2px; }

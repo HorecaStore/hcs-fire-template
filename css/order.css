@@ -1,4 +1,6 @@
 .form-order .control-group { margin-bottom: 10px; }
+.form-order .control-group .control-text { line-height: 32px; padding-left: 7px; }
+.form-order .control-group .control-label { font-weight: bold; font-size: 13px; }
 
 .form-claim .table tbody tr > td { vertical-align: middle; }
 .form-claim .table tbody tr > td input { margin-bottom: 0; }

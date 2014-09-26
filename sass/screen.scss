@@ -142,6 +142,14 @@ a.img-hover{
       .divider-vertical{
         border-right-color: rgb(144, 144, 144);
       }
+      li{
+        &:last-child{
+          >a{
+            padding-right: 0;
+          }
+        }
+      }
+
     }
   }
   .main-menu{
