@@ -10,7 +10,7 @@
   .row-fluid
     .span3.left-user-profile
       .thumbnails
-        = link_to(image_tag(lorem_image("260x180"), :alt=>"Аватар"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile", "data-tab"=>"profile")
+        = link_to(image_tag("user912.svg", :alt=>"Аватар", :class=>"no-foto"),'#profile', :class=>'thumbnail', :title=>"Изменить аватар", :id=>"tab_profile", "data-tab"=>"profile")
       .h3.profile-header.text-center Иван Сидорович Иванов
       .line.line-dotted
       %ul.nav.fa-ul
@@ -100,7 +100,7 @@
               .boxed-group-inner.clearfix
                 %form.form-horizontal.form-registration{:action=>"/users.html"}
                   .control-group.profile-avatar
-                    .control-label=image_tag(lorem_image("85x59"), :alt=>"Аватар", :class=>"img-polaroid")
+                    .control-label=image_tag("user912.svg", :alt=>"Аватар", :class=>"img-polaroid no-foto")
                     .controls
                       %label Фото (аватар)
                       %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}

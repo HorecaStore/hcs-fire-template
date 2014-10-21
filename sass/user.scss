@@ -47,6 +47,9 @@
       text-transform: capitalize;
     }
   }
+  .no-foto{
+    max-height: 166px;
+  }
 }
 .accordion-group{
   .accordion-toggle{
@@ -149,5 +152,8 @@
       line-height: 30px;
       margin-top: 5px;
     }
+  }
+  .no-foto{
+    max-width: 60px;
   }
 }
