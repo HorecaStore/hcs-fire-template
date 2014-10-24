@@ -1,5 +1,4 @@
 @import "base";
-
 .user-menu{
   .fa{
     margin-right: 10px;
@@ -120,18 +119,24 @@
     margin: 0;
     border: 1px solid #d8d8d8;
     border-bottom: 0;
-    padding:{
-      top: 10px;
-      bottom: 11px;
-      left: 10px;
-      right: 10px;
-    }
     font:{
       size: 13px;
       weight: bold;
     }
     @include border-radius(4px 4px 0px 0px);
     @include text-shadow(#fff 0 1px 0);
+    .accordion-toggle{
+      padding:{
+        top: 10px;
+        bottom: 11px;
+        left: 10px;
+        right: 10px;
+      }
+      cursor: pointer;
+      &:hover{
+        background-color: darken(#f5f5f5, 5%);
+      }
+    }
   }
   .boxed-group-inner{
     padding:{
@@ -155,5 +160,8 @@
   }
   .no-foto{
     max-width: 60px;
+  }
+  .filelabel{
+    line-height: 30px;
   }
 }

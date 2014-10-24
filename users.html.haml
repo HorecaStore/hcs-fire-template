@@ -91,104 +91,108 @@
                     %blockquote.message
                       %p= lorem_paragraph
         .tab-pane#profile
-          .boxed-group
-            .boxed-group-head
-              Личные данные
-              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#user_profile"}
-                %i.fa.fa-eye-slash
-            .collapse.in#user_profile
-              .boxed-group-inner.clearfix
-                %form.form-horizontal.form-registration{:action=>"/users.html"}
-                  .control-group.profile-avatar
-                    .control-label=image_tag("user912.svg", :alt=>"Аватар", :class=>"img-polaroid no-foto")
-                    .controls
-                      %label Фото (аватар)
-                      %input{:name=>"avatar", :type=>"button", :class=>"btn span5", :value=>"Изменить фото"}
-                  .control-group
-                    .control-label Имя:
-                    .controls
-                      %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
-                  .control-group
-                    .control-label Фамилия:
-                    .controls
-                      %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
-                  .control-group
-                    .control-label Отчетство:
-                    .controls
-                      %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
-                  .control-group
-                    .control-label Компания:
-                    .controls
-                      %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
-                  .control-group
-                    .control-label Город:
-                    .controls
-                      %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
-                  .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
-          .boxed-group
-            .boxed-group-head
-              Контактные данные
-              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#contact_data"}
-                %i.fa.fa-eye
-            .collapse#contact_data
-              .boxed-group-inner.clearfix
-                %form.form-horizontal.form-registration{:action=>"/users.html"}
-                  .control-group
-                    .control-label.required E-mail:
-                    .controls
-                      %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
-                  .control-group
-                    .control-label Телефон:
-                    .controls
-                      %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
-                  .control-group
-                    .control-label Факс:
-                    .controls
-                      %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
-                  .control-group
-                    .control-label Сайт:
-                    .controls
-                      %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
-                  .control-group
-                    .control-label Страна:
-                    .controls
-                      %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
-                  .control-group
-                    .control-label Почтовый индекс:
-                    .controls
-                      %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
-                  .control-group
-                    .control-label Адрес:
-                    .controls
-                      %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
-                  .text-right=link_to("Обновить контактные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
-          .boxed-group
-            .boxed-group-head
-              Изменить пароль
-              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#change_password"}
-                %i.fa.fa-eye
-            .collapse#change_password
-              .boxed-group-inner.clearfix
-                %form.form-horizontal.form-registration{:action=>"/users.html"}
-                  .control-group
-                    .control-label.required Старый пароль:
-                    .controls
-                      %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                      =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
-                  .control-group
-                    .control-label.required Новый пароль:
-                    .controls
-                      %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                  .control-group
-                    .control-label.required Повтор пароля:
-                    .controls
-                      %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                  .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
-          .boxed-group
-            .boxed-group-head
-              Рассылка
-              %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#maillist"}
-                %i.fa.fa-eye
-            .collapse#maillist
-              .boxed-group-inner.clearfix
-                %form.form-horizontal.form-registration{:action=>"/users.html"}
+          .boxed#profileCollapse
+            .boxed-group
+              .boxed-group-head
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#profileCollapse", "data-target"=>"#user_profile"} Личные данные
+                / %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#user_profile"}
+                /   %i.fa.fa-eye-slash
+              .collapse.in#user_profile
+                .boxed-group-inner.clearfix
+                  %form.form-horizontal.form-registration{:action=>"/users.html"}
+                    .control-group.profile-avatar
+                      .control-label=image_tag("user912.svg", :alt=>"Аватар", :class=>"img-polaroid no-foto")
+                      .controls
+                        %label Фото (аватар)
+                        %span.btn.btn-file.span5
+                          Изменить фото
+                          %input{:name=>"avatar", :type=>"file", :accept=>"image/jpeg,image/png,image/jpg"}
+                        %span.span7.filelabel
+                    .control-group
+                      .control-label Имя:
+                      .controls
+                        %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
+                    .control-group
+                      .control-label Фамилия:
+                      .controls
+                        %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
+                    .control-group
+                      .control-label Отчетство:
+                      .controls
+                        %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
+                    .control-group
+                      .control-label Компания:
+                      .controls
+                        %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
+                    .control-group
+                      .control-label Город:
+                      .controls
+                        %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
+                    .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
+            .boxed-group
+              .boxed-group-head
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#profileCollapse", "data-target"=>"#contact_data"} Контактные данные
+                / %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#contact_data"}
+                /   %i.fa.fa-eye
+              .collapse#contact_data
+                .boxed-group-inner.clearfix
+                  %form.form-horizontal.form-registration{:action=>"/users.html"}
+                    .control-group
+                      .control-label.required E-mail:
+                      .controls
+                        %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
+                    .control-group
+                      .control-label Телефон:
+                      .controls
+                        %input{:name=>"phone", :type=>"text", :placeholder=>"Телефон"}
+                    .control-group
+                      .control-label Факс:
+                      .controls
+                        %input{:name=>"fax", :type=>"text", :placeholder=>"Факс"}
+                    .control-group
+                      .control-label Сайт:
+                      .controls
+                        %input{:name=>"website", :type=>"url", :placeholder=>"http://www.yousite.com"}
+                    .control-group
+                      .control-label Страна:
+                      .controls
+                        %input{:name=>"country", :type=>"text", :placeholder=>"Страна"}
+                    .control-group
+                      .control-label Почтовый индекс:
+                      .controls
+                        %input{:name=>"postcode", :type=>"text", :placeholder=>"Индекс"}
+                    .control-group
+                      .control-label Адрес:
+                      .controls
+                        %input{:name=>"address", :type=>"text", :placeholder=>"Адрес"}
+                    .text-right=link_to("Обновить контактные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
+            .boxed-group
+              .boxed-group-head
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#profileCollapse", "data-target"=>"#change_password"} Изменить пароль
+                / %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#change_password"}
+                /   %i.fa.fa-eye
+              .collapse#change_password
+                .boxed-group-inner.clearfix
+                  %form.form-horizontal.form-registration{:action=>"/users.html"}
+                    .control-group
+                      .control-label.required Старый пароль:
+                      .controls
+                        %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                        =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
+                    .control-group
+                      .control-label.required Новый пароль:
+                      .controls
+                        %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                    .control-group
+                      .control-label.required Повтор пароля:
+                      .controls
+                        %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                    .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
+            .boxed-group
+              .boxed-group-head
+                .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#profileCollapse", "data-target"=>"#maillist"} Рассылка
+                / %a.btn.btn-mini.btn-link.pull-right{"data-toggle"=>"collapse", "data-target"=>"#maillist"}
+                /   %i.fa.fa-eye
+              .collapse#maillist
+                .boxed-group-inner.clearfix
+                  %form.form-horizontal.form-registration{:action=>"/users.html"}

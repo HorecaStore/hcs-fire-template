@@ -39,6 +39,9 @@ textarea { resize: vertical; }
 .required { position: relative; }
 .required:after { content: "*"; color: red; position: absolute; display: block; right: -10px; top: 0; }
 
+.btn-file { position: relative; overflow: hidden; margin-left: 0 !important; }
+.btn-file input[type=file] { position: absolute; top: 0; right: 0; filter: alpha(opacity=0); opacity: 0; }
+
 .wrapper { padding: 0 50px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; box-shadow: rgba(0, 0, 0, 0.1) -10px 0px 8px, rgba(0, 0, 0, 0.1) 10px 0px 8px; }
 .wrapper.layout { background-color: #fff; border-top: 15px solid #231f20; }
 .footer .wrapper { background-color: #231f20; }

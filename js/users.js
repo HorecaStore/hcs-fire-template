@@ -22,10 +22,12 @@ head.ready("bootstrap_tab", function() {
   }
 });
 head.ready("bootstrap_collapse", function() {
-  $("#ordersCollapse, #messagesCollapse").on('click.collapse.data-api', '[data-toggle=collapse]', function(e){
+  $("#ordersCollapse, #messagesCollapse, #profileCollapse").on('click.collapse.data-api', '[data-toggle=collapse]', function(e){
     var $this = $(this),
         target = $this.attr('data-target'),
         toggle = $('.accordion-toggle');
+    console.log(target);
+    console.log($(target).hasClass('in'));
     toggle.removeClass('active');
     $this[$(target).hasClass('in') ? 'removeClass' : 'addClass']('active');
   });
@@ -33,5 +35,20 @@ head.ready("bootstrap_collapse", function() {
 head.ready("bootstrap_tooltip", function() {
   $('.order-actions,.message-actions').tooltip({
     selector: "a[data-toggle=tooltip]"
+  });
+});
+head.ready("jquery", function() {
+  $(document).on('change', '.btn-file :file', function() {
+    var input = $(this),
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
+  $(document).ready( function() {
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+      // console.log(numFiles);
+      // console.log(label);
+      $('.filelabel').text(label);
+    });
   });
 });
