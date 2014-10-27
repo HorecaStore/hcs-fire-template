@@ -33,11 +33,18 @@ head.ready("bootstrap_collapse", function() {
   });
 });
 head.ready("bootstrap_tooltip", function() {
-  $('.order-actions,.message-actions').tooltip({
-    selector: "a[data-toggle=tooltip]"
+  $('.order-actions,.message-actions,.profile-actions').tooltip({
+    selector: "[data-toggle=tooltip]"
   });
 });
 head.ready("jquery", function() {
+  $('.profile-actions .btn').on('click', function(e){
+    var $this = $(this),
+        input_edit = $(this).data('edit');
+    $this.parents('.profile-actions').hide();
+    $('input[name='+input_edit+']').attr('type', 'text').focus();
+    console.log($(this).data('edit'));
+  });
   $(document).on('change', '.btn-file :file', function() {
     var input = $(this),
       numFiles = input.get(0).files ? input.get(0).files.length : 1,

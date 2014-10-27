@@ -19,7 +19,8 @@
         %li= '<i class="fa fa-li fa-phone"></i>+7-111-222-33-44'
       .h4.profile-header.line-dotted Компания
       %ul.nav.fa-ul
-        %li= '<i class="fa fa-li fa-bank"></i>ООО "Компания"'
+        %li= content_tag(:i, "", :class => "fa fa-li fa-bank")+'ООО "Компания"'
+        %li= content_tag(:i, "", :class => "fa fa-li fa-globe")+link_to('www.site.co', '#', :target=>"_blank", :rel=>"nofollow")
       .line.line-dotted
       .row-fluid
         .span6
@@ -111,23 +112,39 @@
                     .control-group
                       .control-label Имя:
                       .controls
-                        %input{:name=>"name", :type=>"text", :placeholder=>"Ваше имя"}
+                        .row-fluid.profile-actions
+                          %span.span4.control-span=content_tag(:strong, "Иван")
+                          %span.span3.control-span
+                            %button.btn.btn-mini{'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", 'data-edit'=>'name', :type=>'button'}= content_tag(:i, "", :class => "fa fa-pencil")
+                        %input{:name=>"name", :type=>"hidden", :placeholder=>"Ваше имя", :value=>"Иван"}
                     .control-group
                       .control-label Фамилия:
                       .controls
-                        %input{:name=>"surname", :type=>"text", :placeholder=>"Фамилия"}
+                        .row-fluid.profile-actions
+                          %span.span4.control-span=content_tag(:strong, "Иванов")
+                          %span.span3.control-span=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini", 'data-edit'=>'patronymic')
+                        %input{:name=>"patronymic", :type=>"hidden", :placeholder=>"Фамилия", :value=>"Иванов"}
                     .control-group
                       .control-label Отчетство:
                       .controls
-                        %input{:name=>"patronymic", :type=>"text", :placeholder=>"Отчество"}
+                        .row-fluid.profile-actions
+                          %span.span4.control-span=content_tag(:strong, "Сидорович")
+                          %span.span3.control-span=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini", 'data-edit'=>'surname')
+                        %input{:name=>"surname", :type=>"hidden", :placeholder=>"Отчество", :value=>"Сидорович"}
                     .control-group
                       .control-label Компания:
                       .controls
-                        %input{:name=>"company", :type=>"text", :placeholder=>"OOO 'Компания'"}
+                        .row-fluid.profile-actions
+                          %span.span4.control-span=content_tag(:strong, "OOO 'Компания'")
+                          %span.span3.control-span=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini", 'data-edit'=>'company')
+                        %input{:name=>"company", :type=>"hidden", :placeholder=>"OOO 'Компания'", :value=>'OOO "Компания"'}
                     .control-group
                       .control-label Город:
                       .controls
-                        %input{:name=>"city", :type=>"text", :placeholder=>"Город"}
+                        .row-fluid.profile-actions
+                          %span.span4.control-span=content_tag(:strong, "Санкт-Петербург")
+                          %span.span3.control-span=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini", 'data-edit'=>'city')
+                        %input{:name=>"city", :type=>"hidden", :placeholder=>"Город", :value=>"Санкт-Петербург"}
                     .text-right=link_to("Обновить личные данные", '#mfp-message', :class=>"btn btn-success mfp-message")
             .boxed-group
               .boxed-group-head

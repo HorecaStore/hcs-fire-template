@@ -68,6 +68,11 @@ textarea{
     opacity: 0;
   }
 }
+.form-horizontal{
+  .control-span{
+    padding-top: 5px;
+  }
+}
 
 .wrapper{
   padding: 0 50px;
