@@ -26,8 +26,8 @@ head.ready("bootstrap_collapse", function() {
     var $this = $(this),
         target = $this.attr('data-target'),
         toggle = $('.accordion-toggle');
-    console.log(target);
-    console.log($(target).hasClass('in'));
+    // console.log(target);
+    // console.log($(target).hasClass('in'));
     toggle.removeClass('active');
     $this[$(target).hasClass('in') ? 'removeClass' : 'addClass']('active');
   });
@@ -40,22 +40,19 @@ head.ready("bootstrap_tooltip", function() {
 head.ready("jquery", function() {
   $('.profile-actions .btn').on('click', function(e){
     var $this = $(this),
-        input_edit = $(this).data('edit');
+        input_edit = $(this).data('edit'),
+        input_type = $this.data('type') ? $this.data('type') : 'text';
+
+    console.log(input_type);
     $this.parents('.profile-actions').hide();
-    $('input[name='+input_edit+']').attr('type', 'text').focus();
+
+    $('input[name='+input_edit+']').attr('type', input_type).focus();
     console.log($(this).data('edit'));
   });
-  $(document).on('change', '.btn-file :file', function() {
-    var input = $(this),
-      numFiles = input.get(0).files ? input.get(0).files.length : 1,
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [numFiles, label]);
-  });
-  $(document).ready( function() {
-    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-      // console.log(numFiles);
-      // console.log(label);
-      $('.filelabel').text(label);
-    });
-  });
 });
+function validatePassword(){
+  var pass2 = document.getElementById("new_password2").value,
+      pass1 = document.getElementById("new_password").value,
+      message =(pass1 != pass2)? "Пароль не совпадает" : '';
+  document.getElementById("new_password2").setCustomValidity(message);
+}

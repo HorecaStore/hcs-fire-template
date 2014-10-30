@@ -157,7 +157,10 @@
                     .control-group
                       .control-label.required E-mail:
                       .controls
-                        %input{:name=>"email", :type=>"email", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
+                        .row-fluid.profile-actions
+                          %span.span4.control-span=content_tag(:strong, "mail@mail.tt")
+                          %span.span3.control-span=link_to(content_tag(:i, "", :class => "fa fa-pencil"), '#', 'data-toggle'=>"tooltip", 'data-original-title'=>"Редактировать", :class=>"btn btn-mini", 'data-edit'=>'email', 'data-type'=>'email')
+                        %input{:name=>"email", :type=>"hidden", :required=>"required", :placeholder=>"Ваш e-mail", :value=>"mail@mail.tt"}/
                     .control-group
                       .control-label Телефон:
                       .controls
@@ -194,17 +197,19 @@
                     .control-group
                       .control-label.required Старый пароль:
                       .controls
-                        %input{:name=>"old_password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                        %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Ваш старый пароль"}
                         =link_to("Забыли пароль?...","#", :class=>"btn btn-link")
                     .control-group
                       .control-label.required Новый пароль:
                       .controls
-                        %input{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
+                        %input#new_password{:name=>"new_password", :type=>"password", :required=>"required", :placeholder=>"Ваш новый пароль", :pattern=>"[A-Za-z0-9_-]{5,}"}
                     .control-group
                       .control-label.required Повтор пароля:
                       .controls
-                        %input{:name=>"password", :type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :pattern=>"[A-Za-z0-9_-]{5,}"}
-                    .text-right=link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
+                        %input#new_password2{:type=>"password", :required=>"required", :placeholder=>"Повтор пароля", :onkeyup=>"validatePassword();"}
+                    .text-right
+                      =#link_to("Изменить пароль", '#mfp-message', :class=>"btn btn-success mfp-message")
+                      %button.btn.btn-success{:type=>"submit"} Изменить пароль
             .boxed-group
               .boxed-group-head
                 .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#profileCollapse", "data-target"=>"#maillist"} Рассылка
