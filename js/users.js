@@ -43,7 +43,7 @@ head.ready("jquery", function() {
         input_edit = $(this).data('edit'),
         input_type = $this.data('type') ? $this.data('type') : 'text';
 
-    console.log(input_type);
+    console.log($(this));
     $this.parents('.profile-actions').hide();
 
     $('input[name='+input_edit+']').attr('type', input_type).focus();
