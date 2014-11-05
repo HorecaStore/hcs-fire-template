@@ -165,3 +165,16 @@
     line-height: 30px;
   }
 }
+.profile-actions{
+  .control-span{
+    &:first-child{
+      border:{
+        bottom:{
+          width: 1px;
+          style: dashed;
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

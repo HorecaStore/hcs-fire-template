@@ -33,3 +33,5 @@
 .profile-avatar .controls > label { line-height: 30px; margin-top: 5px; }
 .profile-avatar .no-foto { max-width: 60px; }
 .profile-avatar .filelabel { line-height: 30px; }
+
+.profile-actions .control-span:first-child { border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: #ccc; }
