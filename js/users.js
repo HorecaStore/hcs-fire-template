@@ -38,7 +38,7 @@ head.ready("bootstrap_tooltip", function() {
   });
 });
 head.ready("jquery", function() {
-  $('.profile-actions .btn').on('click', function(e){
+  $('.profile-actions .btn[data-edit]').on('click', function(e){
     var $this = $(this),
         input_edit = $(this).data('edit'),
         input_type = $this.data('type') ? $this.data('type') : 'text';
