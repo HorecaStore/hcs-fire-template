@@ -113,6 +113,15 @@ a.img-hover { display: inline-block; }
 .white-popup-block .modal-body .message { min-height: 20px; margin-bottom: 20px; padding: 24px; }
 .white-popup-block > form { margin: 0; border: 1px solid #eee; }
 
+/* ====== MFP Zoom effect ====== */
+.mfp-zoom-in { /* start state */ /* animate in */ /* animate out */ }
+.mfp-zoom-in .mfp-with-anim { opacity: 0; transition: all 0.2s ease-in-out; transform: scale(0.8); }
+.mfp-zoom-in.mfp-bg { opacity: 0; transition: all 0.3s ease-out; }
+.mfp-zoom-in.mfp-ready .mfp-with-anim { opacity: 1; transform: scale(1); }
+.mfp-zoom-in.mfp-ready.mfp-bg { opacity: 0.8; }
+.mfp-zoom-in.mfp-removing .mfp-with-anim { transform: scale(0.8); opacity: 0; }
+.mfp-zoom-in.mfp-removing.mfp-bg { opacity: 0; }
+
 .spinner { margin: 100px auto; width: 60px; height: 60px; position: relative; }
 .spinner .container1 > div, .spinner .container2 > div, .spinner .container3 > div { width: 12px; height: 12px; background-color: #fff; border-radius: 100%; position: absolute; -webkit-animation: bouncedelay 1.2s infinite ease-in-out; animation: bouncedelay 1.2s infinite ease-in-out; /* Prevent first frame from flickering when animation starts */ -webkit-animation-fill-mode: both; animation-fill-mode: both; }
 .spinner .spinner-container { position: absolute; width: 100%; height: 100%; }

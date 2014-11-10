@@ -5,7 +5,14 @@ head.ready('mfp', function(){
   });
   $('.mfp-message').magnificPopup({
     type: 'inline',
-    preloader: false
+    preloader: false,
+    removalDelay: 500,
+    callbacks: {
+      beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    },
+    midClick: true
+  },
   });
   $('.mfp-ajax-load').magnificPopup({
     type: 'inline',
