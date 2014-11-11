@@ -35,3 +35,6 @@
 .profile-avatar .filelabel { line-height: 30px; }
 
 .profile-actions .control-span:first-child { border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: #ccc; }
+
+input[type='password'].invalid { border-color: #e9322d; -webkit-box-shadow: 0 0 6px #f8b9b7; -moz-box-shadow: 0 0 6px #f8b9b7; box-shadow: 0 0 6px #f8b9b7; }
+input[type='password'].valid { border-color: #408140; -webkit-box-shadow: 0 0 6px #91c991; -moz-box-shadow: 0 0 6px #91c991; box-shadow: 0 0 6px #91c991; }

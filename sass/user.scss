@@ -178,3 +178,14 @@
     }
   }
 }
+input[type='password']{
+  &.invalid{
+    //border-color: $errorBorder;//#e9322d;
+    border-color: darken(#ee5f5b, 10%);
+    @include box-shadow(0 0 6px lighten(#ee5f5b, 20%));
+  }
+  &.valid{
+    border-color: darken(#51a351, 10%);;
+    @include box-shadow(0 0 6px lighten(#51a351, 20%));
+  }
+}
