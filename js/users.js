@@ -2,7 +2,9 @@ head.js(
   {bootstrap_tab: "/ext/bootstrap/bootstrap-tab.js"},
   {bootstrap_transition: "/ext/bootstrap/bootstrap-transition.js"},
   {bootstrap_collapse: "/ext/bootstrap/bootstrap-collapse.js"},
-  {bootstrap_tooltip: "/ext/bootstrap/bootstrap-tooltip.js"}
+  {bootstrap_tooltip: "/ext/bootstrap/bootstrap-tooltip.js"},
+  {jquery_migrate: "http://code.jquery.com/jquery-migrate-1.2.1.js"},
+  {jPaginate: "/ext/jPaginate/jPaginate.min.js"}
 );
 head.ready("bootstrap_tab", function() {
   $('#profile-user a').click(function(e){
@@ -48,6 +50,14 @@ head.ready("jquery", function() {
 
     $('input[name='+input_edit+']').attr('type', input_type).focus();
     console.log($(this).data('edit'));
+  });
+});
+head.ready("jPaginate", function(){
+  $("#ordersCollapse").jPaginate({
+    items: 10,
+    next: "&raquo;",
+    previous: "&laquo;",
+    pagination_class: "pagination pagination-centered"
   });
 });
 function validatePassword(){

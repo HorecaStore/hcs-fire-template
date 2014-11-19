@@ -40,7 +40,7 @@
       .tab-content
         .tab-pane.active#orders
           .accordion#ordersCollapse
-            -1.upto(10) do |i|
+            -1.upto(17) do |i|
               .accordion-group
                 .accordion-heading
                   .accordion-toggle{"data-toggle"=>"collapse", "data-parent"=>"#ordersCollapse", "data-target"=>"#order_#{i}"}
@@ -64,7 +64,6 @@
                           %td=link_to("Наименование товара", "/catalog/category/group/item.html")
                           %td 5 шт.
                           %td 500 руб.
-          = render :partial => "/layouts/pagination"
         .tab-pane#messages
           .accordion#messagesCollapse
             -1.upto(5) do |i|
